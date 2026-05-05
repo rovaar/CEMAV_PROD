@@ -22,7 +22,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/Medicina Amable.jpg" />
     
     <link rel="shortcut icon" src="img/Medicina Amable.jpg">
-    <title>CEMAV</title>
+    <title>CEMAV | Centre de medicina amable de Vic</title>
     <meta name="description" content="Centre de Medicina Amable de Vic. Especialistes en fisioteràpia, rehabilitació i serveis mèdics per al teu benestar. Demana cita prèvia!">
     <script type="application/ld+json">
       {
@@ -39,7 +39,7 @@
        },
      "telephone": "+34 123 456 789",
      "url": "https://www.cemavvic.com",
-     "medicalSpecialty": ["Fisioteràpia", "Rehabilitació", "Odontologia"]
+     "medicalSpecialty": ["Fisioteràpia","Oftalmologia", "Rehabilitació", "Odontologia"]
      }
    </script>
   </head>

@@ -31,7 +31,7 @@ Route::get('/podologia', function () {
     return view('especialitats/podologia');
 });
 
-Route::get('/fisioteràpia', function () {
+Route::get('/fisioterapia', function () {
     return view('especialitats/fisioterapia');
 });
 
@@ -84,8 +84,8 @@ Route::get('/infermeria', function () {
 Route::get('/serveis', function () {
     return view('serveis/serveis');
 });
-
-Route::get('/depilació', function () {
+    
+Route::get('/depilacio', function () {
     return view('serveis/depilacio');
 });
 

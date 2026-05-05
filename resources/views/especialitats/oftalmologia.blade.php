@@ -1,75 +1,170 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css"  href="{{asset('css/especialitats.css')}}"> 
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-
-    <link rel="shortcut icon" type="image/x-icon" href="img/Medicina Amable.jpg" />
-    
-    <title>CEMAV</title>
+    @include('includes.head')
+    <title>Oftalmologia a Vic | Clínica Oftalmològica CEMAV</title>
+    <meta name="description" content="Servei d’oftalmologia a Vic. Especialistes en cataractes, glaucoma i salut visual. Visites privades i mútues a CEMAV.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Oftalmologia a Vic - CEMAV">
+    <meta property="og:description" content="Centre mèdic especialitzat en oftalmologia a Vic.">
+    <meta property="og:type" content="website">
   </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L3V62LP2WB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-L3V62LP2WB');
-</script>
   <body>
   
   @include('includes.nav')
 
-  <section id="portada">
+<!-- HERO -->
+<section id="hero-oftalmologia" class="d-flex align-items-center text-center">
     <div class="container">
-      <div class="content-center">
-        <h1 id="titol" style="position: absolute; top: 25%; left: 5%;">OFTALMOLOGIA</h1>
-       </div>
-    </div>
-  </section>
-  
-  <section id="professionals">
-    <div class="container">
-    <div id="descripcio" style="margin: 100px 50px 50px 50px; font-size: 20px; text-align: justify">
-        Servei d’oftalmologia per mútues assistencials i visites privades.
-        Diagnòstic, tractament i prevenció de les patologies relacionades amb
-        els ulls i la visió. Exploració visual. Diagnòstic de malalties oculars.
-        Tractament mèdic i quirúrgic de patologies oculars. Prevenció de
-        problemes visuals.
-      </div>
-      <div class="content-center" style="margin-top: 50px">
-          <h1>Professionals</h1>
-       </div>
-       <div class="row">
-         <div class="col-12 col-md-12">
-          <div class="row">
-            <div  class="col-md-12">
-              <img src="img/iconaMen.jpg" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px; display: block; margin: auto;">
-              <p style="text-align: center; font-weight: 700; margin-top:20px">MANEL J.AMEN LETRAN</p>
-              <p style="text-align: center;">N.Coleg 21688</p>
-            </div>
-         </div>
-       </div>
-    </div>
-  </section>
-  
+        
+        <!-- SLUG -->
+        <p class="hero-slug">
+            Especialistes en salut visual i diagnòstic ocular a Vic
+        </p>
 
+        <!-- TITOL GRAN -->
+        <h1 class="hero-title">
+            Oftalmologia avançada <span>per cuidar la teva visió</span>
+        </h1>
+
+        <!-- SUBTITOL -->
+        <p class="hero-subtitle">
+            Oferim diagnòstic, prevenció i tractament de patologies oculars 
+            amb un servei personalitzat i tecnologia especialitzada.
+        </p>
+
+        <!-- BOTO -->
+        <a href="/contacte" class="hero-btn">
+            Demanar visita
+        </a>
+
+    </div>
+</section>
+
+@include('includes.breadcrumb', ['pageTitle' => 'Oftalmologia'])
+
+<!-- SERVEIS -->
+<section id="serveis-oftalmologia">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <h2>
+                Serveis d’<span>oftalmologia</span> i salut visual
+            </h2>
+
+            <p>
+                Diagnòstic i tractament de les principals patologies oculars.
+            </p>
+
+            <p class="text-small">
+                Servei d’oftalmologia per mútues assistencials i visites privades. Diagnòstic, tractament i prevenció de les patologies relacionades amb els ulls i la visió.
+            </p>
+
+        </div>
+
+        <div class="row mt-5">
+
+            <!-- TARGETA -->
+            <div class="col-md-4 mb-4">
+                <div class="servei-card">
+
+                    <div class="servei-icon">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <h3>Exploració visual completa</h3>
+
+                    <p>
+                        Revisió oftalmològica integral per detectar problemes 
+                        de visió i malalties oculars.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- TARGETA -->
+            <div class="col-md-4 mb-4">
+                <div class="servei-card">
+
+                    <div class="servei-icon">
+                        <ion-icon name="medkit-outline"></ion-icon>
+                    </div>
+
+                    <h3>Diagnòstic de patologies oculars</h3>
+
+                    <p>
+                        Diagnòstic i seguiment de cataractes, glaucoma, 
+                        ull sec i altres alteracions visuals.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- TARGETA -->
+            <div class="col-md-4 mb-4">
+                <div class="servei-card">
+
+                    <div class="servei-icon">
+                        <ion-icon name="shield-checkmark-outline"></ion-icon>
+                    </div>
+
+                    <h3>Prevenció i seguiment</h3>
+
+                    <p>
+                        Controls periòdics per prevenir problemes visuals 
+                        i mantenir una bona salut ocular.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROFESSIONALS -->
+<section id="professionals-oftalmologia">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <h2>
+                Equip d’<span>oftalmologia</span>
+            </h2>
+
+            <p>
+                Professionals especialitzats en salut visual a Vic.
+            </p>
+
+        </div>
+
+        <div class="row justify-content-center mt-5">
+
+            <div class="col-md-4">
+
+                <div class="doctor-card text-center">
+
+                    <img src="img/iconaMen.jpg"
+                         alt="Dr. Manel J. Amen Letran Oftalmòleg a Vic"
+                         class="doctor-img">
+
+                    <h3>Dr. Manel J. Amen Letran</h3>
+
+                    <p>Núm. col·legiat: 21688</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+  
   @include('includes.footer')
 
     <!-- Optional JavaScript -->

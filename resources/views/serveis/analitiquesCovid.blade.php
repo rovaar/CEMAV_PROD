@@ -24,6 +24,8 @@
   <body>
   
   @include('includes.nav')
+  
+  @include('includes.breadcrumb', ['pageTitle' => 'Analítiques COVID-19'])
 
   <section id="portada">
     <div class="container">

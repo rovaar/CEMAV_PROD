@@ -24,6 +24,8 @@
   <body>
   
   @include('includes.nav')
+  
+  @include('includes.breadcrumb', ['pageTitle' => 'Revisions Mèdiques'])
 
   <section id="portada">
     <div class="container">

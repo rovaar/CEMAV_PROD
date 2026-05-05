@@ -24,6 +24,8 @@
   <body>
   
   @include('includes.nav')
+  
+  @include('includes.breadcrumb', ['pageTitle' => 'Depilació'])
 
   <section id="portada">
     <div class="container">

@@ -17,7 +17,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="especialitats" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Especialitats
                     </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <div class="dropdown-menu dropdown-menu-horizontal" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="{{URL::to('/dermatologia')}}" id="dermatologia">Dermatologia</a>
                     <a class="dropdown-item" href="{{URL::to('/nutricio')}}" id="nutricio">Dietista i Nutrició</a>
                     <a class="dropdown-item" href="{{URL::to('/fisioteràpia')}}" id="fisioterapia">Fisioteràpia</a>

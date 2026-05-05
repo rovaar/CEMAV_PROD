@@ -1,24 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>CEMAV | Serveis complementaris </title>
-    
-  
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/serveis.css')}}">
+    @include('includes.head')
+    <title>Serveis complementaris | Centre de Medicina Amable de Vic</title>
     <style>
         h3 {
             color: #2c3e50;
@@ -53,6 +37,8 @@
 </head>
 <body>
     @include('includes.nav')
+    
+    @include('includes.breadcrumb')
 
     <section id="portada">
     <div class="container">
@@ -71,35 +57,35 @@
             </div>
          </div>
        <div class="row">
-           <div class="col-md-4 mb-4">
+           <div class="col-md-4 mb-4 d-flex">
                 <div class="service-box text-center">
                     <img src="img/RevisionsMèdiques.jpg" alt="Revisions Mèdiques">
                     <h3>Revisions mèdiques i laborals</h3>
                     <p>Servei de Medicina de Família (Privada i Mútues). També fem Reconeixements Mèdics d'àmbit laboral.</p>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 d-flex">
                 <div class="service-box text-center">
                     <img src="img/RevisionsMèdiques.jpg" alt="Revisions Carnet de Cotxe">
                     <h3>Revisions Carnet de cotxe</h3>
                     <p>Demanar cita prèvia a: <a href="https://www.emedicalboxvic.com">emedicalboxvic.com</a></p>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
+           <div class="col-md-4 mb-4 d-flex">
                 <div class="service-box text-center">
                     <img src="img/analitiques.png" alt="Revisions Esportives">
                     <h3>Servei de revisions esportives</h3>
                     <p>Reconeixements esportius per detectar riscos i prevenir patologies relacionades amb l'esport.</p>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 d-flex">
                 <div class="service-box text-center">
                     <img src="img/analitiques.png" alt="Analítiques">
                     <h3>Servei d'analítiques</h3>
                     <p>Servei d'analítiques per a privats i mútues. Truqueu per demanar informació.</p>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 d-flex">
                 <div class="service-box text-center">
                     <img src="img/Fisioteràpia.jpg" alt="Rehabilitació">
                     <h3>Servei de Rehabilitació</h3>         

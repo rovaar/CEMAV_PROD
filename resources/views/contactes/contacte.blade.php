@@ -21,7 +21,7 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="img/Medicina Amable.jpg" />
     
-    <title>CEMAV</title>
+    <title>Contacte | Centre de Medicina Amable de Vic</title>
   </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L3V62LP2WB"></script>
