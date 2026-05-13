@@ -19,9 +19,9 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 
-    <link rel="shortcut icon" type="image/x-icon" href="img/Medicina Amable.jpg" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/Medicina Amable.webp" />
     
-    <link rel="shortcut icon" src="img/Medicina Amable.jpg">
+    <link rel="shortcut icon" src="img/Medicina Amable.webp">
     <title>CEMAV | Centre de medicina amable de Vic</title>
     <meta name="description" content="Centre de Medicina Amable de Vic. Especialistes en fisioteràpia, rehabilitació i serveis mèdics per al teu benestar. Demana cita prèvia!">
     <script type="application/ld+json">
@@ -78,37 +78,37 @@
         </div>
         <div class="row" id="especialitats">
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/Odontologia.jpg" onclick="javascript:window.location='{{URL::to('/odontologia')}}';" alt="departament 1" class="img-dep">
+                <img src="img/Odontologia.webp" onclick="javascript:window.location='{{URL::to('/odontologia')}}';" alt="departament 1" class="img-dep">
                 <a href="{{URL::to('/odontologia')}}" class="title-dep">
                     </br><span class="title-dep">Odontologia</span>
                 </a> 
             </div>
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/Fisioteràpia.jpg" onclick="javascript:window.location='{{URL::to('/fisioteràpia')}}';" alt="departament 1" class="img-dep">
+                <img src="img/Fisioteràpia.webp" onclick="javascript:window.location='{{URL::to('/fisioteràpia')}}';" alt="departament 1" class="img-dep">
                 <a href="{{URL::to('/fisioteràpia')}}" class="title-dep">
                     </br><span class="title-dep">Fisioteràpia</span>
                 </a>
             </div>
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/Urologia.jpg" onclick="javascript:window.location='{{URL::to('/urologia')}}';" alt="departament 1" class="img-dep">
+                <img src="img/Urologia.webp" onclick="javascript:window.location='{{URL::to('/urologia')}}';" alt="departament 1" class="img-dep">
                 <a href="{{URL::to('/urologia')}}" class="title-dep">
                     </br><span class="title-dep">Urologia</span>
                 </a>
             </div>
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/Optometria.jpg" onclick="javascript:window.location='{{URL::to('/optometria')}}';" alt="departament 1" class="img-dep">
+                <img src="img/Optometria.webp" onclick="javascript:window.location='{{URL::to('/optometria')}}';" alt="departament 1" class="img-dep">
                 <a href="{{URL::to('/optometria')}}" class="title-dep">
                     </br><span class="title-dep">Optometria</span>
                 </a>
             </div>
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/Psicologia.png" onclick="javascript:window.location='{{URL::to('/psicologia')}}';" alt="departament 1" class="img-dep">
+                <img src="img/Psicologia.webp" onclick="javascript:window.location='{{URL::to('/psicologia')}}';" alt="departament 1" class="img-dep">
                 <a href="{{URL::to('/psicologia')}}" class="title-dep">
                     </br><span class="title-dep">Psicologia</span>
                 </a>
             </div>
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/Medicina Amable.jpg" onclick="javascript:window.location='{{URL::to('/infermeria')}}';" alt="departament 1" class="img-dep">
+                <img src="img/Medicina Amable.webp" onclick="javascript:window.location='{{URL::to('/infermeria')}}';" alt="departament 1" class="img-dep">
                 <a href="{{URL::to('/infermeria')}}" class="title-dep">
                     </br><span class="title-dep">Infermeria</span>
                 </a>
@@ -116,39 +116,39 @@
         </div>
         <div class="row" id="especialitats">
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/PersonesTractantPersones.jpg" onclick="javascript:window.location='{{URL::to('/oftalmologia')}}';" alt="departament 1" class="img-dep">
+                <img src="img/PersonesTractantPersones.webp" onclick="javascript:window.location='{{URL::to('/oftalmologia')}}';" alt="departament 1" class="img-dep">
                 <a href="{{URL::to('/oftalmologia')}}" class="title-dep">
                     </br><span class="title-dep">Oftalmologia</span>
                 </a>
             </div>
 
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/RevisionsMèdiques.jpg" onclick="javascript:window.location='{{URL::to('/traumatologia')}}';" alt="departament 1" class="img-dep">
+                <img src="img/traumatologia.webp" onclick="javascript:window.location='{{URL::to('/traumatologia')}}';" alt="departament 1" class="img-dep">
                 <a href="{{URL::to('/traumatologia')}}" class="title-dep">
                     </br><span class="title-dep">Traumatologia</span>
                 </a>
             </div>
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/RevisionsMèdiques.jpg" onclick="javascript:window.location='{{URL::to('/serveis')}}';" alt="departament 1" class="img-dep">
+                <img src="img/RevisionsMèdiques.webp" onclick="javascript:window.location='{{URL::to('/serveis')}}';" alt="departament 1" class="img-dep">
                 <a href="{{URL::to('/serveis')}}" class="title-dep">
                     </br><span class="title-dep">Revisions</span>
                 </a>
             </div>
           
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/Podologia.png" onclick="javascript:window.location='{{URL::to('/podologia')}}';" alt="departament 1" class="img-dep">
+                <img src="img/Podologia.webp" onclick="javascript:window.location='{{URL::to('/podologia')}}';" alt="departament 1" class="img-dep">
                 <a href="{{URL::to('/podologia')}}" class="title-dep">
                     </br><span class="title-dep">Podologia</span>
                 </a>
             </div>
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/Nutrició.jpg" onclick="javascript:window.location='{{URL::to('/nutricio')}}';" alt="departament 1" class="img-dep">
+                <img src="img/Nutrició.webp" onclick="javascript:window.location='{{URL::to('/nutricio')}}';" alt="departament 1" class="img-dep">
                 <a href="{{URL::to('/nutricio')}}" class="title-dep">
                     </br><span class="title-dep">Dietètica i nutrició</span>
                 </a>
             </div>
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/Odontologia.jpg" onclick="javascript:window.location='{{URL::to('/ortodoncista')}}';" alt="departament 1" class="img-dep">
+                <img src="img/Odontologia.webp" onclick="javascript:window.location='{{URL::to('/ortodoncista')}}';" alt="departament 1" class="img-dep">
                 <a href="{{URL::to('/ortodoncista')}}" class="title-dep">
                     </br><span class="title-dep">Ortodoncista</span>
                 </a>
@@ -159,7 +159,7 @@
             
    
         <div class="wrapper">
-           <img src="img/cookie.png" alt="">
+           <img src="img/cookie.webp" alt="">
            <div class="content">
               <header>Consentiment de Cookies</header>
               <p>Aquest lloc web utilitza cookies per assegurar-vos que obteniu la millor experiència al nostre web.</p>

@@ -44,7 +44,7 @@
          <div class="col-12 col-md-12">
           <div class="row">
             <div  class="col-md-6">
-              <img src="img/iconaMen.jpg" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
+              <img src="img/iconaMen.webp" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
               <p style="text-align: center; font-weight: 700">MARC SERRALLACH OREJAS</p>
               <p style="text-align: center;">N.Coleg xxxx</p>
             </div>

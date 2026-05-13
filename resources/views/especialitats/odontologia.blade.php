@@ -55,31 +55,31 @@ A cemav dental trobaràs : <br>
          <div class="col-12 col-md-12 style="text-align: center;">
           <div class="row">
             <div  class="col-md-6 style="text-align: center;">
-              <img src="img/Fotos Treballadors/jordiarn.jpg" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
+              <img src="img/Fotos Treballadors/jordiarn.webp" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
               <p style="text-align: center; font-weight: 700">JORDI ARNAU TUNEU</p>
               <p style="text-align: center;">Odontòleg/a</p>
               <p style="text-align: center;">N.Coleg 3591</p>
             </div>
             <div  class="col-md-6 style="text-align: center;">
-              <img src="img/Fotos Treballadors/nuria.jpg" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
+              <img src="img/Fotos Treballadors/nuria.webp" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
               <p style="text-align: center; font-weight: 700">NÚRIA AZNAR ARASA</p>
               <p style="text-align: center;">Ortodoncista</p>
               <p style="text-align: center;">N.Coleg 4573</p>
             </div>
              <div class="col-md-6 style="text-align: center;">
-              <img src="img/Fotos Treballadors/GeorginaS.jpeg" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
+              <img src="img/Fotos Treballadors/GeorginaS.webp" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
               <p style="text-align: center; font-weight: 700">GEORGINA SANFELIU MOLINERO</p>
               <p style="text-align: center;">Ortodoncista</p>
               <p style="text-align: center;">N.Coleg 5418</p>
             </div>
             <div  class="col-md-6 style="text-align: center;">
-              <img src="img/Fotos Treballadors/Jessenia.jpeg" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
+              <img src="img/Fotos Treballadors/Jessenia.webp" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
               <p style="text-align: center; font-weight: 700">JESSENIA VELÁSQUEZ FIGUEROA</p>
               <p style="text-align: center;">Higienista dental</p>
               <p style="text-align: center;"></p>
             </div>
             <div  class="col-md-6" style="text-align: center;">
-              <img src="img/iconaDona.jpg" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
+              <img src="img/iconaDona.webp" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
               <p style="text-align: center; font-weight: 700">VALENTINA CHAVEZ MARIN</p>
               <p style="text-align: center;">Higienista dental</p>
               <p style="text-align: center;">00003</p>

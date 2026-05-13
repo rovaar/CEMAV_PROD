@@ -147,7 +147,7 @@
 
                 <div class="doctor-card text-center">
 
-                    <img src="img/iconaMen.jpg"
+                    <img src="img/iconaMen.webp"
                          alt="Dr. Manel J. Amen Letran Oftalmòleg a Vic"
                          class="doctor-img">
 

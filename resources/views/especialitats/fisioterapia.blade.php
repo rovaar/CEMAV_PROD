@@ -47,19 +47,19 @@
          <div class="col-12 col-md-12" style="text-align: center;">
           <div class="row">
             <div  class="col-md-6">
-              <img src="img/Fotos Treballadors/ferran.jpg" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
+              <img src="img/Fotos Treballadors/ferran.webp" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
               <p style="text-align: center; font-weight: 700">FERRAN COLOM MARSO</p>
               <p style="text-align: center;">N.Coleg 7552</p>
             </div>
             <div  class="col-md-6" style="text-align: center;">
-              <img src="img/Fotos Treballadors/xevi.jpg" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
+              <img src="img/Fotos Treballadors/xevi.webp" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
               <p style="text-align: center; font-weight: 700">XAVIER VALERI JUNCÀ</p>
               <p style="text-align: center;">N.Coleg 1898</p>
             </div>
          </div>´
          <div class="row">
             <div class="col-12 col-md-12" style="text-align: center;">
-               <img src="img/iconaDona.jpg" class="foto" alt="foto" style="width: 350px; height: 350px; margin-bottom: 50px;">
+               <img src="img/iconaDona.webp" class="foto" alt="foto" style="width: 350px; height: 350px; margin-bottom: 50px;">
                <p style="font-weight: 700">MIREIA PUIG SALVANAS</p>
                <p>N.Coleg 17076</p>
            </div>

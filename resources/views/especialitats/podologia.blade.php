@@ -46,7 +46,7 @@
          <div class="col-12 col-md-12">
           <div class="row">
             <div  class="col-md-12">
-              <img src="img/Fotos Treballadors/Marta.jpeg" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px; display: block; margin: auto;">
+              <img src="img/Fotos Treballadors/Marta.webp" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px; display: block; margin: auto;">
               <p style="text-align: center; font-weight: 700; margin-top:20px">MARTA SERRA RAURELL</p>
               <p style="text-align: center;">N.Coleg 1246</p>
             </div>

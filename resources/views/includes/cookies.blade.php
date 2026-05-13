@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="wrapper">
-        <img src="cookie.png" alt="">
+        <img src="cookie.webp" alt="">
         <div class="content">
             <header>Consentiment de Cookies</header>
             <p>Aquest lloc web utilitza cookies per assegurar-vos que obteniu la millor experiència al nostre web.</p>

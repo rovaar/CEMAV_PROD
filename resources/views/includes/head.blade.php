@@ -16,7 +16,7 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 
-    <link rel="shortcut icon" type="image/x-icon" href="img/Medicina Amable.jpg" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/Medicina Amable.webp" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L3V62LP2WB"></script>
@@ -27,3 +27,4 @@
 
       gtag('config', 'G-L3V62LP2WB');
     </script>
+

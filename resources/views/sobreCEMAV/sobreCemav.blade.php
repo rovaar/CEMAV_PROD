@@ -19,7 +19,7 @@
       <!-- Material Design Bootstrap -->
       <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 
-      <link rel="shortcut icon" type="image/x-icon" href="img/Medicina Amable.jpg" />
+      <link rel="shortcut icon" type="image/x-icon" href="img/Medicina Amable.webp" />
     
     <title>sobre CEMAV</title>
   </head>
@@ -48,7 +48,7 @@
             </p>
         </div>
         <div class="col-md-12 col-xl-6 foto">
-            <img src="img/Portada3.jpeg" class="foto" alt="foto" style="width: 450px; height: 350px;">
+            <img src="img/Portada3.webp" class="foto" alt="foto" style="width: 450px; height: 350px;">
         </div>
     </div>
 

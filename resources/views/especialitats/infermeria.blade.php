@@ -37,7 +37,7 @@
        </div>
       <div class="row">
          <div class="col-md-12" style="text-align: center;">
-           <img src="img/iconaDona.jpg" class="foto" alt="foto" style="width: 350px; height: 350px; display: block; margin: auto; margin-bottom: 50px;">
+           <img src="img/iconaDona.webp" class="foto" alt="foto" style="width: 350px; height: 350px; display: block; margin: auto; margin-bottom: 50px;">
            <p style="font-weight: 700; margin-top: 20px;">SILVIA CARNER GRAU</p>
            <p>N.Coleg 33678</p>
          </div>

@@ -19,7 +19,7 @@ body{
 }
 
 #portada{
-    background-image: url(../img/cemavFora.jpeg);
+    background-image: url(../img/cemavFora.webp);
     background-size: cover;
     padding-top: 90px;
     color: #ffffff;
@@ -108,6 +108,7 @@ footer{
 }
 
 @media (min-width: 1200px) {  }
+
 
 
 

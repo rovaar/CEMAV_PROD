@@ -19,7 +19,7 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 
-    <link rel="shortcut icon" type="image/x-icon" href="img/Medicina Amable.jpg" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/Medicina Amable.webp" />
     
     <title>Contacte | Centre de Medicina Amable de Vic</title>
   </head>

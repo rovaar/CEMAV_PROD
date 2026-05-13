@@ -19,75 +19,75 @@
 
     <div class="row">
         <div class="col-12 col-sm-3 col-md-2">
-            <img src="img/Mutues/adeslas.jpg" class="foto" alt="foto" style="width: 200px; height: 150px; margin: 120px 100px 50px 100px">
+            <img src="img/Mutues/adeslas.webp" class="foto" alt="foto" style="width: 200px; height: 150px; margin: 120px 100px 50px 100px">
         </div>
         <div class="col-12 col-sm-3 col-md-2">
-            <img src="img/Mutues/AEGON.jpg" class="foto" alt="foto" style="width: 200px; height: 150px; margin: 120px 100px 50px 100px">
+            <img src="img/Mutues/AEGON.webp" class="foto" alt="foto" style="width: 200px; height: 150px; margin: 120px 100px 50px 100px">
         </div>
         <div class="col-12 col-sm-3 col-md-2">
-            <img src="img/Mutues/agrupacioMutua.jpg" class="foto" alt="foto" style="width: 200px; height: 150px; margin: 120px 100px 50px 100px">
+            <img src="img/Mutues/agrupacioMutua.webp" class="foto" alt="foto" style="width: 200px; height: 150px; margin: 120px 100px 50px 100px">
         </div>
         <div class="col-12 col-sm-3 col-md-2">
-            <img src="img/Mutues/asisa.png" class="foto" alt="foto" style="width: 200px; height: 150px; margin: 120px 100px 50px 100px">
+            <img src="img/Mutues/asisa.webp" class="foto" alt="foto" style="width: 200px; height: 150px; margin: 120px 100px 50px 100px">
         </div>
         <div class="col-12 col-sm-3 col-md-2">
-            <img src="img/Mutues/assistenciaSanitaria.jpg" class="foto" alt="foto" style="width: 200px; height: 150px; margin: 120px 0px 50px 100px">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 col-sm-3 col-md-2">
-            <img src="img/Mutues/axa.png" class="foto" alt="foto" style="width: 180px; height: 130px; margin: 20px 100px 50px 100px">
-        </div>
-        <div class="col-12 col-sm-3 col-md-2">
-            <img src="img/Mutues/cosalud.png" class="foto" alt="foto" style="width: 200px; height: 130px; margin: 20px 100px 50px 100px">
-        </div>
-        <div class="col-12 col-sm-3 col-md-2">
-            <img src="img/Mutues/divinapastora.png" class="foto" alt="foto" style="width: 240px; height: 150px; margin: 20px 100px 50px 100px">
-        </div>
-        <div class="col-12 col-sm-3 col-md-2">
-            <img src="img/Mutues/dkv.jpg" class="foto" alt="foto" style="width: 180px; height: 130px; margin: 20px 100px 50px 100px">
-        </div>
-        <div class="col-12 col-sm-3 col-md-2">
-            <img src="img/Mutues/generali.jpg" class="foto" alt="foto" style="width: 200px; height: 150px; margin: 20px 0px 50px 100px">
+            <img src="img/Mutues/assistenciaSanitaria.webp" class="foto" alt="foto" style="width: 200px; height: 150px; margin: 120px 0px 50px 100px">
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-sm-3 col-md-2">
-            <img src="img/Mutues/hna.jpg" class="foto" alt="foto" style="width: 180px; height: 130px; margin: 20px 100px 50px 100px">
+            <img src="img/Mutues/axa.webp" class="foto" alt="foto" style="width: 180px; height: 130px; margin: 20px 100px 50px 100px">
         </div>
         <div class="col-12 col-sm-3 col-md-2">
-            <img src="img/Mutues/mutuageneralcat.png" class="foto" alt="foto" style="width: 220px; height: 130px; margin: 20px 100px 50px 100px">
+            <img src="img/Mutues/cosalud.webp" class="foto" alt="foto" style="width: 200px; height: 130px; margin: 20px 100px 50px 100px">
         </div>
         <div class="col-12 col-sm-3 col-md-2">
-            <img src="img/Mutues/sanitas.png" class="foto" alt="foto" style="width: 220px; height: 180px; margin: 20px 100px 50px 100px">
+            <img src="img/Mutues/divinapastora.webp" class="foto" alt="foto" style="width: 240px; height: 150px; margin: 20px 100px 50px 100px">
         </div>
         <div class="col-12 col-sm-3 col-md-2">
-            <img src="img/Mutues/fiatcSeguros.jpg" class="foto" alt="foto" style="width: 220px; height: 180px; margin: 20px 100px 50px 100px">
+            <img src="img/Mutues/dkv.webp" class="foto" alt="foto" style="width: 180px; height: 130px; margin: 20px 100px 50px 100px">
         </div>
         <div class="col-12 col-sm-3 col-md-2">
-            <img src="img/Mutues/Mutuacat.jpeg" class="foto" alt="foto" style="width: 150px; height: 130px; margin: 20px 100px 50px 100px">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 col-sm-3 col-md-2">
-            <img src="img/Mutues/plusUltra.jpg" class="foto" alt="foto" style="width: 220px; height: 180px; margin: 20px 100px 50px 100px">
-        </div>
-        <div class="col-12 col-sm-3 col-md-2">
-            <img src="img/Mutues/logosantalucia.jpg" class="foto" alt="foto" style="width: 200px; height: 150px; margin: 20px 100px 50px 100px">
-        </div>
-        <div class="col-12 col-sm-3 col-md-2">
-            <img src="img/Mutues/groupama.png" class="foto" alt="foto" style="width: 200px; height: 150px; margin: 20px 100px 50px 100px">
-        </div>
-        <div class="col-12 col-sm-3 col-md-2">
-            <img src="img/Mutues/mapfre.png" class="foto" alt="foto" style="width: 200px; height: 150px; margin: 20px 100px 50px 100px">
-        </div>
-        <div class="col-12 col-sm-3 col-md-2">
-            <img src="img/Mutues/caser.png" class="foto" alt="foto" style="width: 200px; height: 120px; margin: 20px 100px 50px 100px">
+            <img src="img/Mutues/generali.webp" class="foto" alt="foto" style="width: 200px; height: 150px; margin: 20px 0px 50px 100px">
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-sm-3 col-md-2">
-            <img src="img/Mutues/atlantida.jpg" class="foto" alt="foto" style="width: 200px; height: 120px; margin: 20px 100px 50px 100px">
+            <img src="img/Mutues/hna.webp" class="foto" alt="foto" style="width: 180px; height: 130px; margin: 20px 100px 50px 100px">
+        </div>
+        <div class="col-12 col-sm-3 col-md-2">
+            <img src="img/Mutues/mutuageneralcat.webp" class="foto" alt="foto" style="width: 220px; height: 130px; margin: 20px 100px 50px 100px">
+        </div>
+        <div class="col-12 col-sm-3 col-md-2">
+            <img src="img/Mutues/sanitas.webp" class="foto" alt="foto" style="width: 220px; height: 180px; margin: 20px 100px 50px 100px">
+        </div>
+        <div class="col-12 col-sm-3 col-md-2">
+            <img src="img/Mutues/fiatcSeguros.webp" class="foto" alt="foto" style="width: 220px; height: 180px; margin: 20px 100px 50px 100px">
+        </div>
+        <div class="col-12 col-sm-3 col-md-2">
+            <img src="img/Mutues/Mutuacat.webp" class="foto" alt="foto" style="width: 150px; height: 130px; margin: 20px 100px 50px 100px">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-sm-3 col-md-2">
+            <img src="img/Mutues/plusUltra.webp" class="foto" alt="foto" style="width: 220px; height: 180px; margin: 20px 100px 50px 100px">
+        </div>
+        <div class="col-12 col-sm-3 col-md-2">
+            <img src="img/Mutues/logosantalucia.webp" class="foto" alt="foto" style="width: 200px; height: 150px; margin: 20px 100px 50px 100px">
+        </div>
+        <div class="col-12 col-sm-3 col-md-2">
+            <img src="img/Mutues/groupama.webp" class="foto" alt="foto" style="width: 200px; height: 150px; margin: 20px 100px 50px 100px">
+        </div>
+        <div class="col-12 col-sm-3 col-md-2">
+            <img src="img/Mutues/mapfre.webp" class="foto" alt="foto" style="width: 200px; height: 150px; margin: 20px 100px 50px 100px">
+        </div>
+        <div class="col-12 col-sm-3 col-md-2">
+            <img src="img/Mutues/caser.webp" class="foto" alt="foto" style="width: 200px; height: 120px; margin: 20px 100px 50px 100px">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-sm-3 col-md-2">
+            <img src="img/Mutues/atlantida.webp" class="foto" alt="foto" style="width: 200px; height: 120px; margin: 20px 100px 50px 100px">
         </div>
     </div>
       

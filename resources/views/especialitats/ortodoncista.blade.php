@@ -40,12 +40,12 @@
          <div class="col-12 col-md-12">
           <div class="row">
             <div  class="col-md-6">
-              <img src="img/Fotos Treballadors/nuria.jpg" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
+              <img src="img/Fotos Treballadors/nuria.webp" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
               <p style="text-align: center; font-weight: 700">NÚRIA AZNAR ARASA</p>
               <p style="text-align: center;">N.Coleg 4573</p>
             </div>
             <div class="col-md-6">
-              <img src="img/iconaMen.jpg" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
+              <img src="img/iconaMen.webp" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
               <p style="text-align: center; font-weight: 700">GEORGINA SANFELIU MOLINERO</p>
               <p style="text-align: center;">N.Coleg 5418</p>
             </div>

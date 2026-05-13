@@ -59,35 +59,35 @@
        <div class="row">
            <div class="col-md-4 mb-4 d-flex">
                 <div class="service-box text-center">
-                    <img src="img/RevisionsMèdiques.jpg" alt="Revisions Mèdiques">
+                    <img src="img/RevisionsMèdiques.webp" alt="Revisions Mèdiques">
                     <h3>Revisions mèdiques i laborals</h3>
                     <p>Servei de Medicina de Família (Privada i Mútues). També fem Reconeixements Mèdics d'àmbit laboral.</p>
                 </div>
             </div>
             <div class="col-md-4 mb-4 d-flex">
                 <div class="service-box text-center">
-                    <img src="img/RevisionsMèdiques.jpg" alt="Revisions Carnet de Cotxe">
+                    <img src="img/RevisionsMèdiques.webp" alt="Revisions Carnet de Cotxe">
                     <h3>Revisions Carnet de cotxe</h3>
                     <p>Demanar cita prèvia a: <a href="https://www.emedicalboxvic.com">emedicalboxvic.com</a></p>
                 </div>
             </div>
            <div class="col-md-4 mb-4 d-flex">
                 <div class="service-box text-center">
-                    <img src="img/analitiques.png" alt="Revisions Esportives">
+                    <img src="img/analitiques.webp" alt="Revisions Esportives">
                     <h3>Servei de revisions esportives</h3>
                     <p>Reconeixements esportius per detectar riscos i prevenir patologies relacionades amb l'esport.</p>
                 </div>
             </div>
             <div class="col-md-4 mb-4 d-flex">
                 <div class="service-box text-center">
-                    <img src="img/analitiques.png" alt="Analítiques">
+                    <img src="img/analitiques.webp" alt="Analítiques">
                     <h3>Servei d'analítiques</h3>
                     <p>Servei d'analítiques per a privats i mútues. Truqueu per demanar informació.</p>
                 </div>
             </div>
             <div class="col-md-4 mb-4 d-flex">
                 <div class="service-box text-center">
-                    <img src="img/Fisioteràpia.jpg" alt="Rehabilitació">
+                    <img src="img/Fisioteràpia.webp" alt="Rehabilitació">
                     <h3>Servei de Rehabilitació</h3>         
                 </div>
             </div>
