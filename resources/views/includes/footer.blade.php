@@ -3,12 +3,13 @@
     <div class="footer-top">
       <div class="container">
         <div class="row py-4 d-flex align-items-centers">
-
+          <!--
           <div class="col-md-12 text-center">
             <a href="#"><i class="fab fa-facebook-f text-white mr-4"></i></a>
             <a href="#"><i class="fab fa-linkedin-in text-white mr-4"></i></a>
             <a href="#"><i class="fab fa-instagram text-white mr-4"></i></a>
           </div>
+        -->
         </div>
       </div>
     </div>
@@ -49,7 +50,7 @@
         </div>
 
         <div class="col-md-3 mx-auto mb-4">
-          <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5937.170768706284!2d2.2512900000000005!3d41.923271!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x84f0ed8304ce9538!2sCemav!5e0!3m2!1sca!2ses!4v1618350453333!5m2!1sca!2ses" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5937.170768706284!2d2.2512900000000005!3d41.923271!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x84f0ed8304ce9538!2sCemav!5e0!3m2!1sca!2ses!4v1618350453333!5m2!1sca!2ses" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" title="Mapa de ubicación de CEMAV"></iframe>
         </div>
       </div>
     </div>

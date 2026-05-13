@@ -57,7 +57,7 @@
                     <label style="margin: 0px 0px 20px 60px"><strong>Correu electrònic:</strong> </br><a href="mailto:noucemav@gmail.com">noucemav@gmail.com</a></label>
                 </div>
                 <div class="col-12 col-md-4">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.585218229426!2d2.249101714945508!3d41.92327457056577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a527119a56dd7d%3A0x84f0ed8304ce9538!2sCemav!5e0!3m2!1sca!2ses!4v1617832343957!5m2!1sca!2ses" width="600" height="450" style="border:0;" allowfullscreen=""  id="mapa" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.585218229426!2d2.249101714945508!3d41.92327457056577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a527119a56dd7d%3A0x84f0ed8304ce9538!2sCemav!5e0!3m2!1sca!2ses!4v1617832343957!5m2!1sca!2ses" width="600" height="450" style="border:0;" allowfullscreen=""  id="mapa" loading="lazy" title="Mapa de ubicación de CEMAV"></iframe>
                 </div>
             </div>
         </div>
