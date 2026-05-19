@@ -50,24 +50,6 @@ body{font-family: 'Titillium Web', sans-serif;
     background-color: #f8f9fa;
 }
 
-#portada{
-    position: relative;
-    background:
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url(../img/cemavFora.webp);
-    background-size: cover;
-    background-position: center;
-    padding-top: 90px;
-    color: #ffffff;
-    width: 100%;
-    min-height: 250px;
-    overflow: hidden;
-}
-
-#portada:before {
-    display: none;
-}
-
 .content-center{
     max-width: 800px;
     margin: 0 auto 60px auto;
@@ -170,12 +152,17 @@ footer{
 #hero-oftalmologia{
     min-height: 85vh;
     background:
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
         url(../img/wallpapers/hero3.webp);
     background-size: cover;
     background-position: center;
     color: white;
     padding: 120px 0;
+}
+
+.container p,
+.container h1{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .hero-slug{
@@ -205,8 +192,9 @@ footer{
 .hero-btn{
     display: inline-block;
     margin-top: 40px;
-    background: #111;
-    color: white;
+    background: #fff;
+    color: #3090C7;
+    border: 2px solid #3090C7;
     padding: 18px 45px;
     border-radius: 50px;
     font-size: 20px;
@@ -216,8 +204,8 @@ footer{
 }
 
 .hero-btn:hover{
-    background: #074169; /* 3090C7 074169 */
-    color: white;
+    background: #3090C7;
+    color: #fff;
 }
 
 /* SECCIONS */

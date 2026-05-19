@@ -59,9 +59,9 @@
         <div class="row">
             <div class="col-md-12 text-center" id="portada">
                 <h2 style="margin-top:50px;">Acompanyant-te en el teu benestar i procés de rehabilitació</h2>
-                <h1>CENTRE DE MEDICINA AMABLE DE VIC</h1>
+                <h1 class="hero-title">CENTRE DE <span>MEDICINA AMABLE</span> DE <span>VIC</span></h1>
                 <h2>Persones tractant persones</h2>
-                <a href="{{URL::to('/contacte')}}" class="btn btn-light" style="margin-top:60px;">Contacte</a>
+                <a href="{{URL::to('/contacte')}}" class="hero-btn" style="margin-top:60px;">Contacte</a>
             </div>
         </div>
         <div class="row" id="novetat">

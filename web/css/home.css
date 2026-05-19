@@ -3,9 +3,9 @@ body{
  }
 
 .navbar{
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, .05);
-    min-height: 100px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, .05);
+  min-height: 100px;
 }
 
 .logo{
@@ -14,7 +14,9 @@ body{
 }
 
 #portada{
-    background-image: url(../img/wallpapers/hero1.webp);
+    background:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url(../img/wallpapers/hero1.webp);
     background-size: cover;
     color: #ffffff;
     height: 550px;
@@ -22,6 +24,17 @@ body{
     position: relative;
 }
 
+.hero-title span{
+    color: #3090C7;
+}
+
+.hero-title{
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
 
 #portada:before {
     content:'';
@@ -31,7 +44,6 @@ body{
     left: 0;
     right: 0;
     height: 550px;
-    background-color: rgba(0,0,0,0.2);
 }
 
 .btn{
@@ -44,9 +56,28 @@ body{
 }
 
 .btn-light{
-    background-color: #ffffff;
-    color: #1a1a1a;
-    border: 2px solid #ffffff;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border: 2px solid #ffffff;
+}
+
+.hero-btn{
+    display: inline-block;
+    margin-top: 40px;
+    background: #fff;
+    color: #3090C7;
+    border: 2px solid #3090C7;
+    padding: 18px 45px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero-btn:hover{
+    background: #3090C7;
+    color: #fff;
 }
 
 .linea {
@@ -65,7 +96,7 @@ body{
 }
 
 #portada h2 {
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 	color: #fff;
 	position: relative
 }
