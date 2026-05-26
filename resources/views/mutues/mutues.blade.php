@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ca">
   <head>
     @include('includes.head')
     <title>Mutues | Centre de Medicina Amable de Vic</title>

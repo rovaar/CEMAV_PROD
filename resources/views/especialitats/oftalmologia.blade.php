@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ca">
   <head>
     @include('includes.head')
     <title>Oftalmologia a Vic | Clínica Oftalmològica CEMAV</title>

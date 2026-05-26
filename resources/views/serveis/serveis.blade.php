@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     @include('includes.head')
     <title>Serveis complementaris | Centre de Medicina Amable de Vic</title>

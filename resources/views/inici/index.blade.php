@@ -1,9 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="ca">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ url()->current() }}" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -70,6 +73,59 @@
              <p style="color: black; font-size:30px;">Ara també fem revisions de permis de conduir, cita prèvia a <a href="https://www.emedicalboxvic.com/" style="color: white;">  emedicalboxvic.com</a></p>
           </div>
         </div>
+
+        <!-- PER QUÈ -->
+        <section id="perque">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2>Per què escollir <span>CEMAV</span>?</h2>
+                    <p>Un centre mèdic orientat a les persones i la seva salut.</p>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-4">
+                        <div class="info-card">
+                            <ion-icon name="heart-outline"></ion-icon>
+                            <h3>Atenció humana</h3>
+                            <p>Tracte proper i personalitzat.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="info-card">
+                            <ion-icon name="medkit-outline"></ion-icon>
+                            <h3>Especialistes</h3>
+                            <p>Equip mèdic multidisciplinari.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="info-card">
+                            <ion-icon name="location-outline"></ion-icon>
+                            <h3>A Vic</h3>
+                            <p>Centre mèdic de referència local.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+          <!-- SEO TEXT -->
+        <section id="seo-text">
+
+            <div class="container">
+
+                <h2>Centre mèdic a Vic</h2>
+
+                <p>
+                    A CEMAV oferim un servei mèdic integral amb especialistes en diferents àrees de la salut.
+                </p>
+
+                <p>
+                    El nostre objectiu és millorar la qualitat de vida dels pacients amb un tracte humà i proper.
+                </p>
+
+            </div>
+
+        </section>
+
         <div class="row" id="especialitats_titol">
           <div class="col-md-12" style="text-align:center;">
              <h1 style="margin-top">Especialitats</h1>

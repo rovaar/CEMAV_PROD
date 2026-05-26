@@ -1,2 +1,13 @@
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /admin
+Disallow: /tmp
+Disallow: /vendor
+Disallow: /bootstrap
+Disallow: /config
+Disallow: /database
+Disallow: /routes
+Disallow: /storage
+Disallow: /tests
+
+Sitemap: https://www.cemavvic.com/sitemap.xml
