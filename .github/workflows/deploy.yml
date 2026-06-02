@@ -51,6 +51,7 @@ jobs:
           server-dir: ./public_html/
           state-name: .ftp-state-web.json
           log-level: standard
+          dry-run: true         # PRUEBA SEGURA — quitar esta línea para deploy real
           exclude: |
             **/.git*
             **/.git*/**
@@ -72,6 +73,7 @@ jobs:
           server-dir: ./
           state-name: .ftp-state-core.json
           log-level: standard
+          dry-run: true         # PRUEBA SEGURA — quitar esta línea para deploy real
           exclude: |
             **/.git*
             **/.git*/**
