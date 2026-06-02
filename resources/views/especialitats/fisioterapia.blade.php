@@ -1,18 +1,37 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ca">
   <head>
-    @include('includes.head')
-    <title>CEMAV</title>
+    @include('includes.head', [
+        'title'       => 'Fisioteràpia a Vic | Centre de Rehabilitació CEMAV',
+        'description' => 'Servei de fisioteràpia i rehabilitació a Vic. Tractament de lesions musculars i articulars amb fisioterapeutes especialitzats. Demana cita a CEMAV.',
+    ])
+    <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Fisioteràpia i Rehabilitació - CEMAV Vic",
+      "description": "Servei de fisioteràpia i rehabilitació a Vic. Tractament de lesions musculars i articulars amb fisioterapeutes especialitzats.",
+      "url": "https://www.cemavvic.cat/fisioterapia",
+      "medicalSpecialty": "https://schema.org/Physiotherapy",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Carrer Bisbe Strauch, 16",
+        "addressLocality": "Vic",
+        "addressRegion": "Catalunya",
+        "postalCode": "08500",
+        "addressCountry": "ES"
+      },
+      "telephone": "+34938894602",
+      "openingHours": ["Mo-Fr 08:00-14:00", "Mo-Fr 15:00-20:00"],
+      "parentOrganization": {
+        "@type": "MedicalClinic",
+        "name": "CEMAV - Centre de Medicina Amable de Vic",
+        "url": "https://www.cemavvic.cat"
+      }
+    }
+    </script>
   </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L3V62LP2WB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-L3V62LP2WB');
-</script>
   <body>
   
   @include('includes.nav')

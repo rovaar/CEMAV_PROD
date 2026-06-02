@@ -1,13 +1,35 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ca">
   <head>
-    @include('includes.head')
-    <title>Oftalmologia a Vic | Clínica Oftalmològica CEMAV</title>
-    <meta name="description" content="Servei d’oftalmologia a Vic. Especialistes en cataractes, glaucoma i salut visual. Visites privades i mútues a CEMAV.">
-    <!-- Open Graph -->
-    <meta property="og:title" content="Oftalmologia a Vic - CEMAV">
-    <meta property="og:description" content="Centre mèdic especialitzat en oftalmologia a Vic.">
-    <meta property="og:type" content="website">
+    @include(‘includes.head’, [
+        ‘title’       => ‘Oftalmologia a Vic | Clínica Oftalmològica CEMAV’,
+        ‘description’ => "Servei d’oftalmologia a Vic. Especialistes en cataractes, glaucoma i salut visual. Visites privades i mútues a CEMAV.",
+    ])
+    <link rel="stylesheet" href="{{asset(‘css/especialitats.css’)}}">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Oftalmologia - CEMAV Vic",
+      "description": "Servei d'oftalmologia a Vic. Especialistes en cataractes, glaucoma i salut visual. Visites privades i mútues a CEMAV.",
+      "url": "https://www.cemavvic.cat/oftalmologia",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Carrer Bisbe Strauch, 16",
+        "addressLocality": "Vic",
+        "addressRegion": "Catalunya",
+        "postalCode": "08500",
+        "addressCountry": "ES"
+      },
+      "telephone": "+34938894602",
+      "openingHours": ["Mo-Fr 08:00-14:00", "Mo-Fr 15:00-20:00"],
+      "parentOrganization": {
+        "@type": "MedicalClinic",
+        "name": "CEMAV - Centre de Medicina Amable de Vic",
+        "url": "https://www.cemavvic.cat"
+      }
+    }
+    </script>
   </head>
   <body>
   
@@ -149,6 +171,7 @@
 
                     <img src="img/iconaMen.webp"
                          alt="Dr. Manel J. Amen Letran Oftalmòleg a Vic"
+                         loading="lazy"
                          class="doctor-img">
 
                     <h3>Dr. Manel J. Amen Letran</h3>
