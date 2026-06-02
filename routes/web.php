@@ -22,7 +22,11 @@ Route::get('/', function () {
     return view('inici/index');
 });
 
-/* Rutes especialitats*/ 
+/* Rutes especialitats*/
+Route::get('/especialitats', function () {
+    return view('especialitats/index');
+});
+ 
 Route::get('/odontologia', function () {
     return view('especialitats/odontologia');
 });
@@ -101,11 +105,7 @@ Route::get('/revisions', function () {
     return view('serveis/revisions');
 });
 
-Route::get('/serveis', function () {
-    return view('serveis/serveis');
-});
-
-/* Rutes Mutues*/ 
+/* Rutes Mutues*/
 
 Route::get('/mutues', function () {
     return view('mutues/mutues');
