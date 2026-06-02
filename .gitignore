@@ -5,8 +5,22 @@
 /vendor
 .env
 .env.backup
+.env.local
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+
+# Archivos borrador / copias locales
+*copy*
+* copy*
+
+# Estado del deploy FTP (generado por GitHub Actions en el servidor)
+.ftp-state-*.json
+
+# Cache Laravel (generado en servidor)
+/bootstrap/cache/*.php
+
+# Logs
+/storage/logs/*.log

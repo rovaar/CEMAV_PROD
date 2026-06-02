@@ -10,4 +10,4 @@ Disallow: /routes
 Disallow: /storage
 Disallow: /tests
 
-Sitemap: https://www.cemavvic.com/sitemap.xml
+Sitemap: https://www.cemavvic.cat/sitemap.xml
