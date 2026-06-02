@@ -5,6 +5,8 @@
         'title'       => 'CEMAV | Centre de medicina amable de Vic',
         'description' => "Centre de Medicina Amable de Vic. Especialistes en fisioteràpia, rehabilitació i serveis mèdics per al teu benestar. Demana cita prèvia!",
     ])
+    <!-- Preload hero image per millorar LCP -->
+    <link rel="preload" as="image" href="/img/wallpapers/hero1.webp" fetchpriority="high">
     <link rel="stylesheet" href="{{asset('css/home.css')}}">
     <script type="application/ld+json">
       {
@@ -101,79 +103,77 @@
              <p>Els nostres especialistes ofereixen tots els seus coneixements i les seves habilitats per acompanyar-vos en el vostre procés de sanació i rehabilitació per millorar la teva qualitat de vida.</p>
           </div>
         </div>
-        <div class="row" id="especialitats">
+        <div class="row especialitats-row">
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/Odontologia.webp" onclick="javascript:window.location='{{URL::to('/odontologia')}}';" alt="Odontologia a CEMAV Vic" loading="lazy" class="img-dep">
+                <img src="img/Odontologia.webp" onclick="javascript:window.location='{{URL::to('/odontologia')}}';" alt="Odontologia a CEMAV Vic" loading="lazy" class="img-dep" width="120" height="120">
                 <a href="{{URL::to('/odontologia')}}" class="title-dep">
                     </br><span class="title-dep">Odontologia</span>
-                </a> 
+                </a>
             </div>
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/Fisioteràpia.webp" onclick="javascript:window.location='{{URL::to('/fisioteràpia')}}';" alt="Fisioteràpia a CEMAV Vic" loading="lazy" class="img-dep">
+                <img src="img/Fisioteràpia.webp" onclick="javascript:window.location='{{URL::to('/fisioteràpia')}}';" alt="Fisioteràpia a CEMAV Vic" loading="lazy" class="img-dep" width="120" height="120">
                 <a href="{{URL::to('/fisioteràpia')}}" class="title-dep">
                     </br><span class="title-dep">Fisioteràpia</span>
                 </a>
             </div>
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/Urologia.webp" onclick="javascript:window.location='{{URL::to('/urologia')}}';" alt="Urologia a CEMAV Vic" loading="lazy" class="img-dep">
+                <img src="img/Urologia.webp" onclick="javascript:window.location='{{URL::to('/urologia')}}';" alt="Urologia a CEMAV Vic" loading="lazy" class="img-dep" width="120" height="120">
                 <a href="{{URL::to('/urologia')}}" class="title-dep">
                     </br><span class="title-dep">Urologia</span>
                 </a>
             </div>
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/Optometria.webp" onclick="javascript:window.location='{{URL::to('/optometria')}}';" alt="Optometria a CEMAV Vic" loading="lazy" class="img-dep">
+                <img src="img/Optometria.webp" onclick="javascript:window.location='{{URL::to('/optometria')}}';" alt="Optometria a CEMAV Vic" loading="lazy" class="img-dep" width="120" height="120">
                 <a href="{{URL::to('/optometria')}}" class="title-dep">
                     </br><span class="title-dep">Optometria</span>
                 </a>
             </div>
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/Psicologia.webp" onclick="javascript:window.location='{{URL::to('/psicologia')}}';" alt="Psicologia a CEMAV Vic" loading="lazy" class="img-dep">
+                <img src="img/Psicologia.webp" onclick="javascript:window.location='{{URL::to('/psicologia')}}';" alt="Psicologia a CEMAV Vic" loading="lazy" class="img-dep" width="120" height="120">
                 <a href="{{URL::to('/psicologia')}}" class="title-dep">
                     </br><span class="title-dep">Psicologia</span>
                 </a>
             </div>
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/Medicina Amable.webp" onclick="javascript:window.location='{{URL::to('/infermeria')}}';" alt="Infermeria a CEMAV Vic" loading="lazy" class="img-dep">
+                <img src="img/Medicina Amable.webp" onclick="javascript:window.location='{{URL::to('/infermeria')}}';" alt="Infermeria a CEMAV Vic" loading="lazy" class="img-dep" width="120" height="120">
                 <a href="{{URL::to('/infermeria')}}" class="title-dep">
                     </br><span class="title-dep">Infermeria</span>
                 </a>
             </div>
         </div>
-        <div class="row" id="especialitats">
+        <div class="row especialitats-row">
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/PersonesTractantPersones.webp" onclick="javascript:window.location='{{URL::to('/oftalmologia')}}';" alt="Oftalmologia a CEMAV Vic" loading="lazy" class="img-dep">
+                <img src="img/PersonesTractantPersones.webp" onclick="javascript:window.location='{{URL::to('/oftalmologia')}}';" alt="Oftalmologia a CEMAV Vic" loading="lazy" class="img-dep" width="120" height="120">
                 <a href="{{URL::to('/oftalmologia')}}" class="title-dep">
                     </br><span class="title-dep">Oftalmologia</span>
                 </a>
             </div>
-
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/traumatologia.webp" onclick="javascript:window.location='{{URL::to('/traumatologia')}}';" alt="Traumatologia i ortopèdia a CEMAV Vic" loading="lazy" class="img-dep">
+                <img src="img/traumatologia.webp" onclick="javascript:window.location='{{URL::to('/traumatologia')}}';" alt="Traumatologia i ortopèdia a CEMAV Vic" loading="lazy" class="img-dep" width="120" height="120">
                 <a href="{{URL::to('/traumatologia')}}" class="title-dep">
                     </br><span class="title-dep">Traumatologia</span>
                 </a>
             </div>
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/RevisionsMèdiques.webp" onclick="javascript:window.location='{{URL::to('/serveis')}}';" alt="Revisions mèdiques a CEMAV Vic" loading="lazy" class="img-dep">
+                <img src="img/RevisionsMèdiques.webp" onclick="javascript:window.location='{{URL::to('/serveis')}}';" alt="Revisions mèdiques a CEMAV Vic" loading="lazy" class="img-dep" width="120" height="120">
                 <a href="{{URL::to('/serveis')}}" class="title-dep">
                     </br><span class="title-dep">Revisions</span>
                 </a>
             </div>
-          
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/Podologia.webp" onclick="javascript:window.location='{{URL::to('/podologia')}}';" alt="Podologia a CEMAV Vic" loading="lazy" class="img-dep">
+                <img src="img/Podologia.webp" onclick="javascript:window.location='{{URL::to('/podologia')}}';" alt="Podologia a CEMAV Vic" loading="lazy" class="img-dep" width="120" height="120">
                 <a href="{{URL::to('/podologia')}}" class="title-dep">
                     </br><span class="title-dep">Podologia</span>
                 </a>
             </div>
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/Nutrició.webp" onclick="javascript:window.location='{{URL::to('/nutricio')}}';" alt="Dietètica i Nutrició a CEMAV Vic" loading="lazy" class="img-dep">
+                <img src="img/Nutrició.webp" onclick="javascript:window.location='{{URL::to('/nutricio')}}';" alt="Dietètica i Nutrició a CEMAV Vic" loading="lazy" class="img-dep" width="120" height="120">
                 <a href="{{URL::to('/nutricio')}}" class="title-dep">
                     </br><span class="title-dep">Dietètica i nutrició</span>
                 </a>
             </div>
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/Odontologia.webp" onclick="javascript:window.location='{{URL::to('/ortodoncista')}}';" alt="Ortodoncista a CEMAV Vic" loading="lazy" class="img-dep">
+                <img src="img/Odontologia.webp" onclick="javascript:window.location='{{URL::to('/ortodoncista')}}';" alt="Ortodoncista a CEMAV Vic" loading="lazy" class="img-dep" width="120" height="120">
                 <a href="{{URL::to('/ortodoncista')}}" class="title-dep">
                     </br><span class="title-dep">Ortodoncista</span>
                 </a>

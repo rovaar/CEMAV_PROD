@@ -287,3 +287,60 @@ footer{
     max-width: 800px;
     margin: 15px auto;
 }
+
+/* ================= RESPONSIVE MÒBIL ================= */
+
+@media (max-width: 768px) {
+    #portada {
+        height: auto;
+        min-height: 420px;
+        padding: 40px 20px 60px;
+        margin-top: 80px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    #portada h2 {
+        font-size: 16px;
+    }
+
+    .hero-btn {
+        font-size: 16px;
+        padding: 14px 30px;
+        margin-top: 30px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .section-title p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .linea {
+        width: 90%;
+    }
+
+    #seo-text h2 {
+        font-size: 28px;
+    }
+
+    #novetat p {
+        font-size: 18px;
+    }
+
+    .wrapper {
+        left: 10px;
+        right: 10px;
+        max-width: calc(100% - 20px);
+        bottom: 15px;
+    }
+}
