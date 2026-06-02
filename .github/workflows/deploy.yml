@@ -1,0 +1,93 @@
+name: Deploy to cdmon
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      # ─── 1. Checkout ────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ─── 2. PHP ─────────────────────────────────────────────────────────────
+      - name: Setup PHP 8.0
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.0'
+          extensions: mbstring, openssl, pdo, tokenizer, xml, ctype, json, bcmath
+
+      # ─── 3. Composer (con caché para acelerar deploys sucesivos) ────────────
+      - name: Get Composer cache directory
+        id: composer-cache-dir
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache Composer packages
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.composer-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
+
+      - name: Install Composer dependencies (production)
+        run: composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
+
+      # ─── 4. Deploy public assets (web/) → public_html/ ─────────────────────
+      #       Esta carpeta es la raíz web del dominio en cdmon
+      - name: Deploy public assets → public_html/
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps        # FTP con TLS (seguro, puerto 21) — si falla, cambia a "ftp"
+          port: 21
+          local-dir: ./web/
+          server-dir: ./public_html/
+          state-name: .ftp-state-web.json
+          log-level: standard
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/* copy.*
+            **/*copy*
+
+      # ─── 5. Deploy Laravel core → directorio home del FTP ──────────────────
+      #       Sube app/, config/, routes/, resources/, vendor/, etc.
+      #       NUNCA sube web/ (ya subida arriba), .env ni logs
+      - name: Deploy Laravel core → home/
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          local-dir: ./
+          server-dir: ./
+          state-name: .ftp-state-core.json
+          log-level: standard
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            .env
+            .env.*
+            **/web/**
+            **/tests/**
+            **/storage/logs/**
+            **/.github/**
+            **/Homestead.*
+            **/*.md
+            **/npm-debug.log
+            **/yarn-error.log
+            **/.phpunit.result.cache
+            **/* copy.*
+            **/*copy*
+            **/*.sql
+            **/*.zip
