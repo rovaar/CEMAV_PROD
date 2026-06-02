@@ -26,8 +26,8 @@
                     <a class="dropdown-item" href="{{URL::to('/oftalmologia')}}" id="oftalmologia">Oftalmologia</a>         
                     <a class="dropdown-item" href="{{URL::to('/optometria')}}" id="optometria">Optometria</a>
                     <a class="dropdown-item" href="{{URL::to('/podologia')}}" id="podologia">Podologia</a>        
-                    <a class="dropdown-item" href="{{URL::to('/psicologia ')}}" id="psicologia ">Psicologia </a>            
-                    <a class="dropdown-item" href="{{URL::to('/traumatologia ')}}" id="traumatologia">Traumatologia i ortòpèdia</a>
+                    <a class="dropdown-item" href="{{URL::to('/psicologia')}}" id="psicologia">Psicologia</a>
+                    <a class="dropdown-item" href="{{URL::to('/traumatologia')}}" id="traumatologia">Traumatologia i ortòpèdia</a>
                     <a class="dropdown-item" href="{{URL::to('/urologia')}}" id="urologia">Urologia</a>
                     
                 </div>

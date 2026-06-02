@@ -14,7 +14,7 @@
       </div>
     </div>
       
-    </div class="container text-center text-md-left mt-5">
+    <div class="container text-center text-md-left mt-5">
       <div class="row footer-bot">
 
      <div class="col-md-2 mx-auto mb-4">
@@ -23,7 +23,7 @@
              <ul class="list-unstyled">
               <li class="my-2"><a href="{{URL::to('/sobreCemav')}}">Sobre CEMAV</a></li>
               <li class="my-2"><a href="{{URL::to('/contacte')}}">Contacte</a></li>
-              <li class="my-2"><a href="">Serveis</a></li>
+              <li class="my-2"><a href="{{URL::to('/serveis')}}">Serveis</a></li>
               <li class="my-2"><a href="{{URL::to('/mutues')}}">Mutues</a></li>
             </ul>
         </div>
