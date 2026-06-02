@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ca">
 <head>
-    @include('includes.head')
-    <title>Serveis complementaris | Centre de Medicina Amable de Vic</title>
+    @include('includes.head', [
+        'title'       => 'Serveis complementaris | Centre de Medicina Amable de Vic',
+        'description' => 'Descobreix els serveis complementaris de CEMAV a Vic: analítiques, depilació làser, revisions mèdiques i molt més. Demana cita al 93 889 46 02.',
+    ])
     <style>
         h3 {
             color: #2c3e50;
@@ -34,6 +36,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
 </head>
 <body>
     @include('includes.nav')

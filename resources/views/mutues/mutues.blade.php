@@ -1,18 +1,12 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ca">
   <head>
-    @include('includes.head')
-    <title>Mutues | Centre de Medicina Amable de Vic</title>
+    @include('includes.head', [
+        'title'       => 'Mutues | Centre de Medicina Amable de Vic',
+        'description' => 'CEMAV treballa amb les principals mútues i assegurances mèdiques. Consulta quines cobertes a Vic: Adeslas, AEGON, Agrupació Mútua i moltes més.',
+    ])
+    <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
   </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L3V62LP2WB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-L3V62LP2WB');
-</script>
   <body>
     
   @include('includes.nav')
