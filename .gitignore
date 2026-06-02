@@ -24,3 +24,6 @@ yarn-error.log
 
 # Logs
 /storage/logs/*.log
+
+# Bundle compilat per webpack/Mix (generat automàticament)
+/web/js/app.js
