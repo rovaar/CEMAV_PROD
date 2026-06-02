@@ -25,5 +25,10 @@ yarn-error.log
 # Logs
 /storage/logs/*.log
 
-# Bundle compilat per webpack/Mix (generat automàticament)
+# Fitxers generats per Laravel Mix (no cal versionar)
 /web/js/app.js
+/web/css/app.css
+/web/mix-manifest.json
+
+# Fitxer intern del servidor FTP
+/web/.ftpquota
