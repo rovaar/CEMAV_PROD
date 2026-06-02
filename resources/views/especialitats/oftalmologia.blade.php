@@ -1,11 +1,11 @@
 ﻿<!doctype html>
 <html lang="ca">
   <head>
-    @include(‘includes.head’, [
-        ‘title’       => ‘Oftalmologia a Vic | Clínica Oftalmològica CEMAV’,
-        ‘description’ => "Servei d’oftalmologia a Vic. Especialistes en cataractes, glaucoma i salut visual. Visites privades i mútues a CEMAV.",
+    @include('includes.head', [
+        'title'       => 'Oftalmologia a Vic | Clínica Oftalmològica CEMAV',
+        'description' => "Servei d'oftalmologia a Vic. Especialistes en cataractes, glaucoma i salut visual. Visites privades i mútues a CEMAV.",
     ])
-    <link rel="stylesheet" href="{{asset(‘css/especialitats.css’)}}">
+    <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -73,7 +73,7 @@
         <div class="section-title text-center">
 
             <h2>
-                Serveis d’<span>oftalmologia</span> i salut visual
+                Serveis d'<span>oftalmologia</span> i salut visual
             </h2>
 
             <p>
@@ -81,7 +81,7 @@
             </p>
 
             <p class="text-small">
-                Servei d’oftalmologia per mútues assistencials i visites privades. Diagnòstic, tractament i prevenció de les patologies relacionades amb els ulls i la visió.
+                Servei d'oftalmologia per mútues assistencials i visites privades. Diagnòstic, tractament i prevenció de les patologies relacionades amb els ulls i la visió.
             </p>
 
         </div>
@@ -154,7 +154,7 @@
         <div class="section-title text-center">
 
             <h2>
-                Equip d’<span>oftalmologia</span>
+                Equip d'<span>oftalmologia</span>
             </h2>
 
             <p>
