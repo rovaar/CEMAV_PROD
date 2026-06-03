@@ -48,10 +48,9 @@ jobs:
           protocol: ftp
           port: 21
           local-dir: ./web/
-          server-dir: ./public_html/
+          server-dir: ./web/
           state-name: .ftp-state-web.json
           log-level: standard
-          dry-run: true         # PRUEBA SEGURA — quitar esta línea para deploy real
           exclude: |
             **/.git*
             **/.git*/**
@@ -73,7 +72,6 @@ jobs:
           server-dir: ./
           state-name: .ftp-state-core.json
           log-level: standard
-          dry-run: true         # PRUEBA SEGURA — quitar esta línea para deploy real
           exclude: |
             **/.git*
             **/.git*/**
