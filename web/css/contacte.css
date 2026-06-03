@@ -19,7 +19,7 @@ body{
 }
 
 #portada{
-    background-image: url(../img/Portada2.webp);
+    background-image: url(../img/Portada2.jpeg);
     background-size: cover;
     color: #ffffff;
     height: 640px;
@@ -75,7 +75,7 @@ footer{
         top: 15% !important;
    }
    #portada{
-    background-image: url(../img/Portada2.webp);
+    background-image: url(../img/Portada2.jpeg);
     background-size: cover;
     color: #ffffff;
     height: 850px !important;
@@ -105,7 +105,7 @@ footer{
         top: 15% !important;
    }
    #portada{
-    background-image: url(../img/Portada2.webp);
+    background-image: url(../img/Portada2.jpeg);
     background-size: cover;
     color: #ffffff;
     height: 850px !important;
@@ -134,7 +134,7 @@ footer{
         top: 100% !important;
    }
    #portada{
-    background-image: url(../img/Portada2.webp);
+    background-image: url(../img/Portada2.jpeg);
     background-size: cover;
     color: #ffffff;
     height: 920px !important;
@@ -164,7 +164,7 @@ footer{
         bottom: -100% !important;
    }
    #portada{
-    background-image: url(../img/Portada2.webp);
+    background-image: url(../img/Portada2.jpeg);
     background-size: cover;
     color: #ffffff;
     height: 850px !important;
