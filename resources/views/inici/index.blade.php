@@ -78,24 +78,20 @@
             </div>
         </section>
 
-          <!-- SEO TEXT -->
+        <!-- SEO TEXT -->
         <section id="seo-text">
-
             <div class="container">
-
                 <h2>Centre mèdic a Vic</h2>
-
                 <p>
                     A CEMAV oferim un servei mèdic integral amb especialistes en diferents àrees de la salut.
                 </p>
-
                 <p>
                     El nostre objectiu és millorar la qualitat de vida dels pacients amb un tracte humà i proper.
                 </p>
-
             </div>
-
         </section>
+
+        <!-- ===== ESPECIALITATS ===== -->
 
         <div class="row" id="especialitats_titol">
           <div class="col-md-12">
@@ -180,21 +176,48 @@
             </div>
         </div>
 
-   
-            
-   
-        <div class="wrapper">
-           <img src="img/cookie.webp" alt="">
-           <div class="content">
-              <header>Consentiment de Cookies</header>
-              <p>Aquest lloc web utilitza cookies per assegurar-vos que obteniu la millor experiència al nostre web.</p>
-              <div class="buttons">
-                  <button class="item">Acceptar</button>
-                  <a href="{{URL::to('/politicadecookies')}}" class="item">Més informació</a>
-              </div>
-           </div>
-       </div>
+        @include('includes.cookies')
   </div>
+
+  <!-- ===== MÚTUES ===== -->
+  <section class="mutues" id="mutues">
+    <div class="wrap">
+      <div class="band">
+        <div>
+          <span class="eyebrow">Mútues</span>
+          <h3>Treballem amb les principals mútues</h3>
+          <p>Consulta'ns la teva i t'informem de la cobertura disponible al centre.</p>
+        </div>
+        <div class="logos">
+          <span class="m">Adeslas</span>
+          <span class="m">Sanitas</span>
+          <span class="m">DKV</span>
+          <span class="m">Asisa</span>
+          <span class="m">Mutua General</span>
+          <a href="{{URL::to('/mutues')}}" class="m">+ altres</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-band" id="contacte">
+    <svg class="cw" style="top:-20px;left:5%;width:120px" viewBox="0 0 48 48">
+      <path d="M18 6h12v12h12v12H30v12H18V30H6V18h12z" fill="currentColor"/>
+    </svg>
+    <svg class="cw" style="bottom:-30px;right:6%;width:160px" viewBox="0 0 48 48">
+      <path d="M18 6h12v12h12v12H30v12H18V30H6V18h12z" fill="currentColor"/>
+    </svg>
+    <div class="wrap">
+      <h2>Persones tractant persones</h2>
+      <p>Demana cita avui mateix i et truquem per trobar l'hora que millor t'encaixi.</p>
+      <div class="cta-actions">
+        <a href="mailto:noucemav@gmail.com" class="cta-btn" style="background:#fff;color:var(--blue-deep)">Escriu-nos</a>
+        <a href="tel:+34938894602" class="cta-btn cta-btn-ghost">Truca'ns · 93 889 46 02</a>
+      </div>
+    </div>
+  </section>
+
   @include('includes.footer')
 
 
@@ -203,22 +226,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script>
-    const cookieBox = document.querySelector(".wrapper"),
-    acceptBtn = cookieBox.querySelector("button");
-    acceptBtn.onclick = ()=>{
-      //setting cookie for 1 month, after one month it'll be expired automatically
-      document.cookie = "CookieBy= 2T; max-age="+60*60*24*30;
-      if(document.cookie){ //if cookie is set
-        cookieBox.classList.add("hide"); //hide cookie box
-      }else{ //if cookie not set then alert an error
-        alert("Cookie can't be set! Please unblock this site from the cookie setting of your browser.");
-      }
-    }
-    let checkCookie = document.cookie.indexOf("CookieBy=2T"); //checking our cookie
-    //if cookie is set then hide the cookie box else show it
-    checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
-  </script>
   </body>
 </html>		
 															
