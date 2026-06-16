@@ -1,67 +1,63 @@
-<footer class="page-footer bg-dark" style="height: 100%">
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
 
-    <div class="footer-top">
-      <div class="container">
-        <div class="row py-4 d-flex align-items-centers">
-          <!--
-          <div class="col-md-12 text-center">
-            <a href="#"><i class="fab fa-facebook-f text-white mr-4"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in text-white mr-4"></i></a>
-            <a href="#"><i class="fab fa-instagram text-white mr-4"></i></a>
-          </div>
-        -->
+      <div class="foot-brand">
+        <span class="name">CEMAV</span>
+        <p>Centre de Medicina Amable de Vic. Persones tractant persones.</p>
+      </div>
+
+      <div>
+        <h4>Links útils</h4>
+        <ul>
+          <li><a href="{{URL::to('/sobreCemav')}}">Sobre CEMAV</a></li>
+          <li><a href="{{URL::to('/serveis')}}">Serveis</a></li>
+          <li><a href="{{URL::to('/mutues')}}">Mútues</a></li>
+          <li><a href="{{URL::to('/contacte')}}">Contacte</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Horari</h4>
+        <ul>
+          <li>Dilluns a divendres</li>
+          <li style="color:#fff;font-weight:700">8.00 h – 14.00 h</li>
+          <li style="color:#fff;font-weight:700">15.00 h – 20.00 h</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contacte</h4>
+        <div class="contact-line">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <rect x="3" y="5" width="18" height="14" rx="2"/>
+            <path d="m3 7 9 6 9-6"/>
+          </svg>
+          <a href="mailto:noucemav@gmail.com">noucemav@gmail.com</a>
+        </div>
+        <div class="contact-line">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>
+          </svg>
+          <a href="tel:+34938894602">93 889 46 02</a>
+        </div>
+        <div class="map-card">
+          <b>Com arribar</b>
+          <span style="font-size:.9rem;display:block">Carrer Bisbe Strauch, 16 · Vic</span>
+          <a class="maps" href="https://www.google.com/maps/search/CEMAV+Centre+Medicina+Amable+Vic" target="_blank" rel="noopener">
+            Obre a Maps
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+              <path d="M15 3h6v6M10 14 21 3M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/>
+            </svg>
+          </a>
         </div>
       </div>
+
     </div>
-      
-    <div class="container text-center text-md-left mt-5">
-      <div class="row footer-bot">
-
-     <div class="col-md-2 mx-auto mb-4">
-          <h6 class="text-uppercase font weight-bold">Links Utils</h6>
-          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 85px;heigth: 2px ;background-color: #3090C7!important;">
-             <ul class="list-unstyled">
-              <li class="my-2"><a href="{{URL::to('/sobreCemav')}}">Sobre CEMAV</a></li>
-              <li class="my-2"><a href="{{URL::to('/contacte')}}">Contacte</a></li>
-              <li class="my-2"><a href="{{URL::to('/serveis')}}">Serveis</a></li>
-              <li class="my-2"><a href="{{URL::to('/mutues')}}">Mutues</a></li>
-            </ul>
-        </div>
-        
-        <div class="col-md-2 mx-auto mb-4">
-          <h6 class="text-uppercase font weight-bold">Horari</h6>
-          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 85px;heigth: 2px ;background-color: #3090C7!important;">
-          
-          <ul class="list-unstyled">
-            <li class="my-2">De dilluns a divendres:</li>
-            <li class="my-2">8.00h. – 14.00h.</li>
-            <li class="my-2">15.00h. – 20.00h.</li>
-          </ul>
-        </div>
-        
-        <div class="col-md-3 mx-auto mb-4">
-          <h6 class="text-uppercase font weight-bold">Contacte</h6>
-          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 85px;heigth: 2px ;background-color: #3090C7!important;">
-            <ul class="list-unstyled">
-              <li class="my-2"><a href="{{URL::to('/sobreCemav')}}">Sobre CEMAV</a></li>
-              <li class="my-2"><a href="mailto:noucemav@gmail.com">noucemav@gmail.com</a></li>
-              <li class="my-2"><a href="tel: +93 889 46 02"> +93 889 46 02</a></li>
-            </ul>
-        </div>
-
-        <div class="col-md-3 mx-auto mb-4">
-          <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5937.170768706284!2d2.2512900000000005!3d41.923271!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x84f0ed8304ce9538!2sCemav!5e0!3m2!1sca!2ses!4v1618350453333!5m2!1sca!2ses" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" title="Mapa de ubicación de CEMAV"></iframe>
-        </div>
-      </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> CEMAV · Centre de Medicina Amable de Vic</span>
+      <span>Persones tractant persones</span>
     </div>
-
-  </footer>
-
-  <style>
-    @media (min-width: 762px) and (max-width: 920px) {
-        #map{
-          display: none;
-        }
-    }
-   
-  </style>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
