@@ -98,8 +98,8 @@
         </section>
 
         <div class="row" id="especialitats_titol">
-          <div class="col-md-12" style="text-align:center;">
-             <h1 style="margin-top">Especialitats</h1>
+          <div class="col-md-12">
+             <h1>Especialitats</h1>
              <p>Els nostres especialistes ofereixen tots els seus coneixements i les seves habilitats per acompanyar-vos en el vostre procés de sanació i rehabilitació per millorar la teva qualitat de vida.</p>
           </div>
         </div>
