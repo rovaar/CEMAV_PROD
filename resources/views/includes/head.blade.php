@@ -50,10 +50,15 @@
     <!-- Google Fonts (asíncron, no bloqueja el renderitzat) -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Mulish:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     </noscript>
+
+    <!-- Footer CSS (compartit per totes les pàgines) -->
+    <link rel="stylesheet" href="{{asset('css/footer.css')}}">
 
     <!-- Font Awesome (asíncron, no bloqueja el renderitzat) -->
     <link rel="preload" as="style" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" onload="this.onload=null;this.rel='stylesheet'">
