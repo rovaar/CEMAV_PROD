@@ -15,7 +15,7 @@
       <div class="container">
         <span class="sobre-eyebrow">Qui som</span>
         <h1 class="sobre-title">Sobre CEMAV</h1>
-        <p class="sobre-subtitle">Centre de Medicina Amable de Vic · Des del 2002</p>
+        <p class="sobre-subtitle">Centre de Mèdic a Vic · Des del 2002</p>
       </div>
     </section>
 
