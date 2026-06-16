@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg fixed-top">
 
     <div class="container">
-        <a class="navbar-brand" href="{{URL::to('/')}}"><img src="img/logoPrincipal.webp" class="logo" alt="logo" style="height: 60px; width: 250px;"></a>
+        <a class="navbar-brand" href="{{URL::to('/')}}"><img src="{{asset('img/logoPrincipal.webp')}}" class="logo" alt="logo" style="height: 60px; width: 250px;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <ion-icon name="menu-outline"></ion-icon>
         </button>
@@ -14,10 +14,10 @@
                     <a class="nav-link" href="{{URL::to('/sobreCemav')}}">Sobre CEMAV</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{{URL::to('/especialitats')}}" id="especialitats" aria-haspopup="true" aria-expanded="false">
-                        Especialitats
+                    <a class="nav-link" href="{{URL::to('/especialitats')}}">
+                        Especialitats ▾
                     </a>
-                <div class="dropdown-menu dropdown-menu-horizontal" aria-labelledby="navbarDropdownMenuLink">
+                <div class="dropdown-menu" aria-labelledby="especialitats">
                     <a class="dropdown-item" href="{{URL::to('/dermatologia')}}" id="dermatologia">Dermatologia</a>
                     <a class="dropdown-item" href="{{URL::to('/nutricio')}}" id="nutricio">Dietista i Nutrició</a>
                     <a class="dropdown-item" href="{{URL::to('/fisioterapia')}}" id="fisioterapia">Fisioteràpia</a>

@@ -64,6 +64,7 @@
             .navbar .nav-item.dropdown:hover > .dropdown-menu {
                 display: block;
                 margin-top: 0;
+                position: absolute;
             }
         }
     </style>
