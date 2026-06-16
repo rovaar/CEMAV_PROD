@@ -5,6 +5,10 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ url()->current() }}" />
 
+    <!-- hreflang: lloc en català, Espanya -->
+    <link rel="alternate" hreflang="ca" href="{{ url()->current() }}" />
+    <link rel="alternate" hreflang="x-default" href="{{ url()->current() }}" />
+
     <title>{{ $title ?? 'CEMAV | Centre de Medicina Amable de Vic' }}</title>
 
     @isset($description)
@@ -31,7 +35,8 @@
     @endisset
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="/img/Medicina Amable.webp" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
     <!-- Preconnect a CDNs per reduir latència -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,6 +76,9 @@
 
     <!-- CSS específic de la pàgina -->
     @stack('head-css')
+
+    <!-- Schema.org injectat per la pàgina (opcional, via @push('head-schema')) -->
+    @stack('head-schema')
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L3V62LP2WB"></script>
