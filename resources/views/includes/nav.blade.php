@@ -14,7 +14,7 @@
                     <a class="nav-link" href="{{URL::to('/sobreCemav')}}">Sobre CEMAV</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="especialitats" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="{{URL::to('/especialitats')}}" id="especialitats" aria-haspopup="true" aria-expanded="false">
                         Especialitats
                     </a>
                 <div class="dropdown-menu dropdown-menu-horizontal" aria-labelledby="navbarDropdownMenuLink">
@@ -23,14 +23,15 @@
                     <a class="dropdown-item" href="{{URL::to('/fisioterapia')}}" id="fisioterapia">Fisioteràpia</a>
                     <a class="dropdown-item" href="{{URL::to('/infermeria')}}" id="infermeria">Infermeria</a>
                     <a class="dropdown-item" href="{{URL::to('/odontologia')}}" id="odontologia">Odontologia</a>
-                    <a class="dropdown-item" href="{{URL::to('/oftalmologia')}}" id="oftalmologia">Oftalmologia</a>         
+                    <a class="dropdown-item" href="{{URL::to('/oftalmologia')}}" id="oftalmologia">Oftalmologia</a>
                     <a class="dropdown-item" href="{{URL::to('/optometria')}}" id="optometria">Optometria</a>
-                    <a class="dropdown-item" href="{{URL::to('/podologia')}}" id="podologia">Podologia</a>        
+                    <a class="dropdown-item" href="{{URL::to('/podologia')}}" id="podologia">Podologia</a>
                     <a class="dropdown-item" href="{{URL::to('/psicologia')}}" id="psicologia">Psicologia</a>
                     <a class="dropdown-item" href="{{URL::to('/traumatologia')}}" id="traumatologia">Traumatologia i ortòpèdia</a>
                     <a class="dropdown-item" href="{{URL::to('/urologia')}}" id="urologia">Urologia</a>
-                    
+
                 </div>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{URL::to('/serveis')}}">Altres Serveis</a>
                 </li>

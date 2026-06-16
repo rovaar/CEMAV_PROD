@@ -58,6 +58,16 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule defer src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+    <!-- Dropdown per hover al navbar (escriptori) -->
+    <style>
+        @media (min-width: 992px) {
+            .navbar .nav-item.dropdown:hover > .dropdown-menu {
+                display: block;
+                margin-top: 0;
+            }
+        }
+    </style>
+
     <!-- CSS específic de la pàgina -->
     @stack('head-css')
 
