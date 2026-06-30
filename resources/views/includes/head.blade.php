@@ -57,6 +57,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     </noscript>
 
+    <!-- Sistema de disseny compartit: tokens + tipografia (Mulish + Fraunces) -->
+    <link rel="stylesheet" href="{{asset('css/base.css')}}">
+
     <!-- Footer CSS (compartit per totes les pàgines) -->
     <link rel="stylesheet" href="{{asset('css/footer.css')}}">
 
