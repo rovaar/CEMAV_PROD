@@ -5,6 +5,7 @@
         'title'       => 'Infermeria a Vic | CEMAV',
         'description' => "Servei d'infermeria a Vic. Cures infermeres, injeccions, extraccions de sang i atenció preventiva. Infermers especialitzats a CEMAV.",
     ])
+    <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero4.webp')}}">
     <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
     <script type="application/ld+json">
     {
@@ -33,44 +34,151 @@
     </script>
   </head>
   <body>
-  
+
   @include('includes.nav')
-  
-  @include('includes.breadcrumb', ['pageTitle' => 'Infermeria'])
 
-  <section id="portada">
+<!-- HERO -->
+<section id="hero-infermeria" class="d-flex align-items-center text-center">
     <div class="container">
-      <div class="content-center">
-        <h1 id="titol" style="position: absolute; top: 25%; left: 5%;">INFERMERIA</h1>
-       </div>
-    </div>
-  </section>
-  
-  <section id="professionals">
-    <div class="container">
-    <div id="descripcio" style="margin: 100px 50px 50px 50px; font-size: 20px; text-align: justify">
-      Analítiques. Revisions laborals. Aplicació d'injectables. Mesura de la pressió arterial. 
-      </div>
-      <div class="content-center" style="margin-top: 50px">
-          <h1>Professionals</h1>
-       </div>
-      <div class="row">
-         <div class="col-md-12" style="text-align: center;">
-           <img src="img/iconaDona.webp" class="foto" alt="foto" style="width: 350px; height: 350px; display: block; margin: auto; margin-bottom: 50px;">
-           <p style="font-weight: 700; margin-top: 20px;">SILVIA CARNER GRAU</p>
-           <p>N.Coleg 33678</p>
-         </div>
-    </div>
-</div>
+
+        <p class="hero-slug">
+            Atenció infermera especialitzada a Vic
+        </p>
+
+        <h1 class="hero-title">
+            Infermeria <span>per cuidar la teva salut</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            Cures infermeres, extraccions de sang, injeccions i atenció preventiva
+            amb professionals qualificats i propers.
+        </p>
+
+        <a href="/contacte" class="hero-btn">
+            Demanar visita
+        </a>
 
     </div>
-  </section>
-  
+</section>
+
+@include('includes.breadcrumb', ['pageTitle' => 'Infermeria'])
+
+<!-- SERVEIS -->
+<section id="serveis-infermeria">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <h2>
+                Serveis de <span>infermeria</span> i atenció sanitària
+            </h2>
+
+            <p>
+                Cures infermeres professionals i atenció preventiva de qualitat.
+            </p>
+
+            <p class="text-small">
+                Servei d'infermeria per mútues assistencials i visites privades. Analítiques, revisions laborals, aplicació d'injectables i mesura de la pressió arterial.
+            </p>
+
+        </div>
+
+        <div class="row mt-5">
+
+            <div class="col-md-4 mb-4">
+                <div class="servei-card">
+
+                    <div class="servei-icon">
+                        <ion-icon name="eyedrop-outline"></ion-icon>
+                    </div>
+
+                    <h3>Administració de medicaments</h3>
+
+                    <p>
+                        Aplicació d'injectables, vacunes i tractaments
+                        infermers personalitzats i de qualitat.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="servei-card">
+
+                    <div class="servei-icon">
+                        <ion-icon name="pulse-outline"></ion-icon>
+                    </div>
+
+                    <h3>Controls i revisions</h3>
+
+                    <p>
+                        Mesura de la pressió arterial, glucèmia i controls
+                        de salut preventius periòdics.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="servei-card">
+
+                    <div class="servei-icon">
+                        <ion-icon name="flask-outline"></ion-icon>
+                    </div>
+
+                    <h3>Analítiques i extraccions</h3>
+
+                    <p>
+                        Extraccions de sang i analítiques laborals amb
+                        resultats ràpids i servei professional.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROFESSIONALS -->
+<section id="professionals-infermeria">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <h2>
+                Equip de <span>infermeria</span>
+            </h2>
+
+            <p>
+                Infermers especialitzats en atenció sanitària a Vic.
+            </p>
+
+        </div>
+
+        <div class="row justify-content-center mt-5">
+
+            <div class="col-md-4">
+                <div class="doctor-card text-center">
+                    <img src="img/iconaDona.webp"
+                         alt="Silvia Carner Grau Infermera a Vic"
+                         loading="lazy"
+                         class="doctor-img">
+                    <h3>Silvia Carner Grau</h3>
+                    <p>Núm. col·legiat: 33678</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
   @include('includes.footer')
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

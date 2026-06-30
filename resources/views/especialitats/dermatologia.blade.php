@@ -1,10 +1,11 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ca">
 <head>
     @include('includes.head', [
         'title'       => 'Dermatologia a Vic | CEMAV',
         'description' => 'Servei de dermatologia a Vic. Diagnòstic i tractament de malalties de la pell, cabells i ungles. Dermatòlegs especialitzats a CEMAV.',
     ])
+    <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero2.webp')}}">
     <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
     <script type="application/ld+json">
     {
@@ -36,41 +37,150 @@
 
 @include('includes.nav')
 
+<!-- HERO -->
+<section id="hero-dermatologia" class="d-flex align-items-center text-center">
+    <div class="container">
+
+        <p class="hero-slug">
+            Especialistes en pell, cabell i ungles a Vic
+        </p>
+
+        <h1 class="hero-title">
+            Dermatologia avançada <span>per cuidar la teva pell</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            Diagnòstic i tractament de totes les malalties dermatològiques
+            amb professionals especialitzats i atenció personalitzada.
+        </p>
+
+        <a href="/contacte" class="hero-btn">
+            Demanar visita
+        </a>
+
+    </div>
+</section>
+
 @include('includes.breadcrumb', ['pageTitle' => 'Dermatologia'])
 
-<section id="portada">
-<div class="container">
-    <div class="content-center">
-    <h1 id="titol" style="position: absolute; top: 25%; left: 5%;">DERMATOLOGIA</h1>
-    </div>
-</div>
-</section>
+<!-- SERVEIS -->
+<section id="serveis-dermatologia">
 
-<section id="professionals">
-<div class="container">
-    <div id="descripcio" style="margin: 100px 50px 50px 50px; font-size: 20px; text-align: justify">
-        En aquest moments no disposem del Servei de dermatologia, esperem en breu poder disposar del dermatòleg.
-    </div>
-    <div class="content-center">
-        <h1 style="margin-top: 5%;">Professionals</h1>
-    </div>
-    <div class="row">
-        <div  class="col-12" style="text-align: center;">
-            <img src="img/iconaMen.webp" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px; display: block; margin: auto;">
-            <p style="text-align: center; font-weight: 700; margin-top:20px">CARLES JANÉS</p>
-            <p style="text-align: center;">N.Coleg xxxx</p>
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <h2>
+                Serveis de <span>dermatologia</span> i salut cutània
+            </h2>
+
+            <p>
+                Diagnòstic i tractament de les principals malalties de la pell.
+            </p>
+
+            <p class="text-small">
+                Servei de dermatologia per visites privades i mútues assistencials. Diagnòstic i tractament de les malalties que afecten la pell, els cabells i les ungles.
+            </p>
+
+        </div>
+
+        <div class="row mt-5">
+
+            <div class="col-md-4 mb-4">
+                <div class="servei-card">
+
+                    <div class="servei-icon">
+                        <ion-icon name="scan-outline"></ion-icon>
+                    </div>
+
+                    <h3>Diagnòstic dermatològic</h3>
+
+                    <p>
+                        Exploració i diagnòstic de malalties de la pell,
+                        cabells i ungles amb tecnologia especialitzada.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="servei-card">
+
+                    <div class="servei-icon">
+                        <ion-icon name="medical-outline"></ion-icon>
+                    </div>
+
+                    <h3>Tractament de patologies</h3>
+
+                    <p>
+                        Tractament de dermatitis, psoriasi, acne, infeccions
+                        cutànies i altres afeccions de la pell.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="servei-card">
+
+                    <div class="servei-icon">
+                        <ion-icon name="shield-checkmark-outline"></ion-icon>
+                    </div>
+
+                    <h3>Prevenció i seguiment</h3>
+
+                    <p>
+                        Control dermatoscòpic, crioteràpia i seguiment
+                        de lesions pigmentades i nevi.
+                    </p>
+
+                </div>
+            </div>
+
         </div>
     </div>
-</div>
 </section>
 
+<!-- PROFESSIONALS -->
+<section id="professionals-dermatologia">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <h2>
+                Equip de <span>dermatologia</span>
+            </h2>
+
+            <p>
+                Professionals especialitzats en salut cutània a Vic.
+            </p>
+
+        </div>
+
+        <div class="row justify-content-center mt-5">
+
+            <div class="col-md-4">
+                <div class="doctor-card text-center">
+                    <img src="img/iconaMen.webp"
+                         alt="Carles Janés Dermatòleg a Vic"
+                         loading="lazy"
+                         class="doctor-img">
+                    <h3>Carles Janés</h3>
+                    <p>Dermatòleg</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 @include('includes.footer')
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

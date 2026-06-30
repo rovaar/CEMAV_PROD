@@ -1,10 +1,11 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ca">
   <head>
     @include('includes.head', [
         'title'       => 'Optometria a Vic | CEMAV',
         'description' => "Servei d'optometria a Vic. Exàmens visuals i adaptació de lents de contacte i ulleres. Optometristes especialitzats a CEMAV.",
     ])
+    <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero3.webp')}}">
     <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
     <script type="application/ld+json">
     {
@@ -33,48 +34,151 @@
     </script>
   </head>
   <body>
-  
-  @include('includes.nav')
-  
-  @include('includes.breadcrumb', ['pageTitle' => 'Optometria'])
 
-  <section id="portada">
+  @include('includes.nav')
+
+<!-- HERO -->
+<section id="hero-optometria" class="d-flex align-items-center text-center">
     <div class="container">
-      <div class="content-center">
-        <h1 id="titol" style="position: absolute; top: 25%; left: 5%;">OPTOMETRIA</h1>
-       </div>
+
+        <p class="hero-slug">
+            Especialistes en salut visual i adaptació de lents a Vic
+        </p>
+
+        <h1 class="hero-title">
+            Optometria <span>per una visió perfecta</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            Prevenció i detecció de problemes visuals, prescripció i adaptació
+            de lents de contacte i ulleres.
+        </p>
+
+        <a href="/contacte" class="hero-btn">
+            Demanar visita
+        </a>
+
     </div>
-  </section>
-  
-  <section id="professionals">
+</section>
+
+@include('includes.breadcrumb', ['pageTitle' => 'Optometria'])
+
+<!-- SERVEIS -->
+<section id="serveis-optometria">
+
     <div class="container">
-    <div id="descripcio" style="margin: 100px 50px 50px 50px; font-size: 20px; text-align: justify">
-          Servei d’optometria mitjançant mútues assistencials i visites privades.
-          Prevenció i detecció de problemes visuals. Detecció de pèrdua visual.
-          Trastorns visuals refractius i la seva correcció. Prescripció i adaptació
-          de lents oculars i o ulleres.
-      </div>
-      <div class="content-center" style="margin-top: 50px">
-          <h1>Professionals</h1>
-       </div>
-       <div class="row">
-         <div class="col-12 col-md-12">
-          <div class="row">
-            <div  class="col-md-12">
-              <img src="img/iconaMen.webp" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px; display: block; margin: auto;">
-              <p style="text-align: center; font-weight: 700; margin-top:20px">ALFRED VERDAGUER PAIRO</p>
-              <p style="text-align: center;">N.Coleg 2631</p>
+
+        <div class="section-title text-center">
+
+            <h2>
+                Serveis de <span>optometria</span> i salut visual
+            </h2>
+
+            <p>
+                Exàmens visuals i adaptació de lents amb professionals especialitzats.
+            </p>
+
+            <p class="text-small">
+                Servei d'optometria per mútues assistencials i visites privades. Prevenció i detecció de problemes visuals, prescripció i adaptació de lents oculars i ulleres.
+            </p>
+
+        </div>
+
+        <div class="row mt-5">
+
+            <div class="col-md-4 mb-4">
+                <div class="servei-card">
+
+                    <div class="servei-icon">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <h3>Exàmens visuals</h3>
+
+                    <p>
+                        Prevenció i detecció de problemes visuals, pèrdua
+                        visual progressiva i trastorns refractius.
+                    </p>
+
+                </div>
             </div>
-         </div>
-       </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="servei-card">
+
+                    <div class="servei-icon">
+                        <ion-icon name="glasses-outline"></ion-icon>
+                    </div>
+
+                    <h3>Prescripció i adaptació de lents</h3>
+
+                    <p>
+                        Prescripció i adaptació de lents oculars correctores,
+                        lents de contacte i ulleres.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="servei-card">
+
+                    <div class="servei-icon">
+                        <ion-icon name="shield-checkmark-outline"></ion-icon>
+                    </div>
+
+                    <h3>Correccions refractives</h3>
+
+                    <p>
+                        Correcció de miopia, hipermetropia, astigmatisme
+                        i presbícia amb solucions personalitzades.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
     </div>
-  </section>
-  
+</section>
+
+<!-- PROFESSIONALS -->
+<section id="professionals-optometria">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <h2>
+                Equip de <span>optometria</span>
+            </h2>
+
+            <p>
+                Optometristes especialitzats en salut visual a Vic.
+            </p>
+
+        </div>
+
+        <div class="row justify-content-center mt-5">
+
+            <div class="col-md-4">
+                <div class="doctor-card text-center">
+                    <img src="img/iconaMen.webp"
+                         alt="Alfred Verdaguer Pairo Optometrista a Vic"
+                         loading="lazy"
+                         class="doctor-img">
+                    <h3>Alfred Verdaguer Pairo</h3>
+                    <p>Núm. col·legiat: 2631</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
   @include('includes.footer')
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

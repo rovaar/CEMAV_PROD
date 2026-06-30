@@ -1,10 +1,11 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ca">
   <head>
     @include('includes.head', [
         'title'       => 'Odontologia a Vic | Dentista CEMAV',
         'description' => "Servei d'odontologia a Vic. Dentistes especialitzats en prevenció, estètica dental i tractaments bucodentals. Visites privades i mútues a CEMAV.",
     ])
+    <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero2.webp')}}">
     <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
     <script type="application/ld+json">
     {
@@ -33,89 +34,200 @@
     </script>
   </head>
   <body>
-  
+
   @include('includes.nav')
-  
-  @include('includes.breadcrumb', ['pageTitle' => 'Odontologia'])
-  
-  <section id="portada">
-    <div class="container">
-      <div class="content-center">
-        <h1 id="titol" style="position: absolute; top: 25%; left: 5%;">ODONTOLOGIA</h1>
-       </div>
-    </div>
-  </section>
-  
-  <section id="professionals">
-    <div class="container">
-      <div id="descripcio" style="margin: 100px 50px 50px 50px; font-size: 20px; text-align: justify">
-          Servei d’odontologia integral per a pacients privats i mutualistes. A les nostres instal.lacions podràs ser atès per un equip humà atent a les teves necessitats, i on podràs gaudir d’una àmplia gamma de tractaments bucodentals, amb una òptima relació cost-benefici.<br>
-<br>
-A cemav dental trobaràs : <br>
-- Odontologia General i conservadora (Higiene dental, obturacions, endodòncies, exodòncies simples, etc.). <br>
-- Rehabilitació protèssica (pròtesis removibles i fixes dento i implantosuportades). <br>
-- Implantologia oral. <br>
-- Manteniment periodontal. <br>
-- Tractament de  problemàtica d’ ATM (confecció de fèrul.les, servei de fisioteràpia específica). <br>
-- Revisions Infantils (detecció de càries, maloclusions, i tractaments odontopediàtrics lleus). <br>
-- Ortodòncia fixa i removible (tractaments per a la correcció de les maloclusions esquelètiques i/o dentals a qualsevol edat). <br>
-- Ortodòncia invisible (Invisalign). <br>
-- Blanquejaments dentals. <br>
 
-<br>
-    La consulta, diagnòstic, radiografies (periapical , ortopantomografia) i pressupost, són totalment gratuïtes.
-    La clínica està totalment adaptada per a persones amb  la mobilitat reduïda.
+<!-- HERO -->
+<section id="hero-odontologia" class="d-flex align-items-center text-center">
+    <div class="container">
 
-      </div>
-      <div class="content-center" style="margin-top: 50px">
-          <h1>Professionals</h1>
-       </div>
-       <div class="row">
-         <div class="col-12 col-md-12 style="text-align: center;">
-          <div class="row">
-            <div  class="col-md-6 style="text-align: center;">
-              <img src="img/Fotos Treballadors/jordiarn.webp" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
-              <p style="text-align: center; font-weight: 700">JORDI ARNAU TUNEU</p>
-              <p style="text-align: center;">Odontòleg/a</p>
-              <p style="text-align: center;">N.Coleg 3591</p>
-            </div>
-            <div  class="col-md-6 style="text-align: center;">
-              <img src="img/Fotos Treballadors/nuria.webp" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
-              <p style="text-align: center; font-weight: 700">NÚRIA AZNAR ARASA</p>
-              <p style="text-align: center;">Ortodoncista</p>
-              <p style="text-align: center;">N.Coleg 4573</p>
-            </div>
-             <div class="col-md-6 style="text-align: center;">
-              <img src="img/Fotos Treballadors/GeorginaS.webp" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
-              <p style="text-align: center; font-weight: 700">GEORGINA SANFELIU MOLINERO</p>
-              <p style="text-align: center;">Ortodoncista</p>
-              <p style="text-align: center;">N.Coleg 5418</p>
-            </div>
-            <div  class="col-md-6 style="text-align: center;">
-              <img src="img/Fotos Treballadors/Jessenia.webp" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
-              <p style="text-align: center; font-weight: 700">JESSENIA VELÁSQUEZ FIGUEROA</p>
-              <p style="text-align: center;">Higienista dental</p>
-              <p style="text-align: center;"></p>
-            </div>
-            <div  class="col-md-6" style="text-align: center;">
-              <img src="img/iconaDona.webp" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px">
-              <p style="text-align: center; font-weight: 700">VALENTINA CHAVEZ MARIN</p>
-              <p style="text-align: center;">Higienista dental</p>
-              <p style="text-align: center;">00003</p>
-            </div>
-        
-         </div>
-       </div>
+        <p class="hero-slug">
+            Especialistes en salut bucodental a Vic
+        </p>
+
+        <h1 class="hero-title">
+            Odontologia <span>per cuidar el teu somriure</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            Tractament integral bucodental per a pacients privats i mutualistes
+            amb un equip especialitzat i multidisciplinar.
+        </p>
+
+        <a href="/contacte" class="hero-btn">
+            Demanar visita
+        </a>
+
     </div>
-  </section>
-  
+</section>
+
+@include('includes.breadcrumb', ['pageTitle' => 'Odontologia'])
+
+<!-- SERVEIS -->
+<section id="serveis-odontologia">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <h2>
+                Serveis de <span>odontologia</span> i salut dental
+            </h2>
+
+            <p>
+                Àmplia gamma de tractaments bucodentals amb una òptima relació cost-benefici.
+            </p>
+
+            <p class="text-small">
+                Servei d'odontologia integral per a pacients privats i mutualistes. Consulta, diagnòstic, radiografies i pressupost totalment gratuïts. Clínica adaptada per a persones amb mobilitat reduïda.
+            </p>
+
+        </div>
+
+        <div class="row mt-5">
+
+            <div class="col-md-4 mb-4">
+                <div class="servei-card">
+
+                    <div class="servei-icon">
+                        <ion-icon name="medkit-outline"></ion-icon>
+                    </div>
+
+                    <h3>Odontologia general</h3>
+
+                    <p>
+                        Higiene dental, obturacions, endodòncies, exodòncies
+                        i atenció integral bucodental.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="servei-card">
+
+                    <div class="servei-icon">
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <h3>Implantologia i estètica dental</h3>
+
+                    <p>
+                        Implantologia oral, blanquejaments dentals i rehabilitació
+                        protèssica fixa i removible.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="servei-card">
+
+                    <div class="servei-icon">
+                        <ion-icon name="people-outline"></ion-icon>
+                    </div>
+
+                    <h3>Ortodòncia i Odontopediatria</h3>
+
+                    <p>
+                        Ortodòncia fixa i invisible (Invisalign), revisions infantils
+                        i tractaments per a totes les edats.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROFESSIONALS -->
+<section id="professionals-odontologia">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <h2>
+                Equip de <span>odontologia</span>
+            </h2>
+
+            <p>
+                Dentistes, ortodoncistes i higienistes especialitzats a Vic.
+            </p>
+
+        </div>
+
+        <div class="row mt-5">
+
+            <div class="col-md-4 mb-4">
+                <div class="doctor-card text-center">
+                    <img src="img/Fotos Treballadors/jordiarn.webp"
+                         alt="Jordi Arnau Tuneu Odontòleg a Vic"
+                         loading="lazy"
+                         class="doctor-img">
+                    <h3>Jordi Arnau Tuneu</h3>
+                    <p>Odontòleg</p>
+                    <p>Núm. col·legiat: 3591</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="doctor-card text-center">
+                    <img src="img/Fotos Treballadors/nuria.webp"
+                         alt="Núria Aznar Arasa Ortodoncista a Vic"
+                         loading="lazy"
+                         class="doctor-img">
+                    <h3>Núria Aznar Arasa</h3>
+                    <p>Ortodoncista</p>
+                    <p>Núm. col·legiat: 4573</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="doctor-card text-center">
+                    <img src="img/Fotos Treballadors/GeorginaS.webp"
+                         alt="Georgina Sanfeliu Molinero Ortodoncista a Vic"
+                         loading="lazy"
+                         class="doctor-img">
+                    <h3>Georgina Sanfeliu Molinero</h3>
+                    <p>Ortodoncista</p>
+                    <p>Núm. col·legiat: 5418</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="doctor-card text-center">
+                    <img src="img/Fotos Treballadors/Jessenia.webp"
+                         alt="Jessenia Velásquez Figueroa Higienista dental a Vic"
+                         loading="lazy"
+                         class="doctor-img">
+                    <h3>Jessenia Velásquez Figueroa</h3>
+                    <p>Higienista dental</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="doctor-card text-center">
+                    <img src="img/iconaDona.webp"
+                         alt="Valentina Chavez Marin Higienista dental a Vic"
+                         loading="lazy"
+                         class="doctor-img">
+                    <h3>Valentina Chavez Marin</h3>
+                    <p>Higienista dental</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
   @include('includes.footer')
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
-</html>		
+</html>

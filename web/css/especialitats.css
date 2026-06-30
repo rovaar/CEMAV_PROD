@@ -1,4 +1,4 @@
-body{font-family: 'Titillium Web', sans-serif;
+body{
     overflow-x: hidden;
      }
 
@@ -137,15 +137,51 @@ footer{
 
 /* HERO */
 
-#hero-oftalmologia{
+/*
+ * Propietats comunes per a tots els heros.
+ * IMPORTANT: fem servir background-image (no la drecera background:)
+ * perquè el background-color de reserva no es reinicialitzi a transparent.
+ * Així, mentre la imatge es descarrega, es mostra un color fosc en comptes de gris.
+ */
+[id^="hero-"] {
     min-height: 85vh;
-    background:
-        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-        url(../img/wallpapers/hero3.webp);
+    padding: 120px 0;
+    color: white;
+    background-color: #111c26;
     background-size: cover;
     background-position: center;
-    color: white;
-    padding: 120px 0;
+    background-repeat: no-repeat;
+}
+
+/* hero3 */
+#hero-oftalmologia,
+#hero-fisioterapia,
+#hero-optometria{
+    background-image:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url(../img/wallpapers/hero3.webp);
+}
+
+/* hero2 */
+#hero-dermatologia,
+#hero-urologia,
+#hero-traumatologia,
+#hero-digestoleg,
+#hero-odontologia{
+    background-image:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url(../img/wallpapers/hero2.webp);
+}
+
+/* hero4 */
+#hero-psicologia,
+#hero-podologia,
+#hero-nutricio,
+#hero-infermeria,
+#hero-ortodoncista{
+    background-image:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url(../img/wallpapers/hero4.webp);
 }
 
 [id^="hero-"] .container p,
@@ -160,6 +196,7 @@ footer{
 }
 
 .hero-title{
+    font-family: 'Mulish', sans-serif;
     font-size: 72px;
     font-weight: 700;
     line-height: 1.1;
@@ -198,8 +235,8 @@ footer{
 
 /* SECCIONS */
 
-#serveis-oftalmologia,
-#professionals-oftalmologia{
+[id^="serveis-"],
+[id^="professionals-"] {
     padding: 120px 0 60px 0;
     background: #f7f7f7;
 }

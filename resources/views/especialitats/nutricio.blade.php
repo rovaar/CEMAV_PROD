@@ -1,10 +1,11 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ca">
   <head>
     @include('includes.head', [
         'title'       => 'Dietètica i Nutrició a Vic | CEMAV',
         'description' => 'Servei de dietètica i nutrició a Vic. Assessorament nutricional personalitzat per a una alimentació saludable i control de pes. CEMAV.',
     ])
+    <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero4.webp')}}">
     <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
     <script type="application/ld+json">
     {
@@ -33,37 +34,115 @@
     </script>
   </head>
   <body>
-  
+
   @include('includes.nav')
 
-  @include('includes.breadcrumb', ['pageTitle' => 'Nutrició'])
+<!-- HERO -->
+<section id="hero-nutricio" class="d-flex align-items-center text-center">
+    <div class="container">
 
-  <section id="portada">
-    <div class="container">
-      <div class="content-center">
-        <h1 id="titol" style="position: absolute; top: 25%; left: 5%;">DIATISTA I NUTRICIÓ</h1>
-       </div>
+        <p class="hero-slug">
+            Assessorament nutricional personalitzat a Vic
+        </p>
+
+        <h1 class="hero-title">
+            Nutrició i Dietètica <span>per a una vida saludable</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            Plans nutricionals personalitzats adaptats a les teves necessitats,
+            objectius i estil de vida.
+        </p>
+
+        <a href="/contacte" class="hero-btn">
+            Demanar visita
+        </a>
+
     </div>
-  </section>
-  
-  <section id="professionals">
+</section>
+
+@include('includes.breadcrumb', ['pageTitle' => 'Nutrició'])
+
+<!-- SERVEIS -->
+<section id="serveis-nutricio">
+
     <div class="container">
-    <div id="descripcio" style="margin: 100px 50px 50px 50px; font-size: 20px; text-align: justify">
-        Servei de nutricionista mitjançant visites privades. Assessorament en
-        nutrició i dietètica. Dietes per perdre pes. Hàbits de vida saludables i
-        prevenció de malalties mitjançant l’alimentació. Plans nutricionals
-        personalitzats adaptats a les necessitats i estils de vida de cada pacient.
-        Alimentació sana i equilibrada. Nutrició esportiva. Nutrició vegetariana i
-        vegana. Receptes.
-      </div>
+
+        <div class="section-title text-center">
+
+            <h2>
+                Serveis de <span>nutrició</span> i dietètica
+            </h2>
+
+            <p>
+                Assessorament nutricional per a una alimentació sana i equilibrada.
+            </p>
+
+            <p class="text-small">
+                Servei de nutricionista per visites privades. Assessorament en nutrició i dietètica, plans nutricionals personalitzats adaptats a les necessitats i estils de vida de cada pacient.
+            </p>
+
+        </div>
+
+        <div class="row mt-5">
+
+            <div class="col-md-4 mb-4">
+                <div class="servei-card">
+
+                    <div class="servei-icon">
+                        <ion-icon name="leaf-outline"></ion-icon>
+                    </div>
+
+                    <h3>Plans nutricionals personalitzats</h3>
+
+                    <p>
+                        Dietes per perdre pes i hàbits de vida saludables
+                        adaptats a cada pacient i les seves necessitats.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="servei-card">
+
+                    <div class="servei-icon">
+                        <ion-icon name="restaurant-outline"></ion-icon>
+                    </div>
+
+                    <h3>Nutrició esportiva i especial</h3>
+
+                    <p>
+                        Nutrició esportiva, vegetariana i vegana amb receptes
+                        i plans alimentaris especialitzats.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="servei-card">
+
+                    <div class="servei-icon">
+                        <ion-icon name="fitness-outline"></ion-icon>
+                    </div>
+
+                    <h3>Prevenció de malalties</h3>
+
+                    <p>
+                        Prevenció de malalties i millora de la salut general
+                        a través d'una alimentació sana i equilibrada.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
     </div>
-  </section>
-  
+</section>
 
   @include('includes.footer')
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

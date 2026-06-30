@@ -1,10 +1,11 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ca">
   <head>
     @include('includes.head', [
         'title'       => 'Podologia a Vic | CEMAV',
         'description' => 'Servei de podologia a Vic. Diagnòstic i tractament de patologies del peu i turmell. Podòlegs especialitzats a CEMAV.',
     ])
+    <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero4.webp')}}">
     <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
     <script type="application/ld+json">
     {
@@ -33,52 +34,151 @@
     </script>
   </head>
   <body>
-  
-  @include('includes.nav')
-  
-  @include('includes.breadcrumb', ['pageTitle' => 'Podologia'])
 
-  <section id="portada">
+  @include('includes.nav')
+
+<!-- HERO -->
+<section id="hero-podologia" class="d-flex align-items-center text-center">
     <div class="container">
-      <div class="content-center">
-        <h1 id="titol" style="position: absolute; top: 25%; left: 5%;">PODOLOGIA</h1>
-       </div>
+
+        <p class="hero-slug">
+            Especialistes en salut del peu i turmell a Vic
+        </p>
+
+        <h1 class="hero-title">
+            Podologia avançada <span>per cuidar els teus peus</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            Prevenció i tractament de les alteracions i malalties del peu
+            amb professionals especialitzats i atenció personalitzada.
+        </p>
+
+        <a href="/contacte" class="hero-btn">
+            Demanar visita
+        </a>
+
     </div>
-  </section>
-  
-  <section id="professionals">
+</section>
+
+@include('includes.breadcrumb', ['pageTitle' => 'Podologia'])
+
+<!-- SERVEIS -->
+<section id="serveis-podologia">
+
     <div class="container">
-    <div id="descripcio" style="margin: 100px 50px 50px 50px; font-size: 20px; text-align: justify">
-        Servei de podologia mitjançant mútues assistencials i visites privades.
-        Prevenció i tractament de les alteracions i malalties del peu. Cirurgia
-        podològica (dèrmica i unguial). Quiropòdies (tallat d’ungles, durícies,
-        malalties de la pell del peu, infeccions, fongs, berrugues, quists).
-        Tractament de les alineacions del peu mitjançant la confecció de
-        plantilles, ortesis de silicona, etc. Control i tractament del peu diabètic.
-        Podologia per a esportistes (millora i prevenció de lesions degudes a
-        l’activitat esportiva).
-      </div>
-      <div class="content-center" style="margin-top: 50px">
-          <h1>Professionals</h1>
-       </div>
-       <div class="row">
-         <div class="col-12 col-md-12">
-          <div class="row">
-            <div  class="col-md-12">
-              <img src="img/Fotos Treballadors/Marta.webp" class="foto" alt="foto" style="width: 350px; height: 350px; margin: 0px 100px 50px 100px; display: block; margin: auto;">
-              <p style="text-align: center; font-weight: 700; margin-top:20px">MARTA SERRA RAURELL</p>
-              <p style="text-align: center;">N.Coleg 1246</p>
+
+        <div class="section-title text-center">
+
+            <h2>
+                Serveis de <span>podologia</span> i salut del peu
+            </h2>
+
+            <p>
+                Tractament integral de les patologies del peu i turmell.
+            </p>
+
+            <p class="text-small">
+                Servei de podologia per mútues assistencials i visites privades. Prevenció i tractament de les alteracions del peu, cirurgia podològica, plantilles personalitzades i podologia esportiva.
+            </p>
+
+        </div>
+
+        <div class="row mt-5">
+
+            <div class="col-md-4 mb-4">
+                <div class="servei-card">
+
+                    <div class="servei-icon">
+                        <ion-icon name="walk-outline"></ion-icon>
+                    </div>
+
+                    <h3>Podologia general i cirurgia</h3>
+
+                    <p>
+                        Quiropòdies, cirurgia podològica dèrmica i unguial,
+                        i tractament d'infeccions, fongs i berrugues.
+                    </p>
+
+                </div>
             </div>
-         </div>
-       </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="servei-card">
+
+                    <div class="servei-icon">
+                        <ion-icon name="footsteps-outline"></ion-icon>
+                    </div>
+
+                    <h3>Plantilles i ortesis</h3>
+
+                    <p>
+                        Confecció de plantilles personalitzades i ortesis de silicona
+                        per a l'alineació correcta del peu.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="servei-card">
+
+                    <div class="servei-icon">
+                        <ion-icon name="bicycle-outline"></ion-icon>
+                    </div>
+
+                    <h3>Podologia esportiva i diabètica</h3>
+
+                    <p>
+                        Control i tractament del peu diabètic i podologia
+                        esportiva per prevenir lesions.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
     </div>
-  </section>
-  
+</section>
+
+<!-- PROFESSIONALS -->
+<section id="professionals-podologia">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <h2>
+                Equip de <span>podologia</span>
+            </h2>
+
+            <p>
+                Podòlegs especialitzats en salut del peu a Vic.
+            </p>
+
+        </div>
+
+        <div class="row justify-content-center mt-5">
+
+            <div class="col-md-4">
+                <div class="doctor-card text-center">
+                    <img src="img/Fotos Treballadors/Marta.webp"
+                         alt="Marta Serra Raurell Podòloga a Vic"
+                         loading="lazy"
+                         class="doctor-img">
+                    <h3>Marta Serra Raurell</h3>
+                    <p>Núm. col·legiat: 1246</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
   @include('includes.footer')
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
