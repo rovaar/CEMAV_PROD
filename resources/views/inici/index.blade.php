@@ -38,12 +38,14 @@
                 <a href="{{URL::to('/contacte')}}" class="hero-btn" style="margin-top:60px;">Contacte</a>
             </div>
         </div>
+        <!--
         <div class="row" id="novetat">
           <div class="col-md-12" style="text-align:center;">
              <h1 style="margin-top: 10px">NOVETAT!</h1>
              <p style="color: black; font-size:30px;">Ara també fem revisions de permis de conduir, cita prèvia a <a href="https://www.emedicalboxvic.com/" style="color: white;">  emedicalboxvic.com</a></p>
           </div>
         </div>
+        -->
 
         <!-- PER QUÈ -->
         <section id="perque">
@@ -75,19 +77,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- SEO TEXT -->
-        <section id="seo-text">
-            <div class="container">
-                <h2>Centre mèdic a Vic</h2>
-                <p>
-                    A CEMAV oferim un servei mèdic integral amb especialistes en diferents àrees de la salut.
-                </p>
-                <p>
-                    El nostre objectiu és millorar la qualitat de vida dels pacients amb un tracte humà i proper.
-                </p>
             </div>
         </section>
 
@@ -176,6 +165,19 @@
             </div>
         </div>
 
+        <!-- SEO TEXT -->
+        <section id="seo-text">
+            <div class="container">
+                <h2>Centre mèdic a Vic</h2>
+                <p>
+                    A CEMAV oferim un servei mèdic integral amb especialistes en diferents àrees de la salut.
+                </p>
+                <p>
+                    El nostre objectiu és millorar la qualitat de vida dels pacients amb un tracte humà i proper.
+                </p>
+            </div>
+        </section>
+
         @include('includes.cookies')
   </div>
 
@@ -199,6 +201,57 @@
       </div>
     </div>
   </section>
+
+  <!-- ===== CARRUSEL LOGOTIPS MÚTUES ===== -->
+  <div class="mutues-carousel" aria-label="Logotips de mútues col·laboradores">
+    <div class="mc-viewport">
+      <div class="mc-track">
+        <div class="mc-slide"><img src="{{asset('img/Mutues/adeslas.webp')}}"              alt="Adeslas"                  class="mc-logo"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/AEGON.webp')}}"                alt="AEGON"                    class="mc-logo"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/agrupacioMutua.webp')}}"       alt="Agrupació Mútua"          class="mc-logo"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/asisa.webp')}}"                alt="Asisa"                    class="mc-logo"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/assistenciaSanitaria.webp')}}" alt="Assistència Sanitària"    class="mc-logo"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/atlantida.webp')}}"            alt="Atlàntida"                class="mc-logo"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/axa.webp')}}"                  alt="AXA"                      class="mc-logo"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/caser.webp')}}"                alt="Caser"                    class="mc-logo"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/cosalud.webp')}}"              alt="Cosalud"                  class="mc-logo"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/divinapastora.webp')}}"        alt="Divina Pastora"           class="mc-logo"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/dkv.webp')}}"                  alt="DKV"                      class="mc-logo"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/fiatcSeguros.webp')}}"         alt="FIATC Seguros"            class="mc-logo"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/generali.webp')}}"             alt="Generali"                 class="mc-logo"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/groupama.webp')}}"             alt="Groupama"                 class="mc-logo"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/hna.webp')}}"                  alt="HNA"                      class="mc-logo"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/logosantalucia.webp')}}"       alt="Santa Lucía"              class="mc-logo"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/mapfre.webp')}}"               alt="Mapfre"                   class="mc-logo"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/Mutuacat.webp')}}"             alt="Mutuacat"                 class="mc-logo"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/mutuageneralcat.webp')}}"      alt="Mútua General Catalunya"  class="mc-logo"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/plusUltra.webp')}}"            alt="Plus Ultra"               class="mc-logo"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/sanitas.webp')}}"              alt="Sanitas"                  class="mc-logo"></div>
+        <!-- Duplicat per al bucle infinit sense interrupcions -->
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/adeslas.webp')}}"              alt="" class="mc-logo"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/AEGON.webp')}}"                alt="" class="mc-logo"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/agrupacioMutua.webp')}}"       alt="" class="mc-logo"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/asisa.webp')}}"                alt="" class="mc-logo"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/assistenciaSanitaria.webp')}}" alt="" class="mc-logo"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/atlantida.webp')}}"            alt="" class="mc-logo"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/axa.webp')}}"                  alt="" class="mc-logo"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/caser.webp')}}"                alt="" class="mc-logo"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/cosalud.webp')}}"              alt="" class="mc-logo"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/divinapastora.webp')}}"        alt="" class="mc-logo"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/dkv.webp')}}"                  alt="" class="mc-logo"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/fiatcSeguros.webp')}}"         alt="" class="mc-logo"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/generali.webp')}}"             alt="" class="mc-logo"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/groupama.webp')}}"             alt="" class="mc-logo"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/hna.webp')}}"                  alt="" class="mc-logo"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/logosantalucia.webp')}}"       alt="" class="mc-logo"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/mapfre.webp')}}"               alt="" class="mc-logo"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/Mutuacat.webp')}}"             alt="" class="mc-logo"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/mutuageneralcat.webp')}}"      alt="" class="mc-logo"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/plusUltra.webp')}}"            alt="" class="mc-logo"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/sanitas.webp')}}"              alt="" class="mc-logo"></div>
+      </div>
+    </div>
+  </div>
 
   <!-- ===== CTA ===== -->
   <section class="cta-band" id="contacte">

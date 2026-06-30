@@ -42,6 +42,14 @@ body{
     color: #3090C7;
 }
 
+/* La portada manté la tipografia sans (Mulish): Fraunces queda massa pesada
+   en títols grans en majúscules. */
+#portada h1,
+#portada h2,
+.hero-title{
+    font-family: 'Mulish', sans-serif;
+}
+
 .hero-title{
     font-size: 72px;
     font-weight: 700;
@@ -126,6 +134,10 @@ body{
 
 section{
     padding: 100px 0;
+}
+
+#perque{
+    background: #f4f7fa;
 }
 
 .section-title h2{
@@ -397,6 +409,81 @@ p{font-size: 18px; color: #999999; line-height: 1.8; margin-bottom: 0px}
 .cta-band .cta-btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
 .cta-band .cta-btn-ghost:hover{background:rgba(255,255,255,.12);color:#fff}
 .cta-band .cw{position:absolute;color:rgba(255,255,255,.08)}
+
+/* ================= CARRUSEL MÚTUES ================= */
+
+.mutues-carousel{
+  background: var(--paper);
+  padding: 0 0 64px;
+  overflow: hidden;
+}
+
+.mc-viewport{
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right,transparent,#000 12%,#000 88%,transparent);
+          mask-image: linear-gradient(to right,transparent,#000 12%,#000 88%,transparent);
+}
+
+.mc-track{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: max-content;
+  animation: mutues-marquee 36s linear infinite;
+  will-change: transform;
+}
+
+.mc-track:hover{
+  animation-play-state: paused;
+}
+
+.mc-slide{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px 28px;
+  height: 96px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 10px -4px rgba(17,50,74,.08);
+  transition: box-shadow .25s, transform .2s;
+}
+
+.mc-slide:hover{
+  box-shadow: 0 8px 24px -6px rgba(17,50,74,.18);
+  transform: translateY(-3px);
+}
+
+.mc-logo{
+  display: block;
+  height: 56px;
+  width: auto;
+  max-width: 170px;
+  filter: grayscale(100%) opacity(.6);
+  transition: filter .3s;
+}
+
+.mc-slide:hover .mc-logo{
+  filter: grayscale(0%) opacity(1);
+}
+
+@keyframes mutues-marquee{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .mc-track{
+    animation: none;
+  }
+  .mc-viewport{
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .mc-viewport::-webkit-scrollbar{ display: none; }
+}
 
 /* ================= RESPONSIVE MÒBIL ================= */
 
