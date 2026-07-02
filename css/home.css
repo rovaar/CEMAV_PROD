@@ -1,0 +1,621 @@
+:root{
+  --ink:#11324A;
+  --ink-soft:#4A6072;
+  --blue:#1E84C6;
+  --blue-deep:#13639C;
+  --sky:#EAF4FB;
+  --warm:#EF8E66;
+  --warm-soft:#FBE7DC;
+  --paper:#FCFBF8;
+  --line:rgba(17,50,74,.10);
+  --shadow-soft:0 10px 30px -18px rgba(17,50,74,.4);
+  --maxw:1180px;
+}
+
+body{
+    overflow-x: hidden;
+ }
+
+.navbar{
+  background-color: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  min-height: 100px;
+}
+
+.logo{
+    width: 250px;
+    height: 60px;
+}
+
+#portada{
+    background:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url(../img/wallpapers/hero1.webp);
+    background-size: cover;
+    color: #ffffff;
+    height: 550px;
+    margin-top: 100px;
+    position: relative;
+}
+
+.hero-title span{
+    color: #3090C7;
+}
+
+/* La portada manté la tipografia sans (Mulish): Fraunces queda massa pesada
+   en títols grans en majúscules. */
+#portada h1,
+#portada h2,
+.hero-title{
+    font-family: 'Mulish', sans-serif;
+}
+
+.hero-title{
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+#portada:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 550px;
+}
+
+.btn{
+    font-size: 14px;
+    padding: 15px 26px;
+    position: relative;
+    min-width: 160px;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+.btn-light{
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border: 2px solid #ffffff;
+}
+
+.hero-btn{
+    display: inline-block;
+    margin-top: 40px;
+    background: #fff;
+    color: #3090C7;
+    border: 2px solid #3090C7;
+    padding: 18px 45px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero-btn:hover{
+    background: #3090C7;
+    color: #fff;
+}
+
+.linea {
+    border-top: 1px solid #3090C7;
+    background-color: #3090C7;
+    width: 750px;
+    height: 2px;
+    margin: 20px auto 0 auto;
+  }
+
+#portada h1 {
+	font-size: 60px;
+	color: #fff;
+	position: relative
+       
+}
+
+#portada h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+	color: #fff;
+	position: relative
+}
+
+#novetat{
+    background-color:#3090C7;
+    font-size: 20px;
+    color: balck;
+
+}
+
+/* ================= SECCIONS ================= */
+
+section{
+    padding: 100px 0;
+}
+
+#perque{
+    background: #f4f7fa;
+}
+
+.section-title h2{
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.section-title span{
+    color: #3090C7;
+}
+
+.section-title p{
+    font-size: 20px;
+    color: #666;
+    margin-top: 15px;
+}
+
+/* ================= CARDS ================= */
+
+.info-card,
+.especialitat-card{
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    padding: 30px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.info-card:hover,
+.especialitat-card:hover{
+    transform: translateY(-8px);
+}
+
+.info-card ion-icon{
+    font-size: 50px;
+    color: #3090C7;
+    margin-bottom: 20px;
+}
+
+.info-card h3{
+    font-size: 22px;
+    color: #222;
+}
+
+#especialitats_titol{
+    margin: 30px 40px 40px 40px;
+}
+
+.container-departaments{
+    display:inline-block;
+    text-align:center;
+    margin: 30px 0px 30px 0px;
+}
+
+p{font-size: 18px; color: #999999; line-height: 1.8; margin-bottom: 0px}
+
+
+.img-dep{
+    width:120px;
+    height:120px;
+    border-radius:150px;
+    cursor: pointer;
+}
+
+.img-dep:hover{filter: grayscale(80%);}
+
+.departamentimg{
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    border-radius: 50px;
+}
+
+
+.wrapper{
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  max-width: 365px;
+  background: #DFE1FF;
+  padding: 25px 25px 30px 25px;
+  border-radius: 15px;
+  box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.15);
+  text-align: center;
+}
+.wrapper.hide{
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+}
+::selection{
+  color: #fff;
+  background: #3090C7;
+}
+.wrapper img{
+  max-width: 90px;
+}
+.content header{
+  font-size: 25px;
+  font-weight: 600;
+}
+.content{
+  margin-top: 10px;
+}
+.content p{
+  color: #858585;
+  margin: 5px 0 20px 0;
+}
+.content .buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttons button{
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  background: #3090C7;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.buttons button:hover{
+  transform: scale(0.97);
+}
+.buttons .item{
+  margin: 0 10px;
+}
+.buttons a{
+  color: #3090C7;
+}
+
+.navbar-toggler{ font-size: 40px;}
+.navbar-toggler:focus{ outline: none;}
+
+/* ================= SEO TEXT ================= */
+
+#seo-text{
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--sky) 0%, var(--paper) 65%);
+    padding: 96px 0;
+}
+
+/* Creu mèdica decorativa de fons */
+#seo-text .seo-cross{
+    position: absolute;
+    top: -40px;
+    right: -30px;
+    width: 320px;
+    color: rgba(30,132,198,.06);
+    pointer-events: none;
+}
+
+#seo-text .seo-wrap{
+    position: relative;
+    z-index: 1;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1.2fr .9fr;
+    align-items: center;
+    gap: 56px;
+}
+
+#seo-text h2{
+    font-family: "Fraunces", Georgia, serif;
+    font-size: clamp(2rem, 4vw, 2.9rem);
+    font-weight: 500;
+    line-height: 1.15;
+    color: var(--ink);
+    margin: 16px 0 20px;
+}
+
+#seo-text h2 span{
+    color: var(--blue-deep);
+}
+
+#seo-text .seo-copy p{
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    max-width: 52ch;
+    margin: 0 0 28px;
+    line-height: 1.85;
+}
+
+/* Tira de dades destacades */
+#seo-text .seo-stats{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 14px;
+}
+
+#seo-text .seo-stats a{
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 20px 24px;
+    box-shadow: var(--shadow-soft);
+    text-decoration: none;
+    transition: transform .2s ease, box-shadow .25s ease, border-color .2s ease;
+}
+
+#seo-text .seo-stats a:hover{
+    transform: translateY(-4px);
+    border-color: var(--blue);
+    box-shadow: 0 16px 34px -18px rgba(17,50,74,.5);
+}
+
+/* Fletxa que apareix en passar el ratolí */
+#seo-text .seo-stats a::after{
+    content: "→";
+    margin-left: auto;
+    align-self: center;
+    color: var(--blue);
+    font-weight: 700;
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity .2s ease, transform .2s ease;
+}
+
+#seo-text .seo-stats a:hover::after{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#seo-text .seo-stats strong{
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--blue);
+    line-height: 1;
+    min-width: 72px;
+}
+
+#seo-text .seo-stats span{
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 1rem;
+}
+
+@media(max-width:860px){
+    #seo-text{ padding: 64px 0; }
+    #seo-text .seo-wrap{
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+    #seo-text .seo-cross{ width: 220px; top: -30px; }
+}
+
+/* ================= ESPECIALITATS TÍTOL ================= */
+
+#especialitats_titol{
+    margin: 0;
+    padding: 70px 40px 30px;
+    text-align: center;
+}
+
+#especialitats_titol h1{
+    font-size: 52px;
+    font-weight: 700;
+    color: #1a2e4a;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+#especialitats_titol h1::after{
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #3090C7;
+    margin: 14px auto 0;
+    border-radius: 2px;
+}
+
+#especialitats_titol p{
+    font-size: 18px;
+    color: #666;
+    max-width: 800px;
+    margin: 20px auto 0;
+    line-height: 1.9;
+}
+
+/* ================= UTILITATS NOVES ================= */
+
+.eyebrow{
+  font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--blue-deep);display:inline-flex;align-items:center;gap:.6em;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--warm);border-radius:2px}
+
+.cta-btn{
+  display:inline-flex;align-items:center;gap:9px;font-weight:700;
+  font-family:"Mulish",sans-serif;border-radius:999px;padding:13px 24px;
+  font-size:.95rem;cursor:pointer;transition:transform .18s,box-shadow .25s,background .2s;
+  white-space:nowrap;text-decoration:none;border:none;
+}
+.cta-btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.cta-btn-ghost:hover{border-color:var(--blue);color:var(--blue-deep)}
+.cta-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+
+/* ================= MÚTUES ================= */
+
+.mutues{background:var(--paper);padding:88px 0}
+.mutues .band{
+  background:#fff;border:1px solid var(--line);border-radius:24px;padding:42px 44px;
+  display:flex;align-items:center;justify-content:space-between;gap:36px;flex-wrap:wrap;
+  box-shadow:var(--shadow-soft);
+}
+.mutues .band h3{
+  font-size:1.7rem;font-weight:500;max-width:18ch;
+  font-family:"Fraunces",Georgia,serif;color:var(--ink);margin-top:14px
+}
+.mutues .band p{color:var(--ink-soft);margin-top:8px;max-width:36ch}
+.logos{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.logos .m{
+  background:var(--sky);color:var(--blue-deep);font-weight:800;font-size:.9rem;
+  padding:11px 18px;border-radius:10px;letter-spacing:.02em
+}
+
+@media(max-width:760px){
+  .mutues .band{flex-direction:column;align-items:flex-start}
+}
+
+/* ================= CTA BAND ================= */
+
+.cta-band{
+  background:linear-gradient(150deg,var(--blue) 0%,var(--blue-deep) 100%);
+  color:#fff;text-align:center;position:relative;overflow:hidden;padding:88px 0;
+}
+.cta-band .wrap{position:relative;z-index:1}
+.cta-band h2{
+  color:#fff;font-size:clamp(2rem,4vw,3rem);margin-bottom:14px;
+  font-family:"Fraunces",Georgia,serif;font-weight:500;
+}
+.cta-band p{color:#dcecf8;font-size:1.12rem;max-width:46ch;margin:0 auto 30px}
+.cta-band .cta-actions{justify-content:center}
+.cta-band .cta-btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
+.cta-band .cta-btn-ghost:hover{background:rgba(255,255,255,.12);color:#fff}
+.cta-band .cw{position:absolute;color:rgba(255,255,255,.08)}
+
+/* ================= CARRUSEL MÚTUES ================= */
+
+.mutues-carousel{
+  background: var(--paper);
+  padding: 0 0 64px;
+  overflow: hidden;
+}
+
+.mc-viewport{
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right,transparent,#000 12%,#000 88%,transparent);
+          mask-image: linear-gradient(to right,transparent,#000 12%,#000 88%,transparent);
+}
+
+.mc-track{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: max-content;
+  animation: mutues-marquee 36s linear infinite;
+  will-change: transform;
+}
+
+.mc-track:hover{
+  animation-play-state: paused;
+}
+
+.mc-slide{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px 28px;
+  height: 96px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 10px -4px rgba(17,50,74,.08);
+  transition: box-shadow .25s, transform .2s;
+}
+
+.mc-slide:hover{
+  box-shadow: 0 8px 24px -6px rgba(17,50,74,.18);
+  transform: translateY(-3px);
+}
+
+.mc-logo{
+  display: block;
+  height: 56px;
+  width: auto;
+  max-width: 170px;
+  filter: grayscale(100%) opacity(.6);
+  transition: filter .3s;
+}
+
+.mc-slide:hover .mc-logo{
+  filter: grayscale(0%) opacity(1);
+}
+
+@keyframes mutues-marquee{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .mc-track{
+    animation: none;
+  }
+  .mc-viewport{
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .mc-viewport::-webkit-scrollbar{ display: none; }
+}
+
+/* ================= RESPONSIVE MÒBIL ================= */
+
+@media (max-width: 768px) {
+    #portada {
+        height: auto;
+        min-height: 420px;
+        padding: 40px 20px 60px;
+        margin-top: 80px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    #portada h2 {
+        font-size: 16px;
+    }
+
+    .hero-btn {
+        font-size: 16px;
+        padding: 14px 30px;
+        margin-top: 30px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .section-title p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .linea {
+        width: 90%;
+    }
+
+    #novetat p {
+        font-size: 18px;
+    }
+
+    .wrapper {
+        left: 10px;
+        right: 10px;
+        max-width: calc(100% - 20px);
+        bottom: 15px;
+    }
+}

@@ -1,0 +1,42 @@
+/* ============================================================
+   CEMAV — Sistema de disseny compartit (tokens + tipografia)
+   Carregat globalment a includes/head.blade.php.
+   Estableix Mulish (text) + Fraunces (títols) a tota la web.
+   ============================================================ */
+
+:root{
+  --ink:#11324A;
+  --ink-soft:#4A6072;
+  --blue:#1E84C6;
+  --blue-deep:#13639C;
+  --sky:#EAF4FB;
+  --warm:#EF8E66;
+  --warm-soft:#FBE7DC;
+  --paper:#FCFBF8;
+  --line:rgba(17,50,74,.10);
+  --shadow-soft:0 10px 30px -18px rgba(17,50,74,.4);
+  --maxw:1180px;
+}
+
+/* ── Tipografia base ── */
+body{
+  font-family: 'Mulish', sans-serif;
+  color: var(--ink);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6{
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  /* Sense color fix: hereta el color del context (ex. títols blancs sobre heros foscos) */
+}
+
+/* Manté coherent qualsevol element que utilitzi les classes display de Bootstrap */
+.display-1, .display-2, .display-3, .display-4{
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+/* ── Navegació (header compartit: includes/nav.blade.php) ── */
+.nav-link{ color: #11324A; font-weight: 600; }
+.nav-link:hover{ color: #3090C7; }
+.dropdown-item:hover{ color: #3090C7; }

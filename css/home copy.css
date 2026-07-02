@@ -1,0 +1,179 @@
+body{
+    font-family: 'Titillium Web', sans-serif;
+    overflow-x: hidden;
+    color: #222;
+}
+
+/* ================= HERO ================= */
+
+#hero-home{
+    min-height: 90vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url('../img/wallpapers/hero-home.webp');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 20px;
+}
+
+.hero-slug{
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.hero-title{
+    font-size: 78px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.hero-title span{
+    color: #3090C7;
+}
+
+.hero-subtitle{
+    font-size: 22px;
+    max-width: 850px;
+    margin: 25px auto;
+    line-height: 1.6;
+}
+
+.hero-buttons{
+    margin-top: 40px;
+}
+
+.hero-btn,
+.hero-btn-outline{
+    display: inline-block;
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero-btn{
+    background: #3090C7;
+    color: white;
+}
+
+.hero-btn:hover{
+    background: #1f6f9a;
+}
+
+.hero-btn-outline{
+    border: 2px solid white;
+    color: white;
+    margin-left: 15px;
+}
+
+.hero-btn-outline:hover{
+    background: white;
+    color: #3090C7;
+}
+
+/* ================= SECCIONS ================= */
+
+section{
+    padding: 100px 0;
+}
+
+.section-title h2{
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.section-title span{
+    color: #3090C7;
+}
+
+.section-title p{
+    font-size: 20px;
+    color: #666;
+    margin-top: 15px;
+}
+
+/* ================= NOVETAT ================= */
+
+#novetat{
+    background: #3090C7;
+    color: white;
+    padding: 60px 20px;
+}
+
+#novetat a{
+    color: white;
+    font-weight: bold;
+}
+
+/* ================= CARDS ================= */
+
+.info-card,
+.especialitat-card{
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    padding: 30px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.info-card:hover,
+.especialitat-card:hover{
+    transform: translateY(-8px);
+}
+
+.info-card ion-icon{
+    font-size: 50px;
+    color: #3090C7;
+    margin-bottom: 20px;
+}
+
+.especialitat-card img{
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.especialitat-card h3{
+    font-size: 22px;
+    color: #222;
+}
+
+/* ================= SEO TEXT ================= */
+
+#seo-text{
+    background: #f7f7f7;
+    text-align: center;
+}
+
+#seo-text h2{
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+#seo-text p{
+    font-size: 18px;
+    color: #666;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 768px){
+
+    .hero-title{
+        font-size: 42px;
+    }
+
+    .hero-subtitle{
+        font-size: 18px;
+    }
+
+    .section-title h2{
+        font-size: 32px;
+    }
+
+}

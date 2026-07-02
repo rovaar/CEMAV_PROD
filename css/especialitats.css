@@ -1,0 +1,498 @@
+body{
+    overflow-x: hidden;
+     }
+
+.navbar{
+    background-color: #ffffff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    min-height: 100px;
+}
+
+.logo{
+    width: 250px;
+    height: 80px;
+}
+
+#portada{
+    position: relative;
+    background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url(../img/cemavFora.webp);
+    background-size: cover;
+    background-position: center;
+    padding-top: 90px;
+    color: #ffffff;
+    width: 100%;
+    min-height: 250px;
+    overflow: hidden;
+}
+
+#portada:before {
+    display: none;
+}
+
+.content-center{
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+}
+
+footer{
+    margin-top: 150px;
+}
+
+.footer-top{
+    background-color: #3090C7
+}
+
+.footer-bot{
+    padding: 60px;
+}
+
+
+@media (min-width: 320px) and (max-width: 400px) {
+    .foto{
+        width: 250px !important;
+        height: 250px !important;
+        margin: 0px 50px 50px 50px  !important;
+    }
+
+    #titol{
+        position: absolute !important; 
+        top: 26% !important;
+        left: 5% !important;
+    }
+    #descripcio{
+        text-align: center !important;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 576px) {
+    .foto{
+        width: 250px !important;
+        height: 250px !important;
+        margin: 0px 50px 50px 70px  !important;
+    }
+
+    #titol{
+        position: absolute !important; 
+        top: 26% !important;
+        left: 5% !important;
+    }
+    #descripcio{
+        text-align: center !important;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .foto{
+        width: 250px !important;
+        height: 250px !important;
+        margin: 0px 50px 50px 50px !important;
+    }
+    #descripcio{
+        text-align: center !important;
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .foto{
+        width: 250px !important;
+        height: 250px !important;
+        margin: 0px 50px 50px 50px !important;
+    }
+
+    #titol{
+        position: absolute !important; 
+        top: 20% !important;
+        left: 5% !important;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {  
+    #titol{
+        position: absolute !important; 
+        top: 15% !important;
+        left: 5% !important;
+    }
+}
+
+@media (min-width: 1200px) {  }
+
+.foto{
+    display: block;
+    width: 200px;
+    height: 150px;
+    object-fit: contain;
+}
+
+/* HERO / PORTADA DE LES ESPECIALITATS FILLES */
+
+/*
+ * Portada compacta (mateix estil que #portada_especialitats):
+ * imatge de fons amb el títol centrat.
+ * IMPORTANT: fem servir background-image (no la drecera background:)
+ * perquè el background-color de reserva no es reinicialitzi a transparent.
+ * Així, mentre la imatge es descarrega, es mostra un color fosc en comptes de gris.
+ */
+[id^="portada-"] {
+    height: 350px;
+    padding-top: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    background-color: #111c26;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* hero3 */
+#portada-oftalmologia,
+#portada-fisioterapia,
+#portada-optometria{
+    background-image:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url(../img/wallpapers/hero3.webp);
+}
+
+/* hero2 */
+#portada-dermatologia,
+#portada-urologia,
+#portada-traumatologia,
+#portada-digestoleg,
+#portada-odontologia{
+    background-image:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url(../img/wallpapers/hero2.webp);
+}
+
+/* hero4 */
+#portada-psicologia,
+#portada-podologia,
+#portada-nutricio,
+#portada-infermeria,
+#portada-ortodoncista{
+    background-image:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url(../img/wallpapers/hero4.webp);
+}
+
+[id^="portada-"] .content-center {
+    margin-bottom: 0;
+}
+
+[id^="portada-"] .container h1,
+[id^="portada-"] .container h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-slug{
+    font-size: 20px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.hero-title{
+    font-family: 'Mulish', sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.hero-title span{
+    color: #3090C7;
+}
+
+.hero-subtitle{
+    font-size: 24px;
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.5;
+}
+
+.hero-btn{
+    display: inline-block;
+    margin-top: 40px;
+    background: #fff;
+    color: #3090C7;
+    border: 2px solid #3090C7;
+    padding: 18px 45px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero-btn:hover{
+    background: #3090C7;
+    color: #fff;
+}
+
+/* SECCIONS */
+
+[id^="serveis-"],
+[id^="professionals-"] {
+    padding: 120px 0 60px 0;
+    background: #f7f7f7;
+}
+
+.section-title h2{
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.section-title span{
+    color: #3090C7;
+}
+
+.section-title p{
+    margin-top: 20px;
+    font-size: 24px;
+    color: #666;
+}
+
+.section-title p.text-small{
+    font-size: 18px;
+}
+
+/* TARGETES */
+
+.servei-card{
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    height: 100%;
+    transition: 0.3s;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.06);
+}
+
+.servei-card:hover{
+    transform: translateY(-8px);
+}
+
+.servei-icon ion-icon{
+    font-size: 55px;
+    color: #3090C7;
+    margin-bottom: 30px;
+}
+
+.servei-card h3{
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.servei-card p{
+    font-size: 20px;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* DOCTORS */
+
+.doctor-card{
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.06);
+}
+
+.doctor-img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.doctor-card h3{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.doctor-card p{
+    color: #777;
+    font-size: 18px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .hero-title{
+        font-size: 46px;
+    }
+
+    .hero-subtitle{
+        font-size: 20px;
+    }
+
+    .section-title h2{
+        font-size: 40px;
+    }
+
+    .servei-card{
+        padding: 35px;
+    }
+}
+
+/* ================= GRID ESPECIALITATS ================= */
+
+#especialitats-grid {
+    padding: 100px 0;
+}
+
+#especialitats-grid .section-title {
+    margin-bottom: 60px;
+}
+
+.especialitat-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    padding: 30px;
+    transition: 0.3s;
+    text-align: center;
+    height: 100%;
+}
+
+.especialitat-card:hover {
+    transform: translateY(-8px);
+}
+
+.especialitat-card ion-icon {
+    font-size: 50px;
+    color: #3090C7;
+    margin-bottom: 20px;
+}
+
+.especialitat-card h3 {
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.especialitat-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.especialitat-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= GRID D'ESPECIALITATS ================= */
+
+#especialitats_titol {
+    margin: 0;
+    padding: 70px 40px 30px;
+    text-align: center;
+}
+
+#especialitats_titol h1 {
+    font-size: 52px;
+    font-weight: 700;
+    color: #1a2e4a;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+#especialitats_titol h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #3090C7;
+    margin: 14px auto 0;
+    border-radius: 2px;
+}
+
+#especialitats_titol p {
+    font-size: 18px;
+    color: #666;
+    max-width: 800px;
+    margin: 20px auto 0;
+    line-height: 1.9;
+}
+
+#especialitats {
+    background: #ffffff;
+    padding: 20px 40px;
+    justify-content: center;
+}
+
+.container-departaments {
+    display: inline-block;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.img-dep {
+    width: 120px;
+    height: 120px;
+    border-radius: 150px;
+    cursor: pointer;
+}
+
+.img-dep:hover {
+    filter: grayscale(80%);
+}
+
+.title-dep {
+    display: block;
+    color: #3090C7;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+p {
+    font-size: 18px;
+    color: #999999;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* ================= PORTADA ESPECIALITATS ================= */
+
+#portada_especialitats {
+    background:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url(../img/wallpapers/hero1.webp);
+    background-size: cover;
+    color: #ffffff;
+    height: 350px;
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#portada_especialitats:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 350px;
+}
+
