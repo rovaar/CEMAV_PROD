@@ -4,6 +4,7 @@
     @include('includes.head', [
         'title'       => 'Ortodòncia a Vic | CEMAV',
         'description' => "Servei d'ortodòncia a Vic. Correccions dentals amb bràquets i alineadors invisibles. Ortodoncistes especialitzats a CEMAV.",
+        'robots'      => 'noindex, follow',
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero4.webp')}}">
     <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">

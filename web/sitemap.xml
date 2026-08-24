@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
     Nomes hi ha d'haver URLs indexables.
-    Les pagines legals (/avislegal, /politicadeprivacitat, /politicadecookies,
-    /termesdus) son noindex,follow: no van al sitemap.
+    Queden fora, totes marcades noindex,follow:
+      - pagines legals: /avislegal, /politicadeprivacitat, /politicadecookies, /termesdus
+      - especialitats que el centre no ofereix ara mateix: /digestoleg, /ortodoncista
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- Portada -->
@@ -76,18 +77,6 @@
     </url>
     <url>
         <loc>https://www.cemavvic.cat/psicologia</loc>
-        <lastmod>2026-08-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://www.cemavvic.cat/digestoleg</loc>
-        <lastmod>2026-08-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://www.cemavvic.cat/ortodoncista</loc>
         <lastmod>2026-08-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>

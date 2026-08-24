@@ -4,6 +4,7 @@
     @include('includes.head', [
         'title'       => 'Digestologia a Vic | CEMAV',
         'description' => 'Servei de digestologia a Vic. Diagnòstic i tractament de malalties del sistema digestiu, fetge i intestí. Especialistes a CEMAV.',
+        'robots'      => 'noindex, follow',
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero2.webp')}}">
     <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
