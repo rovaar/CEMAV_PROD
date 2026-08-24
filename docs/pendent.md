@@ -31,7 +31,8 @@ Quan toqui publicar: mergear `dev` → `main`, push, i seguir
   repositori, amb rutes i enllaços al footer. Els quatre documents legals comparteixen
   ara `web/css/legal.css` en comptes de duplicar un `<style>` inline cadascun.
 - **Sitemap** — hi faltava `/especialitats` i hi sobrava `/politicadecookies`, que és
-  `noindex`. Ara conté exactament les 23 rutes indexables.
+  `noindex`. Després de despublicar digestologia i ortodòncia queda amb 21 URLs,
+  exactament les rutes indexables.
 - **Pàgina de proves** — `/proves` era pública, sense `noindex` i sense cap enllaç que
   hi apuntés. Eliminada amb la seva vista i `web/css/proves.css`, que no feia servir
   ningú.
@@ -54,7 +55,7 @@ Quan toqui publicar: mergear `dev` → `main`, push, i seguir
 
 Hi ha tres llocs que llisten especialitats i cap dels tres diu el mateix:
 
-| On | Quantes | Qè hi falta |
+| On | Quantes | Què hi falta |
 |---|---|---|
 | Menú (`includes/nav.blade.php`) | 11 | digestologia, ortodòncia |
 | Graella (`especialitats/index.blade.php`) | 13 | — (les té totes) |
