@@ -34,7 +34,7 @@
             <div class="col-md-12 text-center" id="portada">
                 <h2 style="margin-top:50px;">Acompanyant-te en el teu benestar i procés de rehabilitació</h2>
                 <h1 class="hero-title">CENTRE DE <span>MEDICINA AMABLE</span> DE <span>VIC</span></h1>
-                <h2>Persones tractant persones</h2>
+                <h2>Persones tractant a persones</h2>
                 <a href="{{URL::to('/contacte')}}" class="hero-btn" style="margin-top:60px;">Contacte</a>
             </div>
         </div>
@@ -96,8 +96,8 @@
                 </a>
             </div>
             <div class="col-12 col-md-2 container-departaments">
-                <img src="img/Fisioteràpia.webp" onclick="javascript:window.location='{{URL::to('/fisioteràpia')}}';" alt="Fisioteràpia a CEMAV Vic" loading="lazy" class="img-dep" width="120" height="120">
-                <a href="{{URL::to('/fisioteràpia')}}" class="title-dep">
+                <img src="img/Fisioteràpia.webp" onclick="javascript:window.location='{{URL::to('/fisioterapia')}}';" alt="Fisioteràpia a CEMAV Vic" loading="lazy" class="img-dep" width="120" height="120">
+                <a href="{{URL::to('/fisioterapia')}}" class="title-dep">
                     </br><span class="title-dep">Fisioteràpia</span>
                 </a>
             </div>
@@ -167,18 +167,41 @@
 
         <!-- SEO TEXT -->
         <section id="seo-text">
-            <div class="container">
-                <h2>Centre mèdic a Vic</h2>
-                <p>
-                    A CEMAV oferim un servei mèdic integral amb especialistes en diferents àrees de la salut.
-                </p>
-                <p>
-                    El nostre objectiu és millorar la qualitat de vida dels pacients amb un tracte humà i proper.
-                </p>
+            <svg class="seo-cross" viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M18 6h12v12h12v12H30v12H18V30H6V18h12z" fill="currentColor"/>
+            </svg>
+            <div class="seo-wrap">
+                <div class="seo-copy">
+                    <span class="eyebrow">Centre mèdic a Vic</span>
+                    <h2>Un servei mèdic integral, <span>a prop teu</span></h2>
+                    <p>
+                        A CEMAV oferim un servei mèdic integral amb especialistes en diferents àrees de la salut,
+                        amb l'objectiu de millorar la qualitat de vida dels pacients amb un tracte humà i proper.
+                    </p>
+                    <a href="{{URL::to('/sobreCemav')}}" class="cta-btn cta-btn-ghost">Coneix el centre</a>
+                </div>
+                <ul class="seo-stats">
+                    <li>
+                        <a href="{{URL::to('/especialitats')}}">
+                            <strong>11+</strong>
+                            <span>Especialitats mèdiques</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{URL::to('/mutues')}}">
+                            <strong>20+</strong>
+                            <span>Mútues col·laboradores</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{URL::to('/contacte')}}">
+                            <strong>Vic</strong>
+                            <span>Centre de referència local</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
-
-        @include('includes.cookies')
   </div>
 
   <!-- ===== MÚTUES ===== -->
@@ -262,7 +285,7 @@
       <path d="M18 6h12v12h12v12H30v12H18V30H6V18h12z" fill="currentColor"/>
     </svg>
     <div class="wrap">
-      <h2>Persones tractant persones</h2>
+      <h2>Persones tractant a persones</h2>
       <p>Demana cita avui mateix i et truquem per trobar l'hora que millor t'encaixi.</p>
       <div class="cta-actions">
         <a href="mailto:noucemav@gmail.com" class="cta-btn" style="background:#fff;color:var(--blue-deep)">Escriu-nos</a>

@@ -44,8 +44,15 @@ footer .contact-line svg{color:#1E84C6;flex-shrink:0;margin-top:3px}
 }
 .map-card a.maps:hover{background:#13639C}
 
-.foot-bottom{
+.foot-legal{
   border-top:1px solid rgba(255,255,255,.1);margin-top:48px;padding-top:24px;
+  display:flex;justify-content:center;gap:8px 22px;flex-wrap:wrap;
+  font-size:.85rem
+}
+.foot-legal a{color:#9fb4c2;text-decoration:none;transition:color .2s ease}
+.foot-legal a:hover{color:#fff;text-decoration:underline}
+.foot-bottom{
+  margin-top:20px;padding-top:20px;
   display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   font-size:.85rem;color:#7e98a8
 }

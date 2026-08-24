@@ -14,7 +14,7 @@
     <header class="contact-hero">
       <div class="wrap">
         <h1>Parlem?</h1>
-        <p>Contacta amb nosaltres i et donarem resposta el més aviat possible. Persones tractant persones.</p>
+        <p>Contacta amb nosaltres i et donarem resposta el més aviat possible. Persones tractant a persones.</p>
       </div>
     </header>
 

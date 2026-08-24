@@ -35,3 +35,8 @@ h1, h2, h3, h4, h5, h6,
 .display-1, .display-2, .display-3, .display-4{
   font-family: 'Fraunces', Georgia, serif;
 }
+
+/* ── Navegació (header compartit: includes/nav.blade.php) ── */
+.nav-link{ color: #11324A; font-weight: 600; }
+.nav-link:hover{ color: #3090C7; }
+.dropdown-item:hover{ color: #3090C7; }

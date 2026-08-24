@@ -31,9 +31,6 @@ body{
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   min-height: 100px;
 }
-.nav-link{ color: #11324A; }
-.nav-link:hover{ color: var(--blue); }
-.dropdown-item:hover{ color: var(--blue); }
 .logo{ width: 250px; height: 60px; }
 .navbar-toggler{ font-size: 40px; }
 .navbar-toggler:focus{ outline: none; }

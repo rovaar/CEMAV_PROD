@@ -3,7 +3,7 @@
   <head>
     @include('includes.head', [
         'title'       => 'Sobre CEMAV | Centre de Medicina Amable de Vic',
-        'description' => "Coneix CEMAV, el Centre de Medicina Amable de Vic. Des del 2002 oferim atenció mèdica especialitzada amb la filosofia 'Persones tractant persones'.",
+        'description' => "Coneix CEMAV, el Centre de Medicina Amable de Vic. Des del 2002 oferim atenció mèdica especialitzada amb la filosofia 'Persones tractant a persones'.",
     ])
     <link rel="stylesheet" href="{{asset('css/sobre.css')}}">
   </head>
@@ -86,7 +86,7 @@
       <div class="container">
         <blockquote class="filosofia-quote">
           <span class="quote-mark">"</span>
-          Persones tractant persones
+          Persones tractant a persones
           <span class="quote-mark">"</span>
         </blockquote>
         <p class="filosofia-sub">La filosofia que guia cada visita al nostre centre.</p>

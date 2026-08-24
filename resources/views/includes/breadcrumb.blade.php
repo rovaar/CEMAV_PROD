@@ -16,7 +16,7 @@
                 <!-- Especialitats Section -->
                 @if(in_array($currentRoute, ['odontologia', 'podologia', 'fisioterapia', 'optometria', 'nutricio', 'urologia', 'oftalmologia', 'traumatologia', 'dermatologia', 'psicologia', 'digestoleg', 'ortodoncista', 'infermeria', 'osteopatia']))
                     <li class="breadcrumb-item">
-                        <a href="{{ url('/#especialitats') }}" title="Especialitats - Centre Mèdic CEMAV">Especialitats</a>
+                        <a href="{{ url('/especialitats') }}" title="Especialitats - Centre Mèdic CEMAV">Especialitats</a>
                     </li>
                     <li class="breadcrumb-item active" aria-current="page">
                         {{ $pageTitle ?? ucfirst(str_replace('ièk', 'ia', $currentRoute)) }}
@@ -81,7 +81,7 @@
 
                 $breadcrumbItems[] = [
                     'name' => 'Especialitats',
-                    'url' => URL::to('/#especialitats'),
+                    'url' => URL::to('/especialitats'),
                     'position' => $position++
                 ];
 

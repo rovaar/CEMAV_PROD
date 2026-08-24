@@ -9,9 +9,6 @@ body {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   min-height: 100px;
 }
-.nav-link         { color: black; }
-.nav-link:hover   { color: #3090C7; }
-.dropdown-item:hover { color: #3090C7; }
 .logo { width: 250px; height: 80px; }
 .navbar-toggler        { font-size: 40px; }
 .navbar-toggler:focus  { outline: none; }
@@ -94,11 +91,11 @@ body {
   box-shadow: 0 10px 28px rgba(0,0,0,0.12);
 }
 .milestone-card--accent {
-  background: #3090C7;
+  background: #1a5f8a;
   color: #fff;
 }
-.milestone-card--accent h3,
-.milestone-card--accent p {
+.milestone-card.milestone-card--accent h3,
+.milestone-card.milestone-card--accent p {
   color: #fff;
 }
 .milestone-year {
@@ -109,7 +106,7 @@ body {
   margin-bottom: 10px;
 }
 .milestone-card--accent .milestone-year {
-  color: rgba(255,255,255,0.85);
+  color: #fff;
 }
 .milestone-icon {
   font-size: 2rem;

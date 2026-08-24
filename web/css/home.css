@@ -195,10 +195,6 @@ section{
 
 p{font-size: 18px; color: #999999; line-height: 1.8; margin-bottom: 0px}
 
-.nav-link{color: black;}
-.nav-link:hover{color: #3090C7;}
-
-.dropdown-item:hover{color: #3090C7;}
 
 .img-dep{
     width:120px;
@@ -285,36 +281,122 @@ p{font-size: 18px; color: #999999; line-height: 1.8; margin-bottom: 0px}
 /* ================= SEO TEXT ================= */
 
 #seo-text{
-    background: #f4f7fa;
-    text-align: center;
-    padding: 70px 0;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--sky) 0%, var(--paper) 65%);
+    padding: 96px 0;
+}
+
+/* Creu mèdica decorativa de fons */
+#seo-text .seo-cross{
+    position: absolute;
+    top: -40px;
+    right: -30px;
+    width: 320px;
+    color: rgba(30,132,198,.06);
+    pointer-events: none;
+}
+
+#seo-text .seo-wrap{
+    position: relative;
+    z-index: 1;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1.2fr .9fr;
+    align-items: center;
+    gap: 56px;
 }
 
 #seo-text h2{
-    font-size: 42px;
+    font-family: "Fraunces", Georgia, serif;
+    font-size: clamp(2rem, 4vw, 2.9rem);
+    font-weight: 500;
+    line-height: 1.15;
+    color: var(--ink);
+    margin: 16px 0 20px;
+}
+
+#seo-text h2 span{
+    color: var(--blue-deep);
+}
+
+#seo-text .seo-copy p{
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    max-width: 52ch;
+    margin: 0 0 28px;
+    line-height: 1.85;
+}
+
+/* Tira de dades destacades */
+#seo-text .seo-stats{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 14px;
+}
+
+#seo-text .seo-stats a{
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 20px 24px;
+    box-shadow: var(--shadow-soft);
+    text-decoration: none;
+    transition: transform .2s ease, box-shadow .25s ease, border-color .2s ease;
+}
+
+#seo-text .seo-stats a:hover{
+    transform: translateY(-4px);
+    border-color: var(--blue);
+    box-shadow: 0 16px 34px -18px rgba(17,50,74,.5);
+}
+
+/* Fletxa que apareix en passar el ratolí */
+#seo-text .seo-stats a::after{
+    content: "→";
+    margin-left: auto;
+    align-self: center;
+    color: var(--blue);
     font-weight: 700;
-    margin-bottom: 10px;
-    color: #1a2e4a;
-    position: relative;
-    display: inline-block;
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity .2s ease, transform .2s ease;
 }
 
-#seo-text h2::after{
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: #3090C7;
-    margin: 14px auto 0;
-    border-radius: 2px;
+#seo-text .seo-stats a:hover::after{
+    opacity: 1;
+    transform: translateX(0);
 }
 
-#seo-text p{
-    font-size: 18px;
-    color: #555;
-    max-width: 720px;
-    margin: 20px auto 0;
-    line-height: 1.9;
+#seo-text .seo-stats strong{
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--blue);
+    line-height: 1;
+    min-width: 72px;
+}
+
+#seo-text .seo-stats span{
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 1rem;
+}
+
+@media(max-width:860px){
+    #seo-text{ padding: 64px 0; }
+    #seo-text .seo-wrap{
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+    #seo-text .seo-cross{ width: 220px; top: -30px; }
 }
 
 /* ================= ESPECIALITATS TÍTOL ================= */
@@ -524,10 +606,6 @@ p{font-size: 18px; color: #999999; line-height: 1.8; margin-bottom: 0px}
 
     .linea {
         width: 90%;
-    }
-
-    #seo-text h2 {
-        font-size: 28px;
     }
 
     #novetat p {
