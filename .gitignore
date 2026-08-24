@@ -24,6 +24,8 @@ yarn-error.log
 
 # Logs
 /storage/logs/*.log
+/errors.log
+/php_errors.log
 
 # Fitxers generats per Laravel Mix (no cal versionar)
 /web/js/app.js
