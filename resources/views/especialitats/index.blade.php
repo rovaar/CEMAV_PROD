@@ -90,7 +90,7 @@
   <div class="row" id="especialitats">
       <div class="col-12 col-md-2 container-departaments">
           <a href="{{URL::to('/nutricio')}}" style="text-decoration: none; color: inherit;">
-              <img src="img/Odontologia.webp" alt="Nutrició" class="img-dep">
+              <img src="img/Nutrició.webp" alt="Nutrició" class="img-dep">
               <span class="title-dep">Nutrició</span>
           </a>
       </div>
@@ -123,7 +123,7 @@
   <div class="row" id="especialitats">
       <div class="col-12 col-md-2 container-departaments">
           <a href="{{URL::to('/digestoleg')}}" style="text-decoration: none; color: inherit;">
-              <img src="img/Odontologia.webp" alt="Digestologia" class="img-dep">
+              <img src="img/Digestoleg.webp" alt="Digestologia" class="img-dep">
               <span class="title-dep">Digestologia</span>
           </a>
       </div>
