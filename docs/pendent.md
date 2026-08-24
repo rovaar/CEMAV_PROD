@@ -45,7 +45,8 @@ Quan toqui publicar: mergear `dev` → `main`, push, i seguir
 - **Digestologia i ortodòncia** — el centre no ofereix aquests serveis ara mateix.
   Les vistes es mantenen, però amb `noindex, follow` i fora del sitemap.
 - **README** — substituït el genèric de Laravel per un del projecte.
-- **Imatges de la graella** — Nutrició i Digestologia ja fan servir la seva imatge.
+- **Imatges de la graella** — Nutrició, Digestologia i Dermatologia ja fan servir
+  la seva imatge.
 
 ---
 
@@ -72,10 +73,14 @@ un pacient hi pot arribar igualment navegant.
 
 ### Imatges que falten
 
-`img/Odontologia.webp` encara es fa servir a tres targetes: Odontologia,
-Dermatologia i Ortodòncia. Les dues últimes no tenen imatge pròpia al repositori;
-caldrien fotos noves. Oftalmologia fa servir la genèrica
-`PersonesTractantPersones.webp` i Infermeria `Medicina Amable.webp`.
+`img/Odontologia.webp` es fa servir a dues targetes: Odontologia i Ortodòncia.
+Només falta imatge pròpia per a **ortodòncia**, i només si el centre torna a oferir
+el servei. Oftalmologia fa servir la genèrica `PersonesTractantPersones.webp` i
+Infermeria `Medicina Amable.webp`.
+
+Les imatges de la graella són icones: creu blava amb un dibuix blanc a sobre, en
+webp de 568x568 i menys de 10 KB. Si n'afegeixes una de nova en un altre format o
+mida, convertir-la abans: es mostren a 120x120 i un PNG gran penalitza la càrrega.
 
 ### Idioma de la documentació
 
