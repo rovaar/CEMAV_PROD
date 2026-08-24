@@ -137,9 +137,3 @@ Route::get('/politicadecookies', function () {
 Route::get('/termesdus', function () {
     return view('includes/termes');
 });
-
-
-/* Proves*/
-Route::get('/proves', function () {
-    return view('proves');
-});
