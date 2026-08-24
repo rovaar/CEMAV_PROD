@@ -7,19 +7,7 @@
         'robots'      => 'noindex, follow',
     ])
     <link rel="stylesheet" href="{{asset('css/sobre.css')}}">
-    <style>
-      .legal-doc{max-width:880px;margin:0 auto;padding:120px 22px 80px}
-      .legal-doc h1{font-size:2rem;margin-bottom:6px;color:#16324f}
-      .legal-doc .updated{color:#8093a3;font-size:.9rem;margin-bottom:34px}
-      .legal-doc h2{font-size:1.25rem;margin:32px 0 10px;color:#16324f}
-      .legal-doc p,.legal-doc li{line-height:1.65;color:#3f4a55}
-      .legal-doc ul{padding-left:20px}
-      .legal-doc a{color:#3090C7}
-      .legal-note{background:#FFF6E5;border:1px solid #FFE0A6;border-radius:10px;padding:12px 16px;font-size:.9rem;color:#7a5b15;margin:14px 0}
-      .legal-doc table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.92rem}
-      .legal-doc th,.legal-doc td{border:1px solid #e3e8ef;padding:10px 12px;text-align:left;vertical-align:top}
-      .legal-doc th{background:#f5f8fb;color:#16324f}
-    </style>
+    <link rel="stylesheet" href="{{asset('css/legal.css')}}">
   </head>
   <body>
   @include('includes.nav')
@@ -43,31 +31,33 @@
       </ul>
 
       <h2>2. Quines dades tractem i amb quina finalitat</h2>
-      <table>
-        <thead>
-          <tr><th>Activitat</th><th>Dades</th><th>Finalitat</th><th>Base jurídica (art. RGPD)</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Contacte (telèfon / correu electrònic)</td>
-            <td>Nom, telèfon, correu electrònic i el contingut del missatge</td>
-            <td>Atendre la vostra consulta o sol·licitud de cita</td>
-            <td>Consentiment i/o mesures precontractuals (art. 6.1.a i 6.1.b)</td>
-          </tr>
-          <tr>
-            <td>Prestació de serveis sanitaris</td>
-            <td>Dades identificatives i dades de salut (categoria especial)</td>
-            <td>Assistència mèdica i gestió de la història clínica</td>
-            <td>Finalitats de medicina preventiva i assistència sanitària (art. 9.2.h) i obligació legal</td>
-          </tr>
-          <tr>
-            <td>Analítica web</td>
-            <td>Identificadors de cookies, adreça IP, dades de navegació</td>
-            <td>Mesurar i millorar l'ús del lloc web (Google Analytics)</td>
-            <td>Consentiment (art. 6.1.a) — vegeu la Política de cookies</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="legal-table">
+        <table>
+          <thead>
+            <tr><th>Activitat</th><th>Dades</th><th>Finalitat</th><th>Base jurídica (art. RGPD)</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Contacte (telèfon / correu electrònic)</td>
+              <td>Nom, telèfon, correu electrònic i el contingut del missatge</td>
+              <td>Atendre la vostra consulta o sol·licitud de cita</td>
+              <td>Consentiment i/o mesures precontractuals (art. 6.1.a i 6.1.b)</td>
+            </tr>
+            <tr>
+              <td>Prestació de serveis sanitaris</td>
+              <td>Dades identificatives i dades de salut (categoria especial)</td>
+              <td>Assistència mèdica i gestió de la història clínica</td>
+              <td>Finalitats de medicina preventiva i assistència sanitària (art. 9.2.h) i obligació legal</td>
+            </tr>
+            <tr>
+              <td>Analítica web</td>
+              <td>Identificadors de cookies, adreça IP, dades de navegació</td>
+              <td>Mesurar i millorar l'ús del lloc web (Google Analytics)</td>
+              <td>Consentiment (art. 6.1.a) — vegeu la Política de cookies</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <div class="legal-note">ℹ️ Les <strong>dades de salut</strong> són categories especials de
       dades (art. 9 RGPD) i es tracten amb mesures de seguretat reforçades i amb deure de secret
       professional. Aquest lloc web <strong>no recull dades de salut a través d'Internet</strong>;

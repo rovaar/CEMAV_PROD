@@ -7,20 +7,7 @@
         'robots'      => 'noindex, follow',
     ])
     <link rel="stylesheet" href="{{asset('css/sobre.css')}}">
-    <style>
-      .legal-doc{max-width:880px;margin:0 auto;padding:120px 22px 80px}
-      .legal-doc h1{font-size:2rem;margin-bottom:6px;color:#16324f}
-      .legal-doc .updated{color:#8093a3;font-size:.9rem;margin-bottom:34px}
-      .legal-doc h2{font-size:1.25rem;margin:32px 0 10px;color:#16324f}
-      .legal-doc p,.legal-doc li{line-height:1.65;color:#3f4a55}
-      .legal-doc ul{padding-left:20px}
-      .legal-doc a{color:#3090C7}
-      .legal-doc table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.92rem}
-      .legal-doc th,.legal-doc td{border:1px solid #e3e8ef;padding:10px 12px;text-align:left;vertical-align:top}
-      .legal-doc th{background:#f5f8fb;color:#16324f}
-      .cc-revoke{display:inline-block;margin-top:6px;padding:11px 18px;background:#3090C7;color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer}
-      .cc-revoke:hover{background:#13639C}
-    </style>
+    <link rel="stylesheet" href="{{asset('css/legal.css')}}">
   </head>
   <body>
   @include('includes.nav')
@@ -48,46 +35,50 @@
       <h2>Cookies que utilitzem</h2>
 
       <h3>Cookies tècniques i de preferències (sempre actives)</h3>
-      <table>
-        <thead>
-          <tr><th>Cookie</th><th>Titularitat</th><th>Finalitat</th><th>Durada</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>cemav_cookie_consent</td>
-            <td>Pròpia (localStorage)</td>
-            <td>Recordar si has acceptat o rebutjat les cookies analítiques</td>
-            <td>Persistent fins que l'esborris</td>
-          </tr>
-          <tr>
-            <td>XSRF-TOKEN / sessió</td>
-            <td>Pròpia (Laravel)</td>
-            <td>Seguretat i funcionament tècnic del lloc</td>
-            <td>Sessió</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="legal-table">
+        <table>
+          <thead>
+            <tr><th>Cookie</th><th>Titularitat</th><th>Finalitat</th><th>Durada</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>cemav_cookie_consent</td>
+              <td>Pròpia (localStorage)</td>
+              <td>Recordar si has acceptat o rebutjat les cookies analítiques</td>
+              <td>Persistent fins que l'esborris</td>
+            </tr>
+            <tr>
+              <td>XSRF-TOKEN / sessió</td>
+              <td>Pròpia (Laravel)</td>
+              <td>Seguretat i funcionament tècnic del lloc</td>
+              <td>Sessió</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h3>Cookies analítiques (només si les acceptes)</h3>
-      <table>
-        <thead>
-          <tr><th>Cookie</th><th>Titularitat</th><th>Finalitat</th><th>Durada</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>_ga</td>
-            <td>Google Analytics 4 (Google LLC)</td>
-            <td>Distingir usuaris de manera anònima</td>
-            <td>2 anys</td>
-          </tr>
-          <tr>
-            <td>_ga_L3V62LP2WB</td>
-            <td>Google Analytics 4 (Google LLC)</td>
-            <td>Mantenir l'estat de la sessió per a l'estadística de visites</td>
-            <td>2 anys</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="legal-table">
+        <table>
+          <thead>
+            <tr><th>Cookie</th><th>Titularitat</th><th>Finalitat</th><th>Durada</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>_ga</td>
+              <td>Google Analytics 4 (Google LLC)</td>
+              <td>Distingir usuaris de manera anònima</td>
+              <td>2 anys</td>
+            </tr>
+            <tr>
+              <td>_ga_L3V62LP2WB</td>
+              <td>Google Analytics 4 (Google LLC)</td>
+              <td>Mantenir l'estat de la sessió per a l'estadística de visites</td>
+              <td>2 anys</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <p>Google Analytics ens ajuda a entendre, de forma agregada i anònima, com s'utilitza el
       web. Tens més informació a la
       <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacitat de Google</a>.

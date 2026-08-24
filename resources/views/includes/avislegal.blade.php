@@ -7,16 +7,7 @@
         'robots'      => 'noindex, follow',
     ])
     <link rel="stylesheet" href="{{asset('css/sobre.css')}}">
-    <style>
-      .legal-doc{max-width:880px;margin:0 auto;padding:120px 22px 80px}
-      .legal-doc h1{font-size:2rem;margin-bottom:6px;color:#16324f}
-      .legal-doc .updated{color:#8093a3;font-size:.9rem;margin-bottom:34px}
-      .legal-doc h2{font-size:1.25rem;margin:32px 0 10px;color:#16324f}
-      .legal-doc p,.legal-doc li{line-height:1.65;color:#3f4a55}
-      .legal-doc ul{padding-left:20px}
-      .legal-doc a{color:#3090C7}
-      .legal-note{background:#FFF6E5;border:1px solid #FFE0A6;border-radius:10px;padding:12px 16px;font-size:.9rem;color:#7a5b15;margin:14px 0}
-    </style>
+    <link rel="stylesheet" href="{{asset('css/legal.css')}}">
   </head>
   <body>
   @include('includes.nav')
