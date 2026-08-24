@@ -38,28 +38,45 @@ Quan toqui publicar: mergear `dev` → `main`, push, i seguir
 - **Fitxers morts** — fora `welcome.blade.php` (i el bloc comentat que la referenciava),
   `web/img/Osteopatia.webp`, `errors.log`, `php_errors.log` (ara al `.gitignore`),
   `index.blade copy.php` i els directoris buits `backup_db/` i `tmp/`.
+- **Formulari de contacte** — descartat. El `mailto:` de la pàgina de contacte ja
+  compleix, i un formulari amb motiu de consulta implicaria tractar dades de salut
+  (categoria especial del RGPD).
+- **Digestologia i ortodòncia** — el centre no ofereix aquests serveis ara mateix.
+  Les vistes es mantenen, però amb `noindex, follow` i fora del sitemap.
+- **README** — substituït el genèric de Laravel per un del projecte.
+- **Imatges de la graella** — Nutrició i Digestologia ja fan servir la seva imatge.
 
 ---
 
-## Decisions obertes
+## Pendent
 
-- **Formulari de contacte.** `contactes/contacte.blade.php` només ofereix un
-  `mailto:noucemav@gmail.com`. No hi ha cap ruta POST ni cap Mailable, i el `.env`
-  encara apunta a Mailtrap amb credencials buides. Si es vol formulari real cal:
-  ruta POST + validació + Mailable + SMTP de cdmon + captcha. Si no, el `mailto` ja
-  compleix i es pot tancar el tema.
+### Les tres llistes d'especialitats no coincideixen
 
-- **`/digestoleg` i `/ortodoncista`** tenen vista, ruta i entrada al sitemap, i
-  s'enllacen des de `especialitats/index.blade.php`, però **no des del menú
-  principal** (`includes/nav.blade.php`), que sí que llista les altres onze
-  especialitats. Confirmar si és intencional.
+Hi ha tres llocs que llisten especialitats i cap dels tres diu el mateix:
 
-- **README.md** és encara el genèric de Laravel. Ara que hi ha `CLAUDE.md`, decidir
-  si val la pena substituir-lo.
+| On | Quantes | Qè hi falta |
+|---|---|---|
+| Menú (`includes/nav.blade.php`) | 11 | digestologia, ortodòncia |
+| Graella (`especialitats/index.blade.php`) | 13 | — (les té totes) |
+| Home (`inici/index.blade.php`) | 11 + 1 servei | dermatologia, digestologia |
 
-- **Imatges repetides a la graella d'especialitats.** `img/Odontologia.webp` es fa
-  servir **5 vegades**: Odontologia, Dermatologia, Nutrició, Digestologia i
-  Ortodòncia. Dues tenen arranjament immediat perquè la imatge ja existeix sense
-  fer-se servir: `Nutrició.webp` i `Digestoleg.webp`. Per a Dermatologia i
-  Ortodòncia no hi ha imatge al repositori. Oftalmologia fa servir la genèrica
-  `PersonesTractantPersones.webp` i Infermeria `Medicina Amable.webp`.
+La home enllaça ortodòncia però no dermatologia; el menú, al revés. La targeta
+número 12 de la home no és una especialitat: és Revisions Mèdiques, que porta a
+`/serveis`.
+
+Cal decidir quina és la llista bona i aplicar-la als tres llocs. Lligat amb això:
+**digestologia i ortodòncia ja són `noindex`, però continuen enllaçades** des de la
+graella, i ortodòncia també des de la home. Si el centre no ofereix aquests serveis,
+un pacient hi pot arribar igualment navegant.
+
+### Imatges que falten
+
+`img/Odontologia.webp` encara es fa servir a tres targetes: Odontologia,
+Dermatologia i Ortodòncia. Les dues últimes no tenen imatge pròpia al repositori;
+caldrien fotos noves. Oftalmologia fa servir la genèrica
+`PersonesTractantPersones.webp` i Infermeria `Medicina Amable.webp`.
+
+### Idioma de la documentació
+
+`README.md`, `CLAUDE.md` i `docs/deploy-cdmon.md` són en castellà; aquest fitxer és
+en català. Decidir si val la pena unificar-ho.
