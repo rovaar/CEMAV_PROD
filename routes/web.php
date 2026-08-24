@@ -124,10 +124,22 @@ Route::get('/contacte', function () {
     return view('contactes/contacte');
 });
 
-/* Rutes PloticaDeCookies*/
+/* Rutes legals */
+
+Route::get('/avislegal', function () {
+    return view('includes/avislegal');
+});
+
+Route::get('/politicadeprivacitat', function () {
+    return view('includes/privacitat');
+});
 
 Route::get('/politicadecookies', function () {
     return view('includes/politicacookies');
+});
+
+Route::get('/termesdus', function () {
+    return view('includes/termes');
 });
 
 

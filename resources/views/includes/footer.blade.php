@@ -4,7 +4,7 @@
 
       <div class="foot-brand">
         <span class="name">CEMAV</span>
-        <p>Centre de Medicina Amable de Vic. Persones tractant persones.</p>
+        <p>Centre de Medicina Amable de Vic. Persones tractant a persones.</p>
       </div>
 
       <div>
@@ -54,9 +54,15 @@
       </div>
 
     </div>
+    <div class="foot-legal">
+      <a href="{{URL::to('/avislegal')}}">Avís legal</a>
+      <a href="{{URL::to('/politicadeprivacitat')}}">Política de privacitat</a>
+      <a href="{{URL::to('/politicadecookies')}}">Política de cookies</a>
+      <a href="{{URL::to('/termesdus')}}">Termes d'ús</a>
+    </div>
     <div class="foot-bottom">
       <span>© <span id="yr"></span> CEMAV · Centre de Medicina Amable de Vic</span>
-      <span>Persones tractant persones</span>
+      <span>Persones tractant a persones</span>
     </div>
   </div>
 </footer>
