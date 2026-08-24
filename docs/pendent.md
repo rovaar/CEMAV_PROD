@@ -32,6 +32,9 @@ Quan toqui publicar: mergear `dev` → `main`, push, i seguir
   ara `web/css/legal.css` en comptes de duplicar un `<style>` inline cadascun.
 - **Sitemap** — hi faltava `/especialitats` i hi sobrava `/politicadecookies`, que és
   `noindex`. Ara conté exactament les 23 rutes indexables.
+- **Pàgina de proves** — `/proves` era pública, sense `noindex` i sense cap enllaç que
+  hi apuntés. Eliminada amb la seva vista i `web/css/proves.css`, que no feia servir
+  ningú.
 
 ---
 
@@ -41,13 +44,9 @@ Quan toqui publicar: mergear `dev` → `main`, push, i seguir
 |---|---|
 | `resources/views/inici/index.blade copy.php` | Còpia de treball (gitignorada, però és al disc) |
 | `resources/views/welcome.blade.php` | Vista per defecte de Laravel, sense ruta |
-| `resources/views/proves.blade.php` + ruta `/proves` | Pàgina de proves accessible públicament |
 | `web/img/Osteopatia.webp` | Imatge òrfena des que s'ha eliminat la ruta |
 | `errors.log`, `php_errors.log` | Buits, a l'arrel del repo |
 | `backup_db/`, `tmp/` | Directoris heretats, revisar si encara calen |
-
-`/proves` no és al sitemap ni té `noindex`, però és accessible per a qui endevini la
-URL. Val la pena treure-la abans del proper deploy.
 
 ---
 
