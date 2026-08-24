@@ -38,26 +38,12 @@
   @include('includes.nav')
 
 <!-- HERO -->
-<section id="hero-infermeria" class="d-flex align-items-center text-center">
+<section id="portada-infermeria">
     <div class="container">
-
-        <p class="hero-slug">
-            Atenció infermera especialitzada a Vic
-        </p>
-
-        <h1 class="hero-title">
-            Infermeria <span>per cuidar la teva salut</span>
-        </h1>
-
-        <p class="hero-subtitle">
-            Cures infermeres, extraccions de sang, injeccions i atenció preventiva
-            amb professionals qualificats i propers.
-        </p>
-
-        <a href="/contacte" class="hero-btn">
-            Demanar visita
-        </a>
-
+      <div class="content-center">
+        <h1 class="hero-title" style="font-size: 48px;">Infermeria <span>per cuidar la teva salut</span></h1>
+        <h2>Atenció infermera especialitzada a Vic</h2>
+      </div>
     </div>
 </section>
 

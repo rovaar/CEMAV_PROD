@@ -38,26 +38,12 @@
   @include('includes.nav')
 
 <!-- HERO -->
-<section id="hero-digestoleg" class="d-flex align-items-center text-center">
+<section id="portada-digestoleg">
     <div class="container">
-
-        <p class="hero-slug">
-            Especialistes en malalties del sistema digestiu a Vic
-        </p>
-
-        <h1 class="hero-title">
-            Digestologia <span>per cuidar el teu sistema digestiu</span>
-        </h1>
-
-        <p class="hero-subtitle">
-            Diagnòstic i tractament integral de les malalties del tracte digestiu
-            i els òrgans glandulars associats.
-        </p>
-
-        <a href="/contacte" class="hero-btn">
-            Demanar visita
-        </a>
-
+      <div class="content-center">
+        <h1 class="hero-title" style="font-size: 48px;">Digestologia <span>per cuidar el teu sistema digestiu</span></h1>
+        <h2>Especialistes en malalties del sistema digestiu a Vic</h2>
+      </div>
     </div>
 </section>
 

@@ -38,26 +38,12 @@
 @include('includes.nav')
 
 <!-- HERO -->
-<section id="hero-dermatologia" class="d-flex align-items-center text-center">
+<section id="portada-dermatologia">
     <div class="container">
-
-        <p class="hero-slug">
-            Especialistes en pell, cabell i ungles a Vic
-        </p>
-
-        <h1 class="hero-title">
-            Dermatologia avançada <span>per cuidar la teva pell</span>
-        </h1>
-
-        <p class="hero-subtitle">
-            Diagnòstic i tractament de totes les malalties dermatològiques
-            amb professionals especialitzats i atenció personalitzada.
-        </p>
-
-        <a href="/contacte" class="hero-btn">
-            Demanar visita
-        </a>
-
+      <div class="content-center">
+        <h1 class="hero-title" style="font-size: 48px;">Dermatologia avançada <span>per cuidar la teva pell</span></h1>
+        <h2>Especialistes en pell, cabell i ungles a Vic</h2>
+      </div>
     </div>
 </section>
 

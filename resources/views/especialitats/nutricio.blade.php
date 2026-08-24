@@ -38,26 +38,12 @@
   @include('includes.nav')
 
 <!-- HERO -->
-<section id="hero-nutricio" class="d-flex align-items-center text-center">
+<section id="portada-nutricio">
     <div class="container">
-
-        <p class="hero-slug">
-            Assessorament nutricional personalitzat a Vic
-        </p>
-
-        <h1 class="hero-title">
-            Nutrició i Dietètica <span>per a una vida saludable</span>
-        </h1>
-
-        <p class="hero-subtitle">
-            Plans nutricionals personalitzats adaptats a les teves necessitats,
-            objectius i estil de vida.
-        </p>
-
-        <a href="/contacte" class="hero-btn">
-            Demanar visita
-        </a>
-
+      <div class="content-center">
+        <h1 class="hero-title" style="font-size: 48px;">Nutrició i Dietètica <span>per a una vida saludable</span></h1>
+        <h2>Assessorament nutricional personalitzat a Vic</h2>
+      </div>
     </div>
 </section>
 

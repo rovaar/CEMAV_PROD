@@ -38,26 +38,12 @@
   @include('includes.nav')
 
 <!-- HERO -->
-<section id="hero-podologia" class="d-flex align-items-center text-center">
+<section id="portada-podologia">
     <div class="container">
-
-        <p class="hero-slug">
-            Especialistes en salut del peu i turmell a Vic
-        </p>
-
-        <h1 class="hero-title">
-            Podologia avançada <span>per cuidar els teus peus</span>
-        </h1>
-
-        <p class="hero-subtitle">
-            Prevenció i tractament de les alteracions i malalties del peu
-            amb professionals especialitzats i atenció personalitzada.
-        </p>
-
-        <a href="/contacte" class="hero-btn">
-            Demanar visita
-        </a>
-
+      <div class="content-center">
+        <h1 class="hero-title" style="font-size: 48px;">Podologia avançada <span>per cuidar els teus peus</span></h1>
+        <h2>Especialistes en salut del peu i turmell a Vic</h2>
+      </div>
     </div>
 </section>
 

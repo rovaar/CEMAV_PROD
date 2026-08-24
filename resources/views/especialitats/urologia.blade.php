@@ -38,26 +38,12 @@
   @include('includes.nav')
 
 <!-- HERO -->
-<section id="hero-urologia" class="d-flex align-items-center text-center">
+<section id="portada-urologia">
     <div class="container">
-
-        <p class="hero-slug">
-            Especialistes en salut urològica i andrologia a Vic
-        </p>
-
-        <h1 class="hero-title">
-            Urologia i Andrologia <span>per cuidar la teva salut urinària</span>
-        </h1>
-
-        <p class="hero-subtitle">
-            Diagnòstic i tractament de patologies urològiques, andrologia
-            i salut sexual masculina per mútues assistencials i visites privades.
-        </p>
-
-        <a href="/contacte" class="hero-btn">
-            Demanar visita
-        </a>
-
+      <div class="content-center">
+        <h1 class="hero-title" style="font-size: 48px;">Urologia i Andrologia <span>per cuidar la teva salut urinària</span></h1>
+        <h2>Especialistes en salut urològica i andrologia a Vic</h2>
+      </div>
     </div>
 </section>
 

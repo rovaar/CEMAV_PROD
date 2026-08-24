@@ -38,26 +38,12 @@
   @include('includes.nav')
 
 <!-- HERO -->
-<section id="hero-optometria" class="d-flex align-items-center text-center">
+<section id="portada-optometria">
     <div class="container">
-
-        <p class="hero-slug">
-            Especialistes en salut visual i adaptació de lents a Vic
-        </p>
-
-        <h1 class="hero-title">
-            Optometria <span>per una visió perfecta</span>
-        </h1>
-
-        <p class="hero-subtitle">
-            Prevenció i detecció de problemes visuals, prescripció i adaptació
-            de lents de contacte i ulleres.
-        </p>
-
-        <a href="/contacte" class="hero-btn">
-            Demanar visita
-        </a>
-
+      <div class="content-center">
+        <h1 class="hero-title" style="font-size: 48px;">Optometria <span>per una visió perfecta</span></h1>
+        <h2>Especialistes en salut visual i adaptació de lents a Vic</h2>
+      </div>
     </div>
 </section>
 

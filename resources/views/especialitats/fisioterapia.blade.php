@@ -38,26 +38,12 @@
   @include('includes.nav')
 
 <!-- HERO -->
-<section id="hero-fisioterapia" class="d-flex align-items-center text-center">
+<section id="portada-fisioterapia">
     <div class="container">
-
-        <p class="hero-slug">
-            Especialistes en rehabilitació i tractament de lesions a Vic
-        </p>
-
-        <h1 class="hero-title">
-            Fisioteràpia avançada <span>per recuperar el teu moviment</span>
-        </h1>
-
-        <p class="hero-subtitle">
-            Tractament personalitzat de lesions musculars, articulars i esportives
-            amb tècniques especialitzades i fisioterapeutes qualificats.
-        </p>
-
-        <a href="/contacte" class="hero-btn">
-            Demanar visita
-        </a>
-
+      <div class="content-center">
+        <h1 class="hero-title" style="font-size: 48px;">Fisioteràpia avançada <span>per recuperar el teu moviment</span></h1>
+        <h2>Especialistes en rehabilitació i tractament de lesions a Vic</h2>
+      </div>
     </div>
 </section>
 

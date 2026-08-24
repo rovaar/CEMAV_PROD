@@ -38,26 +38,12 @@
   @include('includes.nav')
 
 <!-- HERO -->
-<section id="hero-traumatologia" class="d-flex align-items-center text-center">
+<section id="portada-traumatologia">
     <div class="container">
-
-        <p class="hero-slug">
-            Especialistes en lesions musculoesquelètiques i ortopèdia a Vic
-        </p>
-
-        <h1 class="hero-title">
-            Traumatologia <span>per recuperar la teva mobilitat</span>
-        </h1>
-
-        <p class="hero-subtitle">
-            Valoració clínica, diagnòstic i tractament de patologies traumàtiques,
-            congènites i ortopèdiques de l'aparell locomotor.
-        </p>
-
-        <a href="/contacte" class="hero-btn">
-            Demanar visita
-        </a>
-
+      <div class="content-center">
+        <h1 class="hero-title" style="font-size: 48px;">Traumatologia <span>per recuperar la teva mobilitat</span></h1>
+        <h2>Especialistes en lesions musculoesquelètiques i ortopèdia a Vic</h2>
+      </div>
     </div>
 </section>
 

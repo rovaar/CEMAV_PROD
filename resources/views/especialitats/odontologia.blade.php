@@ -38,26 +38,12 @@
   @include('includes.nav')
 
 <!-- HERO -->
-<section id="hero-odontologia" class="d-flex align-items-center text-center">
+<section id="portada-odontologia">
     <div class="container">
-
-        <p class="hero-slug">
-            Especialistes en salut bucodental a Vic
-        </p>
-
-        <h1 class="hero-title">
-            Odontologia <span>per cuidar el teu somriure</span>
-        </h1>
-
-        <p class="hero-subtitle">
-            Tractament integral bucodental per a pacients privats i mutualistes
-            amb un equip especialitzat i multidisciplinar.
-        </p>
-
-        <a href="/contacte" class="hero-btn">
-            Demanar visita
-        </a>
-
+      <div class="content-center">
+        <h1 class="hero-title" style="font-size: 48px;">Odontologia <span>per cuidar el teu somriure</span></h1>
+        <h2>Especialistes en salut bucodental a Vic</h2>
+      </div>
     </div>
 </section>
 

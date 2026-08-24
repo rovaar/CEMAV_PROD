@@ -38,26 +38,12 @@
   @include('includes.nav')
 
 <!-- HERO -->
-<section id="hero-ortodoncista" class="d-flex align-items-center text-center">
+<section id="portada-ortodoncista">
     <div class="container">
-
-        <p class="hero-slug">
-            Especialistes en correcció dental i ortodòncia a Vic
-        </p>
-
-        <h1 class="hero-title">
-            Ortodòncia <span>per un somriure perfecte</span>
-        </h1>
-
-        <p class="hero-subtitle">
-            Correcció de maloclusions i alineament dental amb bràquets estètics,
-            ortodòncia lingual i alineadors invisibles.
-        </p>
-
-        <a href="/contacte" class="hero-btn">
-            Demanar visita
-        </a>
-
+      <div class="content-center">
+        <h1 class="hero-title" style="font-size: 48px;">Ortodòncia <span>per un somriure perfecte</span></h1>
+        <h2>Especialistes en correcció dental i ortodòncia a Vic</h2>
+      </div>
     </div>
 </section>
 

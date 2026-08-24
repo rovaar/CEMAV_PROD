@@ -36,30 +36,12 @@
   @include('includes.nav')
 
 <!-- HERO -->
-<section id="hero-oftalmologia" class="d-flex align-items-center text-center">
+<section id="portada-oftalmologia">
     <div class="container">
-        
-        <!-- SLUG -->
-        <p class="hero-slug">
-            Especialistes en salut visual i diagnòstic ocular a Vic
-        </p>
-
-        <!-- TITOL GRAN -->
-        <h1 class="hero-title">
-            Oftalmologia avançada <span>per cuidar la teva visió</span>
-        </h1>
-
-        <!-- SUBTITOL -->
-        <p class="hero-subtitle">
-            Oferim diagnòstic, prevenció i tractament de patologies oculars 
-            amb un servei personalitzat i tecnologia especialitzada.
-        </p>
-
-        <!-- BOTO -->
-        <a href="/contacte" class="hero-btn">
-            Demanar visita
-        </a>
-
+      <div class="content-center">
+        <h1 class="hero-title" style="font-size: 48px;">Oftalmologia avançada <span>per cuidar la teva visió</span></h1>
+        <h2>Especialistes en salut visual i diagnòstic ocular a Vic</h2>
+      </div>
     </div>
 </section>
 
