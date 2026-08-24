@@ -69,7 +69,7 @@
       </div>
       <div class="col-12 col-md-2 container-departaments">
           <a href="{{URL::to('/dermatologia')}}" style="text-decoration: none; color: inherit;">
-              <img src="img/Odontologia.webp" alt="Dermatologia" class="img-dep">
+              <img src="img/Dermatologia.webp" alt="Dermatologia" class="img-dep">
               <span class="title-dep">Dermatologia</span>
           </a>
       </div>
