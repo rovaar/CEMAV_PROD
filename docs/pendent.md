@@ -35,18 +35,9 @@ Quan toqui publicar: mergear `dev` → `main`, push, i seguir
 - **Pàgina de proves** — `/proves` era pública, sense `noindex` i sense cap enllaç que
   hi apuntés. Eliminada amb la seva vista i `web/css/proves.css`, que no feia servir
   ningú.
-
----
-
-## Neteja pendent
-
-| Fitxer / ruta | Què és |
-|---|---|
-| `resources/views/inici/index.blade copy.php` | Còpia de treball (gitignorada, però és al disc) |
-| `resources/views/welcome.blade.php` | Vista per defecte de Laravel, sense ruta |
-| `web/img/Osteopatia.webp` | Imatge òrfena des que s'ha eliminat la ruta |
-| `errors.log`, `php_errors.log` | Buits, a l'arrel del repo |
-| `backup_db/`, `tmp/` | Directoris heretats, revisar si encara calen |
+- **Fitxers morts** — fora `welcome.blade.php` (i el bloc comentat que la referenciava),
+  `web/img/Osteopatia.webp`, `errors.log`, `php_errors.log` (ara al `.gitignore`),
+  `index.blade copy.php` i els directoris buits `backup_db/` i `tmp/`.
 
 ---
 
@@ -66,5 +57,9 @@ Quan toqui publicar: mergear `dev` → `main`, push, i seguir
 - **README.md** és encara el genèric de Laravel. Ara que hi ha `CLAUDE.md`, decidir
   si val la pena substituir-lo.
 
-- **Imatges repetides a la graella d'especialitats.** Digestologia i Ortodòncia fan
-  servir `img/Odontologia.webp`, i Infermeria fa servir `img/Medicina Amable.webp`.
+- **Imatges repetides a la graella d'especialitats.** `img/Odontologia.webp` es fa
+  servir **5 vegades**: Odontologia, Dermatologia, Nutrició, Digestologia i
+  Ortodòncia. Dues tenen arranjament immediat perquè la imatge ja existeix sense
+  fer-se servir: `Nutrició.webp` i `Digestoleg.webp`. Per a Dermatologia i
+  Ortodòncia no hi ha imatge al repositori. Oftalmologia fa servir la genèrica
+  `PersonesTractantPersones.webp` i Infermeria `Medicina Amable.webp`.
