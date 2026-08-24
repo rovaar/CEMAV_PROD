@@ -51,10 +51,6 @@ Route::get('/urologia', function () {
     return view('especialitats/urologia');
 });
 
-Route::get('/osteopatia', function () {
-    return view('especialitats/osteopatia');
-});
-
 Route::get('/oftalmologia', function () {
     return view('especialitats/oftalmologia');
 });

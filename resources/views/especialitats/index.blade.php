@@ -113,12 +113,6 @@
           </a>
       </div>
       <div class="col-12 col-md-2 container-departaments">
-          <a href="{{URL::to('/osteopatia')}}" style="text-decoration: none; color: inherit;">
-              <img src="img/Odontologia.webp" alt="Osteopatia" class="img-dep">
-              <span class="title-dep">Osteopatia</span>
-          </a>
-      </div>
-      <div class="col-12 col-md-2 container-departaments">
           <a href="{{URL::to('/infermeria')}}" style="text-decoration: none; color: inherit;">
               <img src="img/Medicina Amable.webp" alt="Infermeria" class="img-dep">
               <span class="title-dep">Infermeria</span>

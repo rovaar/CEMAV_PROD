@@ -14,7 +14,7 @@
                 </li>
 
                 <!-- Especialitats Section -->
-                @if(in_array($currentRoute, ['odontologia', 'podologia', 'fisioterapia', 'optometria', 'nutricio', 'urologia', 'oftalmologia', 'traumatologia', 'dermatologia', 'psicologia', 'digestoleg', 'ortodoncista', 'infermeria', 'osteopatia']))
+                @if(in_array($currentRoute, ['odontologia', 'podologia', 'fisioterapia', 'optometria', 'nutricio', 'urologia', 'oftalmologia', 'traumatologia', 'dermatologia', 'psicologia', 'digestoleg', 'ortodoncista', 'infermeria']))
                     <li class="breadcrumb-item">
                         <a href="{{ url('/especialitats') }}" title="Especialitats - Centre Mèdic CEMAV">Especialitats</a>
                     </li>
@@ -77,7 +77,7 @@
             $position = 2;
             $breadcrumbItems = [];
             
-            if(in_array($currentRoute, ['odontologia', 'podologia', 'fisioterapia', 'optometria', 'nutricio', 'urologia', 'oftalmologia', 'traumatologia', 'dermatologia', 'psicologia', 'digestoleg', 'ortodoncista', 'infermeria', 'osteopatia'])) {
+            if(in_array($currentRoute, ['odontologia', 'podologia', 'fisioterapia', 'optometria', 'nutricio', 'urologia', 'oftalmologia', 'traumatologia', 'dermatologia', 'psicologia', 'digestoleg', 'ortodoncista', 'infermeria'])) {
 
                 $breadcrumbItems[] = [
                     'name' => 'Especialitats',
