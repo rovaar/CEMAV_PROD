@@ -25,13 +25,18 @@
     <meta property="og:description" content="{{ $description }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:image" content="https://www.cemavvic.cat/img/Medicina%20Amable.webp">
     <meta property="og:site_name" content="CEMAV">
+    <meta property="og:locale" content="ca_ES">
+    <meta property="og:image" content="https://www.cemavvic.cat/img/og-cemav.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Façana de CEMAV, centre mèdic al carrer Bisbe Strauch de Vic">
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ $title ?? 'CEMAV' }}">
     <meta name="twitter:description" content="{{ $description }}">
-    <meta name="twitter:image" content="https://www.cemavvic.cat/img/Medicina%20Amable.webp">
+    <meta name="twitter:image" content="https://www.cemavvic.cat/img/og-cemav.webp">
+    <meta name="twitter:image:alt" content="Façana de CEMAV, centre mèdic al carrer Bisbe Strauch de Vic">
     @endisset
 
     <!-- Favicon -->
