@@ -527,11 +527,10 @@ p {
 
 .relacionades-peu {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 18px 30px;
-    margin-top: 40px;
+    gap: 20px;
+    margin-top: 46px;
 }
 
 .rel-totes {
@@ -543,6 +542,29 @@ p {
 
 .rel-totes:hover {
     color: #13639C;
+}
+
+/* Boto de cita a escala d'aquesta seccio, no de portada. */
+.rel-cita {
+    display: inline-block;
+    background: #3090C7;
+    color: #ffffff;
+    border: 2px solid #3090C7;
+    padding: 13px 32px;
+    border-radius: 50px;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background .25s ease, color .25s ease, transform .25s ease;
+}
+
+.rel-cita:hover,
+.rel-cita:focus-visible {
+    background: #13639C;
+    border-color: #13639C;
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {

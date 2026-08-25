@@ -74,9 +74,12 @@
             @endforeach
         </div>
 
-        <div class="relacionades-peu text-center">
+        {{-- Enllac de navegacio a dalt i crida a l'accio a sota: primer "en vull veure
+             mes", despres "ja ho tinc clar". No fem servir .hero-btn: es un boto de
+             portada (18px/45px de padding i margin-top:40px) i aqui queda desproporcionat. --}}
+        <div class="relacionades-peu">
             <a class="rel-totes" href="{{ URL::to('/especialitats') }}">Veure totes les especialitats</a>
-            <a class="hero-btn" href="{{ URL::to('/contacte') }}">Demanar cita</a>
+            <a class="rel-cita" href="{{ URL::to('/contacte') }}">Demanar cita</a>
         </div>
 
     </div>
