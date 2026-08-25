@@ -43,17 +43,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-    <!-- Bootstrap + MDB (crítics per al layout, síncrons) -->
+    {{-- MDBootstrap retirat el 25/08/2026: cap vista feia servir ni una sola classe seva. --}}
+    <!-- Bootstrap (crític per al layout, síncron) -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 
+    {{-- Només Fraunces + Mulish: són les dues que fixa base.css. Titillium Web i Roboto
+         retirades el 25/08/2026, no les feia servir cap full d'estil de producció. --}}
     <!-- Google Fonts (asíncron, no bloqueja el renderitzat) -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Mulish:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     </noscript>
 
@@ -62,10 +60,6 @@
 
     <!-- Footer CSS (compartit per totes les pàgines) -->
     <link rel="stylesheet" href="{{asset('css/footer.css')}}">
-
-    <!-- Font Awesome (asíncron, no bloqueja el renderitzat) -->
-    <link rel="preload" as="style" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"></noscript>
 
     <!-- Ionicons (diferit, no bloqueja el renderitzat) -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
