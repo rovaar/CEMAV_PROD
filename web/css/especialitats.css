@@ -265,7 +265,16 @@ body{
 
 /* DOCTORS */
 
+/* Columna flexible i height:100% perque totes les targetes d'una fila facin la
+   mateixa alcada, encara que un nom ocupi dues linies i el del costat nomes una.
+   Es el mateix patro que ja fan servir .servei-card i .especialitat-card.
+   align-items: center cal perque, en fer-se flex, .text-center ja no centra la
+   foto: la imatge passa a ser flex item i deixa de dependre de text-align. */
 .doctor-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
     background: white;
     padding: 40px;
     border-radius: 20px;
@@ -278,14 +287,23 @@ body{
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 30px;
+    flex-shrink: 0;
 }
 
 .doctor-card h3{
+    width: 100%;
     font-size: 30px;
     font-weight: 700;
 }
 
+/* margin-top: auto empeny el numero de col·legiat al peu de la targeta, aixi
+   queda a la mateixa alcada a totes les de la fila. Si tots els noms fan una
+   sola linia no es nota, perque llavors ja hi son totes igual. */
 .doctor-card p{
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 0;
+    padding-top: 10px;
     color: #777;
     font-size: 18px;
 }
