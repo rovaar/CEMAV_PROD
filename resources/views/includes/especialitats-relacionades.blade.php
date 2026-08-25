@@ -60,7 +60,7 @@
             <p>Al centre també t'hi podem ajudar amb això.</p>
         </div>
 
-        <div class="row justify-content-center mt-5">
+        <div class="row justify-content-center mt-4">
             @foreach($items as $slug)
                 @php([$nom, $img] = $especialitats[$slug])
                 <div class="col-6 col-md-4 mb-4">

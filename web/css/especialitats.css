@@ -483,16 +483,21 @@ p {
    Va sobre blanc perque la seccio de professionals que te a sobre es #f7f7f7. */
 
 .relacionades {
-    padding: 90px 0 80px;
+    padding: 50px 0 70px;
     background: #ffffff;
 }
 
+/* Titol i subtitol mes junts del que els deixa .section-title, que esta pensat
+   per als encapcalaments grans de dalt de pagina. Aqui es un tancament de
+   seccio i ha de quedar compacte. */
 .relacionades .section-title h2 {
     font-size: 44px;
+    margin-bottom: 0;
 }
 
 .relacionades .section-title p {
     font-size: 20px;
+    margin-top: 12px;
 }
 
 .rel-card {
