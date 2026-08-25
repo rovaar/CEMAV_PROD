@@ -19,18 +19,6 @@ body{
     text-align: center;
 }
 
-footer{
-    margin-top: 150px;
-}
-
-.footer-top{
-    background-color: #3090C7
-}
-
-.footer-bot{
-    padding: 60px;
-}
-
 
 @media (min-width: 320px) and (max-width: 400px) {
     .foto{
@@ -477,7 +465,7 @@ p {
    Va sobre blanc perque la seccio de professionals que te a sobre es #f7f7f7. */
 
 .relacionades {
-    padding: 90px 0 100px;
+    padding: 90px 0 80px;
     background: #ffffff;
 }
 

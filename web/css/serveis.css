@@ -13,18 +13,6 @@ body {
     height: 60px;
 }
 
-footer {
-    margin-top: 150px;
-}
-
-.footer-top {
-    background-color: #3090C7;
-}
-
-.footer-bot {
-    padding: 60px;
-}
-
 .navbar-toggler { font-size: 40px; }
 .navbar-toggler:focus { outline: none; }
 

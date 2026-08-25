@@ -154,9 +154,6 @@ body {
 }
 
 /* ── Footer ── */
-footer { margin-top: 0; }
-.footer-top { background-color: #3090C7; }
-.footer-bot { padding: 60px; }
 
 /* ── Responsive ── */
 @media (max-width: 991.98px) {
