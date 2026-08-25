@@ -500,25 +500,32 @@ p {
     margin-top: 12px;
 }
 
+/* Aquestes targetes van sobre blanc, no sobre el #f7f7f7 de la resta de
+   seccions, i una ombra difusa sobre blanc queda com una taca. El que les dona
+   forma es la vora fina; l'ombra nomes les aixeca una mica.
+   --shadow-soft de base.css te spread negatiu i esta tenyida amb --ink en
+   comptes de negre pur, per aixo queda molt mes neta que un rgba(0,0,0,.06). */
 .rel-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 18px;
     height: 100%;
-    padding: 34px 20px;
+    padding: 30px 20px 26px;
     background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: var(--shadow-soft);
     text-decoration: none;
     color: inherit;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 
 .rel-card:hover,
 .rel-card:focus-visible {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.10);
+    transform: translateY(-4px);
+    border-color: var(--blue);
+    box-shadow: 0 14px 28px -16px rgba(17, 50, 74, .45);
     text-decoration: none;
     color: inherit;
 }
