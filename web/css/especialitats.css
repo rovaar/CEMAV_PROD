@@ -13,24 +13,6 @@ body{
     height: 80px;
 }
 
-#portada{
-    position: relative;
-    background:
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url(../img/cemavFora.webp);
-    background-size: cover;
-    background-position: center;
-    padding-top: 90px;
-    color: #ffffff;
-    width: 100%;
-    min-height: 250px;
-    overflow: hidden;
-}
-
-#portada:before {
-    display: none;
-}
-
 .content-center{
     max-width: 800px;
     margin: 0 auto 60px auto;
@@ -122,13 +104,6 @@ footer{
 }
 
 @media (min-width: 1200px) {  }
-
-.foto{
-    display: block;
-    width: 200px;
-    height: 150px;
-    object-fit: contain;
-}
 
 /* HERO / PORTADA DE LES ESPECIALITATS FILLES */
 

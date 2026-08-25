@@ -4,6 +4,8 @@
     Queden fora, totes marcades noindex,follow:
       - pagines legals: /avislegal, /politicadeprivacitat, /politicadecookies, /termesdus
       - especialitats que el centre no ofereix ara mateix: /digestoleg, /ortodoncista
+    Retirades el 25/08/2026, ara son redireccions 301 cap a /serveis:
+      /analitiques, /analitiquesCovid, /depilacio, /revisions
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- Portada -->
@@ -91,30 +93,6 @@
     <!-- Serveis -->
     <url>
         <loc>https://www.cemavvic.cat/serveis</loc>
-        <lastmod>2026-08-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.cemavvic.cat/depilacio</loc>
-        <lastmod>2026-08-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.cemavvic.cat/analitiques</loc>
-        <lastmod>2026-08-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.cemavvic.cat/analitiquesCovid</loc>
-        <lastmod>2026-08-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.cemavvic.cat/revisions</loc>
         <lastmod>2026-08-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>

@@ -23,15 +23,10 @@
                     </li>
 
                 <!-- Services Section -->
-                @elseif(in_array($currentRoute, ['serveis', 'depilacio', 'analitiques', 'analitiquesCovid', 'revisions']) || strpos($currentRoute, 'serveis') !== false)
-                    <li class="breadcrumb-item">
-                        <a href="{{URL::to('/serveis')}}" title="Altres Serveis - CEMAV">Serveis</a>
+                @elseif($currentRoute == 'serveis')
+                    <li class="breadcrumb-item active" aria-current="page">
+                        {{ $pageTitle ?? 'Serveis' }}
                     </li>
-                    @if($currentRoute != 'serveis')
-                        <li class="breadcrumb-item active" aria-current="page">
-                            {{ $pageTitle ?? ucfirst(str_replace('-', ' ', $currentRoute)) }}
-                        </li>
-                    @endif
 
                 <!-- Mutuals Page -->
                 @elseif($currentRoute == 'mutues')
@@ -91,19 +86,12 @@
                     'position' => $position++
                 ];
 
-            } elseif(in_array($currentRoute, ['serveis', 'depilacio', 'analitiques', 'analitiquesCovid', 'revisions']) || strpos($currentRoute, 'serveis') !== false) {
+            } elseif($currentRoute == 'serveis') {
                 $breadcrumbItems[] = [
-                    'name' => 'Serveis',
+                    'name' => $pageTitle ?? 'Serveis',
                     'url' => URL::to('/serveis'),
                     'position' => $position++
                 ];
-                if($currentRoute != 'serveis') {
-                    $breadcrumbItems[] = [
-                        'name' => $pageTitle ?? ucfirst(str_replace('-', ' ', $currentRoute)),
-                        'url' => URL::to('/' . $currentRoute),
-                        'position' => $position++
-                    ];
-                }
             }
         @endphp
         @foreach($breadcrumbItems as $item)

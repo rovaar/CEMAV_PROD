@@ -79,21 +79,14 @@ Route::get('/serveis', function () {
     return view('serveis/serveis');
 });
     
-Route::get('/depilacio', function () {
-    return view('serveis/depilacio');
-});
-
-Route::get('/analitiques', function () {
-    return view('serveis/analitiques');
-});
-
-Route::get('/analitiquesCovid', function () {
-    return view('serveis/analitiquesCovid');
-});
-
-Route::get('/revisions', function () {
-    return view('serveis/revisions');
-});
+/*
+ | Les subpagines de serveis s'han retirat: el contingut viu a /serveis.
+ | Eren URL indexades, per aixo redirigim 301 en comptes de deixar-les en 404.
+ */
+Route::permanentRedirect('/depilacio', '/serveis');
+Route::permanentRedirect('/analitiques', '/serveis');
+Route::permanentRedirect('/analitiquesCovid', '/serveis');
+Route::permanentRedirect('/revisions', '/serveis');
 
 /* Rutes Mutues*/
 
