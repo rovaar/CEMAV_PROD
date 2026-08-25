@@ -108,6 +108,17 @@ tandas: `web/` → `./web/` y el core de Laravel → `./` (excluyendo `.env`, lo
 
 Detalle completo del primer despliegue y del rollback: [docs/deploy-cdmon.md](docs/deploy-cdmon.md).
 
+## SEO
+
+La auditoría SEO completa del sitio está en
+[docs/seo-auditoria.md](docs/seo-auditoria.md): 49 hallazgos con identificador estable
+(`SEO-01`…`SEO-49`), priorizados y con plan de acción por tandas.
+
+**Consúltala antes de tocar `includes/head.blade.php`, el sitemap, el schema JSON-LD o
+las etiquetas `<h1>`.** Varias decisiones que parecen mejoras ya están analizadas ahí —
+incluida una lista de lo que ya está bien y no hay que "corregir". Al arreglar algo,
+cita el identificador en el mensaje de commit y marca la casilla del plan de acción.
+
 ## Al trabajar aquí
 
 - No commitees `web/js/app.js`, `web/css/app.css` ni `mix-manifest.json` (generados).

@@ -4,6 +4,9 @@ Estat de la branca `dev`. Revisar abans de mergear a `main` (= producció).
 
 Última revisió: 24/08/2026
 
+Auditoria SEO completa del web: [seo-auditoria.md](seo-auditoria.md).
+Els punts d'aquest fitxer que hi surten porten l'identificador entre parèntesis.
+
 ---
 
 ## Estat del desplegament
@@ -86,3 +89,30 @@ mida, convertir-la abans: es mostren a 120x120 i un PNG gran penalitza la càrre
 
 `README.md`, `CLAUDE.md` i `docs/deploy-cdmon.md` són en castellà; aquest fitxer és
 en català. Decidir si val la pena unificar-ho.
+
+### Pendent de l'auditoria SEO
+
+Les 49 troballes viuen a [seo-auditoria.md](seo-auditoria.md), amb el pla d'acció per tandes.
+El 25/08/2026 se n'han tancat 9 (SEO-01, 02, 04, 05, 06, 22, 23, 24 i 35).
+
+**Queda un sol P0:** **SEO-03** — `/especialitats` carrega jQuery, Popper i Bootstrap amb
+hashes d'integritat diferents dels de la resta del web. Algun ha de ser incorrecte, i llavors
+el navegador bloqueja l'script i el menú desplegable no funciona en aquesta pàgina. Cal
+comprovar-ho amb la consola oberta abans de mergear.
+
+Els següents amb més impacte: **SEO-07** (cap especialitat enllaça cap enfora),
+**SEO-13** (catorze entitats de schema duplicades en comptes d'una) i **SEO-40**
+(`sameAs`: el web no està connectat amb la fitxa de Google Business).
+
+### Les subpàgines de serveis s'han retirat
+
+`/analitiques`, `/analitiquesCovid`, `/depilacio` i `/revisions` ja no existeixen: tenien ~50
+paraules, un «N.Coleg xxxx» publicat i cap enllaç intern que hi apuntés.
+
+**Compte en desplegar:** eren URLs indexades a producció, així que les rutes s'han mantingut
+com a `Route::permanentRedirect()` 301 cap a `/serveis`. No les esborris del tot pensant que
+són codi mort — si desapareixen, són quatre 404. Convé revisar la cobertura a Search Console
+un parell de setmanes després del desplegament.
+
+També ha caigut, per arrossegament: la regla `#portada` i la classe `.foto` d'`especialitats.css`,
+i les entrades del `breadcrumb`. La imatge `web/img/cemavFora.webp` (288 KB) queda òrfena.
