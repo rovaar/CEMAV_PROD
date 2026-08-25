@@ -9,24 +9,19 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "Oftalmologia - CEMAV Vic",
+      "@type": "Service",
+      "name": "Oftalmologia a Vic",
+      "serviceType": "Oftalmologia",
       "description": "Servei d'oftalmologia a Vic. Especialistes en cataractes, glaucoma i salut visual. Visites privades i mútues a CEMAV.",
       "url": "https://www.cemavvic.cat/oftalmologia",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Carrer Bisbe Strauch, 16",
-        "addressLocality": "Vic",
-        "addressRegion": "Catalunya",
-        "postalCode": "08500",
-        "addressCountry": "ES"
-      },
-      "telephone": "+34938894602",
-      "openingHours": ["Mo-Fr 08:00-14:00", "Mo-Fr 15:00-20:00"],
-      "parentOrganization": {
+      "provider": {
         "@type": "MedicalClinic",
-        "name": "CEMAV - Centre de Medicina Amable de Vic",
-        "url": "https://www.cemavvic.cat"
+        "@id": "https://www.cemavvic.cat/#clinica",
+        "name": "CEMAV - Centre de Medicina Amable de Vic"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Vic"
       }
     }
     </script>

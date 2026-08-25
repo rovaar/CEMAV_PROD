@@ -10,26 +10,21 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "Psicologia - CEMAV Vic",
+      "@type": "Service",
+      "name": "Psicologia a Vic",
+      "serviceType": "Psicologia",
       "description": "Servei de psicologia a Vic. Atenció psicològica per a adults, joves i infants. Teràpia individual i tractament de l'ansietat i depressió.",
       "url": "https://www.cemavvic.cat/psicologia",
-      "medicalSpecialty": "https://schema.org/Psychiatric",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Carrer Bisbe Strauch, 16",
-        "addressLocality": "Vic",
-        "addressRegion": "Catalunya",
-        "postalCode": "08500",
-        "addressCountry": "ES"
-      },
-      "telephone": "+34938894602",
-      "openingHours": ["Mo-Fr 08:00-14:00", "Mo-Fr 15:00-20:00"],
-      "parentOrganization": {
+      "provider": {
         "@type": "MedicalClinic",
-        "name": "CEMAV - Centre de Medicina Amable de Vic",
-        "url": "https://www.cemavvic.cat"
-      }
+        "@id": "https://www.cemavvic.cat/#clinica",
+        "name": "CEMAV - Centre de Medicina Amable de Vic"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Vic"
+      },
+      "category": "https://schema.org/Psychiatric"
     }
     </script>
   </head>

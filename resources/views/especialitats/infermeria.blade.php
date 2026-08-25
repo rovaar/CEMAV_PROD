@@ -10,26 +10,21 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "Infermeria - CEMAV Vic",
+      "@type": "Service",
+      "name": "Infermeria a Vic",
+      "serviceType": "Infermeria",
       "description": "Servei d'infermeria a Vic. Cures infermeres, injeccions, extraccions de sang i atenció preventiva.",
       "url": "https://www.cemavvic.cat/infermeria",
-      "medicalSpecialty": "https://schema.org/Nursing",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Carrer Bisbe Strauch, 16",
-        "addressLocality": "Vic",
-        "addressRegion": "Catalunya",
-        "postalCode": "08500",
-        "addressCountry": "ES"
-      },
-      "telephone": "+34938894602",
-      "openingHours": ["Mo-Fr 08:00-14:00", "Mo-Fr 15:00-20:00"],
-      "parentOrganization": {
+      "provider": {
         "@type": "MedicalClinic",
-        "name": "CEMAV - Centre de Medicina Amable de Vic",
-        "url": "https://www.cemavvic.cat"
-      }
+        "@id": "https://www.cemavvic.cat/#clinica",
+        "name": "CEMAV - Centre de Medicina Amable de Vic"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Vic"
+      },
+      "category": "https://schema.org/Nursing"
     }
     </script>
   </head>

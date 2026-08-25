@@ -10,26 +10,21 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "Podologia - CEMAV Vic",
+      "@type": "Service",
+      "name": "Podologia a Vic",
+      "serviceType": "Podologia",
       "description": "Servei de podologia a Vic. Diagnòstic i tractament de patologies del peu i turmell.",
       "url": "https://www.cemavvic.cat/podologia",
-      "medicalSpecialty": "https://schema.org/Podiatric",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Carrer Bisbe Strauch, 16",
-        "addressLocality": "Vic",
-        "addressRegion": "Catalunya",
-        "postalCode": "08500",
-        "addressCountry": "ES"
-      },
-      "telephone": "+34938894602",
-      "openingHours": ["Mo-Fr 08:00-14:00", "Mo-Fr 15:00-20:00"],
-      "parentOrganization": {
+      "provider": {
         "@type": "MedicalClinic",
-        "name": "CEMAV - Centre de Medicina Amable de Vic",
-        "url": "https://www.cemavvic.cat"
-      }
+        "@id": "https://www.cemavvic.cat/#clinica",
+        "name": "CEMAV - Centre de Medicina Amable de Vic"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Vic"
+      },
+      "category": "https://schema.org/Podiatric"
     }
     </script>
   </head>

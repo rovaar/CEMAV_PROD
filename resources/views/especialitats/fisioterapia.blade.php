@@ -10,26 +10,21 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "Fisioteràpia i Rehabilitació - CEMAV Vic",
+      "@type": "Service",
+      "name": "Fisioteràpia i Rehabilitació a Vic",
+      "serviceType": "Fisioteràpia i Rehabilitació",
       "description": "Servei de fisioteràpia i rehabilitació a Vic. Tractament de lesions musculars i articulars amb fisioterapeutes especialitzats.",
       "url": "https://www.cemavvic.cat/fisioterapia",
-      "medicalSpecialty": "https://schema.org/Physiotherapy",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Carrer Bisbe Strauch, 16",
-        "addressLocality": "Vic",
-        "addressRegion": "Catalunya",
-        "postalCode": "08500",
-        "addressCountry": "ES"
-      },
-      "telephone": "+34938894602",
-      "openingHours": ["Mo-Fr 08:00-14:00", "Mo-Fr 15:00-20:00"],
-      "parentOrganization": {
+      "provider": {
         "@type": "MedicalClinic",
-        "name": "CEMAV - Centre de Medicina Amable de Vic",
-        "url": "https://www.cemavvic.cat"
-      }
+        "@id": "https://www.cemavvic.cat/#clinica",
+        "name": "CEMAV - Centre de Medicina Amable de Vic"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Vic"
+      },
+      "category": "https://schema.org/Physiotherapy"
     }
     </script>
   </head>
