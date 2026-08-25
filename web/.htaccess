@@ -5,6 +5,24 @@
 
     RewriteEngine On
 
+    # Canonicalitzacio del domini: sempre https://www.cemavvic.cat
+    #
+    # Ha d'anar ABANS del front controller, si no la peticio ja s'ha reescrit a
+    # index.php i el redirect no s'aplica mai.
+    #
+    # Per que cal: el <link rel="canonical"> de includes/head.blade.php es genera
+    # amb url()->current(), o sigui a partir del host pel qual s'ha entrat. Si
+    # algu arriba per http:// o sense www, el canonical apunta a aquella variant
+    # i contradiu el sitemap, que declara https://www.cemavvic.cat. Sense aixo hi
+    # ha fins a quatre versions indexables del mateix web.
+    #
+    # La condicio %{HTTPS} !=on nomes s'avalua a produccio; en local (php artisan
+    # serve) aquest fitxer no s'utilitza.
+    RewriteCond %{HTTPS} !=on [OR]
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
+    RewriteRule ^ https://www.%1%{REQUEST_URI} [L,R=301]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
