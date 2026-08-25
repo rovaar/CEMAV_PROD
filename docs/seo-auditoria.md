@@ -10,7 +10,7 @@ Revisió profunda del codi de la branca `dev`. Substitueix les revisions parcial
   comprovar-se contra el servidor viu són al [bloc J](#j-verificacions-a-producció).
 - **Estat del codi auditat:** `dev`, commit `934b557`. Recorda que això **encara no és a
   producció** (vegeu [pendent.md](pendent.md)).
-- **Última execució:** 25/08/2026 — 9 troballes tancades. Vegeu
+- **Última execució:** 25/08/2026 — 15 troballes tancades, **cap P0 obert**. Vegeu
   [Registre d'execució](#registre-dexecució).
 
 Cada troballa té un identificador estable (`SEO-01`…) per poder-la citar als commits i al
@@ -50,16 +50,16 @@ El que queda per fer amb més impacte: **SEO-03** (l'últim P0), **SEO-07** (enl
 
 | Bloc | Troballes | Tancades | Obertes | P0 | P1 | P2 | P3 |
 |---|---|---|---|---|---|---|---|
-| A. Errors actius | 4 | 3 | 1 | 1 | — | — | — |
-| B. Indexació i arquitectura | 6 | 2 | 4 | — | 1 | 3 | — |
-| C. Dades estructurades | 6 | — | 6 | — | 4 | 2 | — |
-| D. Contingut | 5 | — | 5 | — | 2 | 3 | — |
+| A. Errors actius | 4 | 4 | 0 | — | — | — | — |
+| B. Indexació i arquitectura | 6 | 3 | 3 | — | — | 3 | — |
+| C. Dades estructurades | 6 | 3 | 3 | — | 1 | 2 | — |
+| D. Contingut | 5 | 1 | 4 | — | 1 | 3 | — |
 | E. Rendiment | 7 | 3 | 4 | — | 3 | 1 | — |
 | F. Imatges | 5 | — | 5 | — | 2 | 2 | 1 |
 | G. Metadades | 6 | 1 | 5 | — | 1 | 2 | 2 |
 | H. Local SEO / E-E-A-T | 5 | — | 5 | — | 2 | 3 | — |
 | I. Higiene tècnica | 5 | — | 5 | — | — | 1 | 4 |
-| **Total** | **49** | **9** | **40** | **1** | **15** | **17** | **7** |
+| **Total** | **49** | **15** | **34** | **0** | **10** | **17** | **7** |
 
 ### Registre d'execució
 
@@ -84,6 +84,23 @@ que serveixen actius baixen de 8 a **6**; les imatges òrfenes pugen a 26 perqu�
 **Verificat:** les 23 pàgines restants retornen 200, les 4 retirades retornen 301 cap a
 `/serveis`, i el codi servit no conté cap referència a MDBootstrap, Font Awesome, Titillium
 ni Roboto.
+
+**Segona tanda del mateix dia** — tancades 6 troballes més, i amb elles **l'últim P0**:
+
+| ID | Què s'ha fet |
+|---|---|
+| SEO-03 | Descarregats els tres fitxers dels CDN i calculats els seus SHA-384 reals: **els tres hashes de `/especialitats` eren incorrectes**, o sigui que el navegador bloquejava els tres scripts en aquella pàgina. Unificada amb el joc de la resta del web, que sí que és correcte. Ara 18 vistes carreguen exactament les mateixes tres línies. |
+| SEO-07 | Nou `includes/especialitats-relacionades.blade.php`, cridat des de les 13 especialitats. Cada pàgina passa de 0 a 5 enllaços propis: 3 especialitats relacionades, `/especialitats` i un CTA a `/contacte`. Digestologia i ortodòncia en tenen, però mai en són destí. |
+| SEO-12 | El `MedicalClinic` de la portada ara porta `geo` (41.92327, 2.24910), `logo`, `image`, `email`, `hasMap`, `areaServed`, `foundingDate` i `openingHoursSpecification`. Falten `sameAs` i `priceRange`, que necessiten dades del centre: vegeu SEO-40. |
+| SEO-13 | Una sola entitat, `https://www.cemavvic.cat/#clinica`. Les 13 especialitats han passat de declarar cadascuna un `MedicalBusiness` complet a declarar un `Service` amb `provider` apuntant a aquell `@id`. De 14 negocis al mateix carrer a un de sol amb 13 serveis. |
+| SEO-14 | `medicalSpecialty` amb valors de l'enumeració de schema.org i sense ortodòncia ni digestologia. |
+| SEO-18 | `/mutues` passa de 47 a **505 paraules**. Els 21 noms de mútua ara són text visible sota cada logo, no només un atribut `alt`. Afegits dos `h2` i una secció explicant com funciona la visita per mútua. |
+
+També s'ha afegit al `web/.htaccess` la canonicalització de domini cap a
+`https://www.cemavvic.cat` (J3 i J4), i les imatges del bloc nou porten `width`/`height`.
+
+**Verificat:** les 23 pàgines segueixen a 200, tots els blocs JSON-LD parsegen com a JSON
+vàlid, i cap bloc d'especialitats relacionades enllaça a digestologia ni a ortodòncia.
 
 ---
 
@@ -125,6 +142,8 @@ Life») amb criteris més estrictes que la resta.
 **Arreglar:** posar-hi els números reals, o treure la línia sencera. Mai deixar-hi `xxxx`.
 
 ### SEO-03 · Hashes SRI incoherents a `/especialitats` — P0
+
+> ✅ **Resolt el 25/08/2026.** Comprovat contra els CDN: **els tres hashes de `/especialitats` eren incorrectes** i el navegador bloquejava els tres scripts en aquella pàgina. Unificada amb el joc de la resta del web, verificat correcte.
 
 `especialitats/index.blade.php:139-142` carrega els mateixos fitxers que la resta del web
 però amb hashes d'integritat **diferents**:
@@ -229,6 +248,8 @@ pàgina ja no aporta res sola).
 
 ### SEO-07 · Cap especialitat enllaça cap enfora — P1
 
+> ✅ **Resolt el 25/08/2026.** Nou include `especialitats-relacionades`. De 0 a 5 enllaços propis per pàgina.
+
 **Precisió, perquè es pot llegir malament:** això no va dels enllaços que porten *cap a* una
 especialitat. Aquests funcionen perfectament — des del menú, des de la graella de
 `/especialitats` i des de la portada s'hi arriba bé, i han de continuar així.
@@ -302,6 +323,8 @@ Que `/contacte` no en tingui és el més greu: és la pàgina on Google espera t
 
 ### SEO-12 · El `MedicalClinic` de la portada està incomplet — P1
 
+> ✅ **Resolt el 25/08/2026.** Afegits `@id`, `geo`, `logo`, `image`, `email`, `hasMap`, `areaServed`, `foundingDate` i `openingHoursSpecification`. `sameAs` i `priceRange` continuen pendents perquè necessiten dades que ha de donar el centre: vegeu SEO-40.
+
 `inici/index.blade.php:11-27`. Hi ha nom, adreça, telèfon, URL i `medicalSpecialty`. Hi
 **falta**, i tot això compta per al panell de coneixement i per al paquet local:
 
@@ -315,6 +338,8 @@ Que `/contacte` no en tingui és el més greu: és la pàgina on Google espera t
 - `hasMap`, `priceRange`, `email`, `areaServed`
 
 ### SEO-13 · Catorze entitats `MedicalBusiness` duplicades sense `@id` — P1
+
+> ✅ **Resolt el 25/08/2026.** Una sola entitat `#clinica` a la portada; les 13 especialitats declaren un `Service` que hi apunta.
 
 Cada especialitat declara el seu propi `MedicalBusiness` amb la **mateixa** adreça, el
 **mateix** telèfon i els **mateixos** horaris que la portada, sense `@id` i sense apuntar a
@@ -337,6 +362,8 @@ portada, i a cada especialitat un `Service` que hi apunti:
 Així es reforça una sola entitat en comptes de dividir-la en catorze.
 
 ### SEO-14 · `medicalSpecialty` amb valors no vàlids i serveis que no s'ofereixen — P1
+
+> ✅ **Resolt el 25/08/2026.** Valors de l'enumeració de schema.org, i fora ortodòncia i digestologia.
 
 A la portada, `medicalSpecialty` és una llista de text en català: `["Fisioteràpia",
 "Oftalmologia", …]`. Schema.org espera valors de l'enumeració `MedicalSpecialty`
@@ -380,6 +407,8 @@ concretes, ni com és la visita, ni preus orientatius, ni preparació prèvia.
 dermatologia. La resta poden quedar-se com estan de moment.
 
 ### SEO-18 · `/mutues` són 47 paraules i 21 logos — P1
+
+> ✅ **Resolt el 25/08/2026.** De 47 a 505 paraules. Els 21 noms com a text visible, dos `h2` i una secció sobre com funciona la visita per mútua.
 
 `mutues/mutues.blade.php`: un `<h1>`, una frase i una graella d'imatges. Cap `<h2>`, cap text.
 «CEMAV mútua Adeslas», «centre concertat Sanitas Vic» i variants són cerques d'intenció
@@ -794,8 +823,9 @@ cop desplegat.
 |---|---|---|---|
 | J1 | `APP_DEBUG=false` i `APP_ENV=production` al `.env` del servidor | FTP / panell cdmon | Amb `debug=true` qualsevol error mostra la traça completa de Laravel, indexable. El `.env` local té `APP_DEBUG=true` i `APP_URL=http://localhost` |
 | J2 | `APP_URL=https://www.cemavvic.cat` | ídem | `asset()` genera les URLs dels CSS i les imatges a partir d'aquí |
-| J3 | Redirecció 301 de `http://` a `https://` | `curl -I http://cemavvic.cat` | Sense això hi ha fins a quatre versions indexables del mateix web |
-| J4 | Redirecció 301 de `cemavvic.cat` a `www.cemavvic.cat` | `curl -I https://cemavvic.cat` | El canonical fa servir `url()->current()`: si s'hi arriba sense www, el canonical apunta a la versió sense www i es contradiu amb el sitemap |
+| J3 | Redirecció 301 de `http://` a `https://` | `curl -I http://cemavvic.cat` | Sense això hi ha fins a quatre versions indexables. **Regla afegida al `.htaccess` el 25/08/2026, per verificar contra cdmon** |
+| J4 | Redirecció 301 de `cemavvic.cat` a `www.cemavvic.cat` | `curl -I https://cemavvic.cat` | El canonical fa servir `url()->current()`: si s'hi arriba sense www, apunta a la versió sense www i contradiu el sitemap. **Mateixa regla que J3** |
+| J14 | Que la regla nova no encadeni dos redirects ni provoqui un bucle | `curl -ILs https://cemavvic.cat` | Si cdmon ja força https pel seu compte, la petició podria fer dos salts. Ha de ser **un sol 301** fins a la URL final |
 | J5 | El domini està verificat a Search Console | search.google.com/search-console | Sense això no hi ha dades de res |
 | J6 | La fitxa de Google Business Profile existeix, està verificada i el NAP coincideix exactament amb el web | business.google.com | És el factor número u del paquet local |
 | J7 | Quantes de les 17 URLs estan indexades | Search Console → Pàgines | Estat real de cobertura |
@@ -816,7 +846,7 @@ Arreglades petites i sense risc. **Feta el 25/08/2026 excepte tres punts.**
 
 - [x] **SEO-01** Esborrades les tres línies de script trencades de `serveis.blade.php`
 - [x] **SEO-02** Resolt en retirar les quatre subpàgines
-- [ ] **SEO-03** Unificar els scripts de `/especialitats` amb els de la resta del web
+- [x] **SEO-03** Unificats. Comprovat contra els CDN: els tres hashes eren incorrectes
 - [x] **SEO-22** Fora MDBootstrap: el CSS de `head.blade.php` i el JS de `/especialitats`
 - [x] **SEO-23** Fora Font Awesome
 - [x] **SEO-24** Només Fraunces + Mulish a les Google Fonts
@@ -830,7 +860,7 @@ Arreglades petites i sense risc. **Feta el 25/08/2026 excepte tres punts.**
 
 - [x] ~~**SEO-05** Enllaçar les targetes de `/serveis` amb les subpàgines~~ — resolt d'una
       altra manera: les subpàgines s'han retirat i el contingut es queda a `/serveis`
-- [ ] **SEO-07** Include d'especialitats relacionades + CTA a `/contacte`
+- [x] ~~**SEO-07** Include d'especialitats relacionades + CTA a `/contacte`~~ — fet
 - [ ] **SEO-34** Un sol `h1` per pàgina a les 3 pàgines que queden
 - [ ] **SEO-10** `/especialitats` al footer
 - [ ] **SEO-15** Completar el `BreadcrumbList` a mútues, sobre i contacte
@@ -839,10 +869,10 @@ Arreglades petites i sense risc. **Feta el 25/08/2026 excepte tres punts.**
 
 ### Tanda 3 — entitat i dades estructurades (~1 dia)
 
-- [ ] **SEO-13** `MedicalClinic` amb `@id` a la portada; `Service` a les filles
-- [ ] **SEO-12** Completar-lo amb `geo`, `image`, `logo`, `openingHoursSpecification`
+- [x] ~~**SEO-13** `MedicalClinic` amb `@id`; `Service` a les filles~~ — fet
+- [x] ~~**SEO-12** Completar-lo amb `geo`, `image`, `logo`, horaris~~ — fet
 - [ ] **SEO-40** `sameAs` amb Google Business, Instagram i Facebook
-- [ ] **SEO-14** `medicalSpecialty` amb valors de l'enumeració, sense els serveis retirats
+- [x] ~~**SEO-14** `medicalSpecialty` amb valors de l'enumeració~~ — fet
 - [ ] **SEO-11** JSON-LD a les 8 pàgines que no en tenen
 - [ ] **J5, J6** Search Console i Google Business Profile
 - [ ] **SEO-44** Centralitzar el NAP i els horaris
@@ -851,7 +881,7 @@ Arreglades petites i sense risc. **Feta el 25/08/2026 excepte tres punts.**
 
 - [x] ~~**SEO-06** Decidir el destí de les 4 subpàgines de serveis i executar-ho~~ — fet:
       retirades i redirigides 301
-- [ ] **SEO-18** Reescriure `/mutues` amb els noms com a text
+- [x] ~~**SEO-18** Reescriure `/mutues` amb els noms com a text~~ — fet
 - [ ] **SEO-17** Ampliar les 5 especialitats prioritàries a 600-900 paraules
 - [ ] **SEO-16** FAQ a `/contacte` i a les especialitats prioritàries
 - [ ] **SEO-42** Fitxes de professionals amb `Physician`
@@ -905,4 +935,5 @@ Perquè no es «corregeixi» per error en una revisió futura:
 | Data | Canvi |
 |---|---|
 | 25/08/2026 | Primera versió. 49 troballes sobre `dev` @ `934b557`. |
+| 25/08/2026 | Executades 6 troballes més (SEO-03, 07, 12, 13, 14, 18) i afegida la canonicalització de domini al `.htaccess`. Cap P0 obert. |
 | 25/08/2026 | Executades 9 troballes (SEO-01, 02, 04, 05, 06, 22, 23, 24, 35). Corregit el recompte de SEO-32 (30 → 77). Reescrit SEO-07 per evitar que s'entengui com si els enllaços cap a les especialitats no funcionessin. Actualitzats els parcials SEO-08, 25, 30, 31, 33, 34. |
