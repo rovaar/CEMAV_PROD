@@ -66,4 +66,32 @@
     </div>
   </div>
 </footer>
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Menu hamburguesa. Substitueix el data-toggle="collapse" de Bootstrap JS:
+  // era l'unic component que es feia servir de jQuery + Popper + bootstrap.min.js,
+  // retirats el 26/08/2026. Les classes .collapse i .show les segueix donant el
+  // CSS de Bootstrap, que si que es carrega.
+  var cemavToggler = document.querySelector('.navbar-toggler');
+  var cemavMenu = document.getElementById('navbarSupportedContent');
+
+  if (cemavToggler && cemavMenu) {
+    cemavToggler.addEventListener('click', function () {
+      var obert = cemavMenu.classList.toggle('show');
+      cemavToggler.setAttribute('aria-expanded', obert ? 'true' : 'false');
+    });
+  }
+
+  // Submenu d'especialitats dins del hamburguesa. El boto nomes es visible per
+  // sota de 992px; a escriptori el desplegable segueix obrint-se amb :hover.
+  var cemavEsp = document.querySelector('.nav-especialitats-toggle');
+  var cemavEspMenu = document.getElementById('menu-especialitats');
+
+  if (cemavEsp && cemavEspMenu) {
+    cemavEsp.addEventListener('click', function () {
+      var obert = cemavEspMenu.classList.toggle('show');
+      cemavEsp.setAttribute('aria-expanded', obert ? 'true' : 'false');
+    });
+  }
+</script>

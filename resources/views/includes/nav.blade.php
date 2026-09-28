@@ -15,9 +15,14 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="{{URL::to('/especialitats')}}">
-                        Especialitats ▾
+                        Especialitats <span class="caret-especialitats" aria-hidden="true">▾</span>
                     </a>
-                <div class="dropdown-menu" aria-labelledby="especialitats">
+                    {{-- Nomes es veu per sota de 992px. A escriptori el desplegable
+                         s'obre amb :hover i el ▾ decoratiu ja va dins de l'enllac. --}}
+                    <button class="nav-especialitats-toggle" type="button"
+                            aria-expanded="false" aria-controls="menu-especialitats"
+                            aria-label="Mostra la llista d'especialitats">▾</button>
+                <div class="dropdown-menu" id="menu-especialitats" aria-labelledby="especialitats">
                     <a class="dropdown-item" href="{{URL::to('/dermatologia')}}" id="dermatologia">Dermatologia</a>
                     <a class="dropdown-item" href="{{URL::to('/nutricio')}}" id="nutricio">Dietista i Nutrició</a>
                     <a class="dropdown-item" href="{{URL::to('/fisioterapia')}}" id="fisioterapia">Fisioteràpia</a>

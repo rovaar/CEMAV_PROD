@@ -66,20 +66,16 @@
     <!-- Footer CSS (compartit per totes les pàgines) -->
     <link rel="stylesheet" href="{{asset('css/footer.css')}}">
 
+    {{-- Ionicons unificat a 7.1.0 el 26/08/2026: abans el head carregava la 5.5.2 i
+         /serveis se sobrecarregava la 7.1.0 a sobre. Comprovat que els 34 noms
+         d'icona que fa servir el web existeixen tots a la 7. --}}
     <!-- Ionicons (diferit, no bloqueja el renderitzat) -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule defer src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule defer src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <!-- Dropdown per hover al navbar (escriptori) -->
-    <style>
-        @media (min-width: 992px) {
-            .navbar .nav-item.dropdown:hover > .dropdown-menu {
-                display: block;
-                margin-top: 0;
-                position: absolute;
-            }
-        }
-    </style>
+    {{-- Els estils del desplegable i del boto hamburguesa han passat a
+         web/css/base.css el 26/08/2026, al costat de .nav-link, en comptes
+         de viure en un <style> inline aqui. --}}
 
     <!-- CSS específic de la pàgina -->
     @stack('head-css')
