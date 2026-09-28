@@ -7,10 +7,11 @@ Dominio de producción: **https://www.cemavvic.cat**
 
 | Pieza | Versión / detalle |
 |---|---|
-| Laravel | 8.x (`composer.json` pide `php ^7.3\|^8.0`) |
-| PHP | **8.2** en local y en cdmon — lo fija `composer.lock` y el workflow de CI |
-| Frontend | Blade + CSS escrito a mano en `web/css/`. Bootstrap 4.5 + MDB 4.19 por CDN |
-| Iconos | Font Awesome 5.8 + Ionicons 5.5 (ambos por CDN, carga diferida) |
+| Laravel | 8.x (`composer.json` pide `php ^8.2`) |
+| PHP | **8.2**, mínimo real — lo exigen 16 paquetes del `composer.lock`. Techo: 8.5 (`nette/utils`) |
+| Frontend | Blade + CSS escrito a mano en `web/css/`. **Solo el CSS** de Bootstrap 4.5, por CDN |
+| JavaScript | Vanilla. **No hay jQuery, ni Popper, ni Bootstrap JS** — retirados el 26/08/2026 |
+| Iconos | Ionicons 7.1 por CDN, carga diferida |
 | Tipografías | Fraunces (títulos) + Mulish (texto), Google Fonts con preload async |
 | Hosting | cdmon, hosting compartido, deploy por FTP |
 
@@ -108,6 +109,13 @@ tandas: `web/` → `./web/` y el core de Laravel → `./` (excluyendo `.env`, lo
 
 Detalle completo del primer despliegue y del rollback: [docs/deploy-cdmon.md](docs/deploy-cdmon.md).
 
+⚠️ **El primer deploy todavía no se ha hecho.** `origin/main` sigue en `b94596f` y en
+producción está lo que se subió por FTP a mano hace años. Ese primer despliegue va
+acompañado del cambio de PHP 7.4 → 8.2 en cdmon, y las dos cosas tienen que ir en la
+misma ventana: el `vendor/` del servidor no arranca en PHP 8 y el nuevo no arranca en
+7.4. Plan, secuencia y copia de seguridad previa:
+[docs/actualizacion-dependencias.md](docs/actualizacion-dependencias.md).
+
 ## SEO
 
 La auditoría SEO completa del sitio está en
@@ -118,6 +126,26 @@ La auditoría SEO completa del sitio está en
 las etiquetas `<h1>`.** Varias decisiones que parecen mejoras ya están analizadas ahí —
 incluida una lista de lo que ya está bien y no hay que "corregir". Al arreglar algo,
 cita el identificador en el mensaje de commit y marca la casilla del plan de acción.
+
+## JavaScript
+
+Del stack original solo queda el **CSS** de Bootstrap 4.5, que sí sostiene todo el
+layout: el grid (`container`, `row`, `col-*`) y las utilidades (`mb-4`, `mt-5`,
+`text-center`, `justify-content-center`) suman ~357 usos en las vistas y no están
+redefinidas en `web/css/`. **No lo quites.**
+
+El **JavaScript** de Bootstrap, jQuery y Popper se retiraron el 26/08/2026: entre los
+tres solo daban servicio a un `data-toggle="collapse"`, el botón hamburguesa. Ahora lo
+resuelven unas líneas de JS nativo al final de `includes/footer.blade.php`.
+
+- **No vuelvas a añadir jQuery, Popper ni `bootstrap.min.js`.** Si necesitas un
+  componente de Bootstrap que requiera JS (modal, carrusel, tooltip), escríbelo a mano
+  o plantéalo antes: ahora mismo no hay ninguno en todo el web.
+- El desplegable de Especialitats se abre con una regla CSS `:hover` en
+  `includes/head.blade.php`, no con JS, y solo por encima de 992px. En móvil el `▾` se
+  oculta y el enlace lleva a `/especialitats`.
+- Sin librerías por CDN no hay atributos `integrity` que mantener sincronizados en 18
+  ficheros — que es justo lo que provocó el hallazgo `SEO-03`.
 
 ## Al trabajar aquí
 

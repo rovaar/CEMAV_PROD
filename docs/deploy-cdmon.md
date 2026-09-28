@@ -1,16 +1,36 @@
 # Checklist de deploy a cdmon
 
-Completa estos pasos EN ORDEN antes de hacer el deploy real.
-El deploy real se activa eliminando `dry-run: true` del workflow y haciendo push.
+Runbook del despliegue. Completa estos pasos EN ORDEN.
+El deploy se dispara con un **push a `main`**; el workflow ya está activo (se le quitó
+el `dry-run` en `62282d7`, no hay que tocar nada).
+
+> ⚠️ **El PRIMER deploy es un caso especial.** Va acompañado del cambio de PHP 7.4 a
+> 8.2 en cdmon y de la limpieza de librerías de frontend, y necesita una copia de
+> seguridad previa que este documento no cubre.
+> **Antes de ese primero, lee [actualizacion-dependencias.md](actualizacion-dependencias.md).**
+> Este runbook es para los despliegues **a partir del segundo**.
 
 ---
 
-## Paso 1 — Verificar versión PHP en cdmon
-
-El `composer.lock` requiere PHP 8.2.
-Asegúrate de que cdmon tenga PHP 8.2 activado para tu dominio.
+## Paso 1 — Versión de PHP en cdmon: **8.2**
 
 **Dónde:** Panel cdmon → Hosting → tu dominio → PHP → seleccionar 8.2
+
+El `vendor/` que sube el workflow se resuelve sobre PHP 8.2 y **no arranca en 7.4**:
+16 paquetes del `composer.lock` exigen PHP 8.1 o superior, y algunos usan sintaxis
+que 7.4 ni siquiera sabe parsear. Detalle y lista completa en
+[actualizacion-dependencias.md §1](actualizacion-dependencias.md).
+
+> ⚠️ **No cambies la versión de PHP "para probar" sin desplegar a la vez.** Ya se
+> intentó y tumbó el web: el `vendor/` que hay en el servidor es el viejo, resuelto
+> sobre PHP 7.x, y ese sí revienta en PHP 8. Los dos árboles de dependencias son
+> incompatibles entre sí, así que el cambio de PHP y el deploy del código nuevo van
+> **en la misma ventana**. La secuencia correcta está en
+> [actualizacion-dependencias.md §5, fase D](actualizacion-dependencias.md).
+
+Al cambiar de versión, cdmon configura las extensiones **por versión**: las de 7.4 no
+se heredan. Deben quedar activas `ctype`, `dom`, `fileinfo`, `iconv`, `json`,
+`libxml`, `mbstring`, `openssl`, `pcre` y `tokenizer`.
 
 ---
 
@@ -59,24 +79,24 @@ Si la web da error 500 después del deploy, es probable que sea esto.
 
 ---
 
-## Paso 5 — Hacer el deploy real
+## Paso 5 — Hacer el deploy
 
-Cuando hayas completado los pasos anteriores:
-
-1. Abre `.github/workflows/deploy.yml`
-2. Elimina las dos líneas `dry-run: true`
-3. Haz commit y push:
+El workflow ya está activo. No hay que editar `deploy.yml`: basta con llevar los
+cambios a `main` y hacer push.
 
 ```bash
-git add .github/workflows/deploy.yml
-git commit -m "ci: activar deploy real"
+git checkout main
+git merge dev
 git push origin main
 ```
 
-4. Ve a https://github.com/rovaar/CEMAV_PROD/actions y espera.
+Ve a https://github.com/rovaar/CEMAV_PROD/actions y espera al icono verde.
 
-**Tiempo estimado del primer deploy:** 5-15 minutos (sube vendor/ entero, ~3000 ficheros)
+**Primer deploy:** 5-15 minutos (sube `vendor/` entero, ~3000 ficheros)
 **Deploys siguientes:** 1-2 minutos (solo ficheros modificados)
+
+Recuerda que la rama de trabajo es `dev`. Hacer commits en `dev`, o incluso push de
+`dev`, **no despliega nada**: el workflow solo escucha `main`.
 
 ---
 
@@ -110,3 +130,11 @@ git push origin main
 ```
 
 GitHub Actions re-desplegará la versión anterior automáticamente.
+
+> ⚠️ **Esto NO sirve como rollback del primer deploy.** El `composer.lock` de git es
+> el de PHP 8.2 y siempre lo ha sido, así que revertir commits vuelve a subir el
+> mismo `vendor/`: no hay ningún commit al que volver que genere uno compatible con
+> PHP 7.4. Si el primer deploy sale mal, devolver cdmon a 7.4 deja el web caído
+> igualmente, porque el `vendor/` viejo ya estará sobrescrito.
+> El único rollback real es la copia previa del servidor:
+> [actualizacion-dependencias.md §4](actualizacion-dependencias.md).
