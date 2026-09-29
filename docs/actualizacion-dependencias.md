@@ -360,8 +360,8 @@ porque el `vendor/` viejo que funcionaba en 7.4 ya lo habrá sobrescrito el FTP.
 **Procedimiento de rollback**, si hace falta, en este orden:
 
 1. Subir la copia entera encima de lo desplegado.
-2. Borrar del servidor `.ftp-state-web.json` (en `web/`) y `.ftp-state-core.json`
-   (en la raíz). Los deja el primer deploy y describen el estado **nuevo**: si se
+2. Borrar del servidor `.ftp-state-web.json` (en `web/`), `.ftp-state-vendor.json`
+   (en `vendor/`) y `.ftp-state-core.json` (en la raíz). Los deja el primer deploy y describen el estado **nuevo**: si se
    quedan, el siguiente deploy creerá que el servidor ya tiene esos ficheros y solo
    subirá diferencias, dejando un web a medias.
 3. Borrar `bootstrap/cache/*.php` y `storage/framework/views/*.php`.
@@ -469,6 +469,7 @@ es lo que faltó la primera vez que se intentó el cambio de PHP.
 | 29/09/2026 | A | Segunda prueba en móvil: portadas de especialidades, serveis y sobre CEMAV desbordadas | ✅ Corregido (`4aa705c`) |
 | 29/09/2026 | B | `.env` del servidor era el de desarrollo, con `APP_DEBUG=true` | ✅ Corregido y subido antes del deploy; el web viejo carga |
 | 29/09/2026 | C | Copia de seguridad del servidor descargada en local | ✅ |
+| 29/09/2026 | D | Push a `main` (`6983766`). `web/` sube bien; el core falla dos veces con `Error: read ECONNRESET (data socket)` | ❌ cdmon corta la conexión FTP a media subida. El web sigue en PHP 7.4 con el código viejo y el CSS nuevo. Se separa `vendor/` en tanda propia con 3 intentos y `timeout: 120000` |
 | | | | |
 
 ---

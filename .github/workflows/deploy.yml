@@ -57,10 +57,16 @@ jobs:
             **/* copy.*
             **/*copy*
 
-      # ─── 5. Deploy Laravel core → directorio home del FTP ──────────────────
-      #       Sube app/, config/, routes/, resources/, vendor/, etc.
-      #       NUNCA sube web/ (ya subida arriba), .env ni logs
-      - name: Deploy Laravel core → home/
+      # ─── 5. vendor/ → ./vendor/ ────────────────────────────────────────────
+      #       Tanda propia amb el seu fitxer d'estat: el primer deploy puja ~3000
+      #       fitxers i cdmon talla la connexio a mitges (ECONNRESET). L'accio
+      #       nomes desa l'estat en acabar, aixi que cada tanda ha de ser prou
+      #       petita per completar-se. Tres intents; el segon i el tercer nomes
+      #       corren si ha fallat l'anterior. Un cop desat l'estat, els deploys
+      #       seguents nomes pugen el que canvia del composer.lock.
+      - name: Deploy vendor/ (intent 1)
+        id: vendor1
+        continue-on-error: true
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -68,6 +74,79 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           port: 21
+          timeout: 120000
+          local-dir: ./vendor/
+          server-dir: ./vendor/
+          state-name: .ftp-state-vendor.json
+          log-level: standard
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/tests/**
+            **/*.md
+            **/* copy.*
+            **/*copy*
+
+      - name: Deploy vendor/ (intent 2)
+        id: vendor2
+        if: steps.vendor1.outcome == 'failure'
+        continue-on-error: true
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          port: 21
+          timeout: 120000
+          local-dir: ./vendor/
+          server-dir: ./vendor/
+          state-name: .ftp-state-vendor.json
+          log-level: standard
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/tests/**
+            **/*.md
+            **/* copy.*
+            **/*copy*
+
+      - name: Deploy vendor/ (intent 3)
+        if: steps.vendor2.outcome == 'failure'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          port: 21
+          timeout: 120000
+          local-dir: ./vendor/
+          server-dir: ./vendor/
+          state-name: .ftp-state-vendor.json
+          log-level: standard
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/tests/**
+            **/*.md
+            **/* copy.*
+            **/*copy*
+
+      # ─── 6. Laravel core → directorio home del FTP ─────────────────────────
+      #       Sube app/, config/, routes/, resources/, etc.
+      #       NUNCA sube web/ ni vendor/ (tandas propias), .env ni logs
+      - name: Deploy Laravel core (intent 1)
+        id: core1
+        continue-on-error: true
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          port: 21
+          timeout: 120000
           local-dir: ./
           server-dir: ./
           state-name: .ftp-state-core.json
@@ -79,6 +158,79 @@ jobs:
             .env
             .env.*
             **/web/**
+            **/vendor/**
+            **/tests/**
+            **/storage/logs/**
+            **/.github/**
+            **/Homestead.*
+            **/*.md
+            **/npm-debug.log
+            **/yarn-error.log
+            **/.phpunit.result.cache
+            **/* copy.*
+            **/*copy*
+            **/*.sql
+            **/*.zip
+
+      - name: Deploy Laravel core (intent 2)
+        id: core2
+        if: steps.core1.outcome == 'failure'
+        continue-on-error: true
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          port: 21
+          timeout: 120000
+          local-dir: ./
+          server-dir: ./
+          state-name: .ftp-state-core.json
+          log-level: standard
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            .env
+            .env.*
+            **/web/**
+            **/vendor/**
+            **/tests/**
+            **/storage/logs/**
+            **/.github/**
+            **/Homestead.*
+            **/*.md
+            **/npm-debug.log
+            **/yarn-error.log
+            **/.phpunit.result.cache
+            **/* copy.*
+            **/*copy*
+            **/*.sql
+            **/*.zip
+
+      - name: Deploy Laravel core (intent 3)
+        if: steps.core2.outcome == 'failure'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          port: 21
+          timeout: 120000
+          local-dir: ./
+          server-dir: ./
+          state-name: .ftp-state-core.json
+          log-level: standard
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            .env
+            .env.*
+            **/web/**
+            **/vendor/**
             **/tests/**
             **/storage/logs/**
             **/.github/**

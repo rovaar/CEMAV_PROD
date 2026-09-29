@@ -99,9 +99,11 @@ No añadas scripts de terceros que dejen cookies sin pasarlos por ese gate.
 
 ## Deploy
 
-Push a **`main`** dispara `.github/workflows/deploy.yml`, que sube por FTP en dos
-tandas: `web/` → `./web/` y el core de Laravel → `./` (excluyendo `.env`, logs,
-`node_modules/`, tests, `*.md` y ficheros `*copy*`).
+Push a **`main`** dispara `.github/workflows/deploy.yml`, que sube por FTP en tres
+tandas: `web/` → `./web/`, `vendor/` → `./vendor/` y el resto del core de Laravel → `./`
+(excluyendo `.env`, logs, `node_modules/`, tests, `*.md` y ficheros `*copy*`).
+`vendor/` y el core llevan hasta tres intentos cada uno: cdmon corta la conexión
+(`ECONNRESET`) en subidas largas, y la acción solo guarda su estado al terminar.
 
 - **El deploy real está activo** — ya no hay `dry-run`.
 - El `.env` del servidor se creó a mano una sola vez y el deploy nunca lo toca.
