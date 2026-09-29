@@ -4,8 +4,8 @@
 > deploy real. El runbook del deploy en sí está en [deploy-cdmon.md](deploy-cdmon.md);
 > aquí está el **qué** hay que actualizar y el **porqué**.
 >
-> **Estado:** planificado — nada de esto está ejecutado.
-> **Última revisión:** 26/08/2026
+> **Estado:** en ejecución — fases A, B y C hechas; falta la ventana (D).
+> **Última revisión:** 29/09/2026
 
 ---
 
@@ -345,16 +345,27 @@ porque el `vendor/` viejo que funcionaba en 7.4 ya lo habrá sobrescrito el FTP.
 
 **El único rollback real es una copia del servidor hecha antes de tocar nada:**
 
-- [ ] Descargar por FTP el **`vendor/` completo** del servidor a un ZIP local, con
-      fecha en el nombre. Es lo único irrecuperable: no está en git y no se puede
-      regenerar (haría falta un PHP 7.4 con Composer para resolver aquel árbol).
-- [ ] Descargar también `.env`, `bootstrap/cache/` y `storage/` del servidor.
+- [x] Descargar por FTP **toda la raíz FTP** del servidor a un ZIP local, con fecha en
+      el nombre. No basta con el `vendor/`: el deploy sobrescribe también `app/`,
+      `routes/`, `resources/`, `config/` y `web/`, y restaurar solo el `vendor/` viejo
+      dejaría código nuevo corriendo sobre él, una combinación nunca probada.
+      Lo irrecuperable es el **`vendor/`**: no está en git y no se puede regenerar
+      (haría falta un PHP 7.4 con Composer para resolver aquel árbol). Si el gestor de
+      ficheros de cdmon permite comprimir, zipear en el servidor y bajar un solo
+      fichero es mucho más rápido que 3000 sueltos por FTP.
 - [ ] Mirar si cdmon ofrece copia de seguridad o snapshot desde el panel y hacer una.
-      Es más rápido y fiable que el FTP, pero **no sustituye** la descarga del
-      `vendor/`: hay que tener la copia también fuera de cdmon.
+      Es más rápido y fiable que el FTP, pero **no sustituye** la descarga: hay que
+      tener la copia también fuera de cdmon.
 
-**Procedimiento de rollback**, si hace falta: subir el `vendor/` del ZIP encima del
-nuevo y devolver cdmon a PHP 7.4. En ese orden.
+**Procedimiento de rollback**, si hace falta, en este orden:
+
+1. Subir la copia entera encima de lo desplegado.
+2. Borrar del servidor `.ftp-state-web.json` (en `web/`) y `.ftp-state-core.json`
+   (en la raíz). Los deja el primer deploy y describen el estado **nuevo**: si se
+   quedan, el siguiente deploy creerá que el servidor ya tiene esos ficheros y solo
+   subirá diferencias, dejando un web a medias.
+3. Borrar `bootstrap/cache/*.php` y `storage/framework/views/*.php`.
+4. Devolver cdmon a PHP 7.4.
 
 ---
 
@@ -390,18 +401,25 @@ es la ventana crítica.
 - [x] Las reglas del nav se han movido del `<style>` inline de `head.blade.php` a
       `web/css/base.css`, junto a `.nav-link`. En el HTML ya solo queda un `<style>`,
       el del banner de cookies
-- [ ] **Pendiente de comprobación manual:** volver a probar en móvil que el `▾`
-      despliega las 11 especialidades, que "Especialitats" sigue llevando a la
-      rejilla, y que los dos botones ya se ven bien
+- [x] Comprobado en móvil (29/09/2026): el hamburguesa y el `▾` funcionan
+- [x] Portadas rotas en móvil corregidas (29/09/2026): las 13 especialidades y
+      `/especialitats` tenían altura fija y un `font-size: 48px` inline que ganaba al
+      media query; `/serveis` y `/sobreCemav` tenían menos padding superior que los
+      100px del nav fijo
 
 ### Fase B — Cerrar lo que quede pendiente
 
-- [ ] Repasar [pendent.md](pendent.md) y [seo-auditoria.md](seo-auditoria.md)
+- [x] `.env` del servidor corregido y subido (29/09/2026): tenía los valores de
+      desarrollo (`APP_ENV=local`, **`APP_DEBUG=true`**, `APP_URL=http://localhost`).
+      Ahora `production` / `false` / `https://www.cemavvic.cat` y `LOG_LEVEL=error`.
+      La copia local es `.env.prod`, en `.gitignore`. El web viejo carga bien con él
+- [ ] Repasar [pendent.md](pendent.md) y [seo-auditoria.md](seo-auditoria.md).
+      Nada de lo que queda bloquea el deploy
 - [ ] Merge `dev` → `main` **sin push todavía**
 
 ### Fase C — Copia de seguridad
 
-- [ ] Todo lo de la §4. **No seguir sin esto.**
+- [x] Todo lo de la §4. **No seguir sin esto.** Copia descargada el 29/09/2026
 
 ### Fase D — Ventana de migración (hay downtime)
 
@@ -414,8 +432,8 @@ Elegir una hora de poco tráfico. Cuenta con **15-30 minutos** con el web caído
       (5-15 min, sube el `vendor/` entero)
 - [ ] **Solo con Actions en verde:** panel de cdmon → PHP → **8.2**
 - [ ] Activar en 8.2 las extensiones de la §1.5
-- [ ] Borrar por FTP los `bootstrap/cache/*.php` del servidor: pueden ser caché
-      compilada por PHP 7.4 y no todos los borra el deploy
+- [ ] Borrar por FTP los `bootstrap/cache/*.php` y los `storage/framework/views/*.php`
+      del servidor: son caché compilada con el `vendor/` viejo y el deploy no los borra
 - [ ] Abrir https://www.cemavvic.cat
 
 ### Fase E — Verificación
@@ -448,6 +466,9 @@ es lo que faltó la primera vez que se intentó el cambio de PHP.
 | ~antes~ | — | Cambio de PHP a 8.x en el panel de cdmon, sin desplegar | ❌ Web caído. Vuelta a 7.4. Causa: el `vendor/` del servidor está resuelto sobre PHP 7.x (§1.2) |
 | 26/08/2026 | A | Retirada de jQuery, Popper y Bootstrap JS; Ionicons a 7.1.0; `composer.json` a `^8.2` | ✅ 23/23 rutas a 200 en local, 0 cambios de versión en el `lock` |
 | 26/08/2026 | A | Prueba en móvil real: el hamburguesa va, pero el menú no daba acceso a ninguna especialidad | ⚠️ Corregido el mismo día: el `▾` pasa a ser un botón que despliega el submenú (§3.4) |
+| 29/09/2026 | A | Segunda prueba en móvil: portadas de especialidades, serveis y sobre CEMAV desbordadas | ✅ Corregido (`4aa705c`) |
+| 29/09/2026 | B | `.env` del servidor era el de desarrollo, con `APP_DEBUG=true` | ✅ Corregido y subido antes del deploy; el web viejo carga |
+| 29/09/2026 | C | Copia de seguridad del servidor descargada en local | ✅ |
 | | | | |
 
 ---
