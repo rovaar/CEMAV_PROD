@@ -74,7 +74,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 text-center" id="portada">
-                <h2 style="margin-top:50px;">Acompanyant-te en el teu benestar i procés de rehabilitació</h2>
+                <h2 style="margin-top:50px;">Acompanyant-te en el teu benestar i procés de salut</h2>
                 <h1 class="hero-title">CENTRE DE <span>MEDICINA AMABLE</span> DE <span>VIC</span></h1>
                 <h2>Persones tractant a persones</h2>
                 <a href="{{URL::to('/contacte')}}" class="hero-btn" style="margin-top:60px;">Contacte</a>
