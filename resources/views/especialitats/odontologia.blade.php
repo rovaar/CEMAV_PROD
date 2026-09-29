@@ -36,7 +36,7 @@
 <section id="portada-odontologia">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title" style="font-size: 48px;">Odontologia <span>per cuidar el teu somriure</span></h1>
+        <h1 class="hero-title">Odontologia <span>per cuidar el teu somriure</span></h1>
         <h2>Especialistes en salut bucodental a Vic</h2>
       </div>
     </div>

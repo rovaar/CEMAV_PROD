@@ -35,7 +35,7 @@
   <section id="portada_especialitats">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title" style="font-size: 48px;">LES NOSTRES <span>ESPECIALITATS</span></h1>
+        <h1 class="hero-title">LES NOSTRES <span>ESPECIALITATS</span></h1>
         <h2>Tots els serveis de salut que necessites</h2>
       </div>
     </div>

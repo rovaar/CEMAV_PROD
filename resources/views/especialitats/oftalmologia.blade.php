@@ -34,7 +34,7 @@
 <section id="portada-oftalmologia">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title" style="font-size: 48px;">Oftalmologia avançada <span>per cuidar la teva visió</span></h1>
+        <h1 class="hero-title">Oftalmologia avançada <span>per cuidar la teva visió</span></h1>
         <h2>Especialistes en salut visual i diagnòstic ocular a Vic</h2>
       </div>
     </div>

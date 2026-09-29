@@ -36,7 +36,7 @@
 <section id="portada-podologia">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title" style="font-size: 48px;">Podologia avançada <span>per cuidar els teus peus</span></h1>
+        <h1 class="hero-title">Podologia avançada <span>per cuidar els teus peus</span></h1>
         <h2>Especialistes en salut del peu i turmell a Vic</h2>
       </div>
     </div>

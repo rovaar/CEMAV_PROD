@@ -36,7 +36,7 @@
 <section id="portada-infermeria">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title" style="font-size: 48px;">Infermeria <span>per cuidar la teva salut</span></h1>
+        <h1 class="hero-title">Infermeria <span>per cuidar la teva salut</span></h1>
         <h2>Atenció infermera especialitzada a Vic</h2>
       </div>
     </div>

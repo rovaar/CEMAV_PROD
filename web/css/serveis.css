@@ -163,8 +163,10 @@ body {
         padding: 35px;
     }
 
+    /* El nav fix fa 100px: amb 80px de padding la primera linia quedava
+       tapada, i amb min-height en vh el contingut desbordava en pantalles baixes */
     #hero-serveis {
-        min-height: 60vh;
-        padding: 80px 0;
+        min-height: 0;
+        padding: 130px 0 60px;
     }
 }

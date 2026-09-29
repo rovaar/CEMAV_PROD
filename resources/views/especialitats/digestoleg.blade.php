@@ -37,7 +37,7 @@
 <section id="portada-digestoleg">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title" style="font-size: 48px;">Digestologia <span>per cuidar el teu sistema digestiu</span></h1>
+        <h1 class="hero-title">Digestologia <span>per cuidar el teu sistema digestiu</span></h1>
         <h2>Especialistes en malalties del sistema digestiu a Vic</h2>
       </div>
     </div>

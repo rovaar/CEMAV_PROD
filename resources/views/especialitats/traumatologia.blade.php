@@ -36,7 +36,7 @@
 <section id="portada-traumatologia">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title" style="font-size: 48px;">Traumatologia <span>per recuperar la teva mobilitat</span></h1>
+        <h1 class="hero-title">Traumatologia <span>per recuperar la teva mobilitat</span></h1>
         <h2>Especialistes en lesions musculoesquelètiques i ortopèdia a Vic</h2>
       </div>
     </div>

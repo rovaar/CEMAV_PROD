@@ -36,7 +36,7 @@
 <section id="portada-urologia">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title" style="font-size: 48px;">Urologia i Andrologia <span>per cuidar la teva salut urinària</span></h1>
+        <h1 class="hero-title">Urologia i Andrologia <span>per cuidar la teva salut urinària</span></h1>
         <h2>Especialistes en salut urològica i andrologia a Vic</h2>
       </div>
     </div>

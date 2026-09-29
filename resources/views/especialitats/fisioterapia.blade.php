@@ -36,7 +36,7 @@
 <section id="portada-fisioterapia">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title" style="font-size: 48px;">Fisioteràpia avançada <span>per recuperar el teu moviment</span></h1>
+        <h1 class="hero-title">Fisioteràpia avançada <span>per recuperar el teu moviment</span></h1>
         <h2>Especialistes en rehabilitació i tractament de lesions a Vic</h2>
       </div>
     </div>

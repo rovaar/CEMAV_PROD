@@ -37,7 +37,7 @@
 <section id="portada-ortodoncista">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title" style="font-size: 48px;">Ortodòncia <span>per un somriure perfecte</span></h1>
+        <h1 class="hero-title">Ortodòncia <span>per un somriure perfecte</span></h1>
         <h2>Especialistes en correcció dental i ortodòncia a Vic</h2>
       </div>
     </div>

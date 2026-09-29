@@ -36,7 +36,7 @@
 <section id="portada-nutricio">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title" style="font-size: 48px;">Nutrició i Dietètica <span>per a una vida saludable</span></h1>
+        <h1 class="hero-title">Nutrició i Dietètica <span>per a una vida saludable</span></h1>
         <h2>Assessorament nutricional personalitzat a Vic</h2>
       </div>
     </div>

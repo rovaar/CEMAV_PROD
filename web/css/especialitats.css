@@ -103,7 +103,9 @@ body{
  * Així, mentre la imatge es descarrega, es mostra un color fosc en comptes de gris.
  */
 [id^="portada-"] {
-    height: 350px;
+    /* min-height i no height: en mobil el titol fa 3-4 linies i amb una alcada
+       fixa desbordava per sota del nav i per sobre del breadcrumb */
+    min-height: 350px;
     padding-top: 100px;
     box-sizing: border-box;
     color: #ffffff;
@@ -151,6 +153,13 @@ body{
 
 [id^="portada-"] .content-center {
     margin-bottom: 0;
+}
+
+/* Abans era un style="font-size: 48px" inline a cada vista, que guanyava al
+   media query i impedia reduir-lo en mobil */
+[id^="portada-"] .hero-title,
+#portada_especialitats .hero-title {
+    font-size: 48px;
 }
 
 [id^="portada-"] .container h1,
@@ -329,6 +338,30 @@ body{
     }
 }
 
+@media (max-width: 767.98px){
+    [id^="portada-"]{
+        min-height: 0;
+        padding: 130px 0 40px;
+    }
+
+    #portada_especialitats{
+        min-height: 0;
+        padding: 40px 0;
+    }
+
+    [id^="portada-"] .hero-title,
+    #portada_especialitats .hero-title{
+        font-size: 34px;
+        margin-bottom: 16px;
+    }
+
+    [id^="portada-"] h2,
+    #portada_especialitats h2{
+        font-size: 22px;
+        margin-bottom: 0;
+    }
+}
+
 /* ================= GRID ESPECIALITATS ================= */
 
 #especialitats-grid {
@@ -459,7 +492,7 @@ p {
         url(../img/wallpapers/hero1.webp);
     background-size: cover;
     color: #ffffff;
-    height: 350px;
+    min-height: 350px;
     margin-top: 20px;
     position: relative;
     display: flex;

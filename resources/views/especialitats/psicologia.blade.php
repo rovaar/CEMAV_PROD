@@ -36,7 +36,7 @@
 <section id="portada-psicologia">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title" style="font-size: 48px;">Psicologia <span>per al teu benestar emocional</span></h1>
+        <h1 class="hero-title">Psicologia <span>per al teu benestar emocional</span></h1>
         <h2>Atenció psicològica professional per a adults i infants a Vic</h2>
       </div>
     </div>
