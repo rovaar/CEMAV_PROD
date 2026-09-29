@@ -159,6 +159,11 @@ jobs:
             .env.*
             **/web/**
             **/vendor/**
+            public
+            public/**
+            errors/**
+            logs/**
+            .ftpquota
             **/tests/**
             **/storage/logs/**
             **/.github/**
@@ -196,6 +201,11 @@ jobs:
             .env.*
             **/web/**
             **/vendor/**
+            public
+            public/**
+            errors/**
+            logs/**
+            .ftpquota
             **/tests/**
             **/storage/logs/**
             **/.github/**
@@ -231,6 +241,11 @@ jobs:
             .env.*
             **/web/**
             **/vendor/**
+            public
+            public/**
+            errors/**
+            logs/**
+            .ftpquota
             **/tests/**
             **/storage/logs/**
             **/.github/**
