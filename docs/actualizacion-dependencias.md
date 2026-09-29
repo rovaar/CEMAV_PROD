@@ -4,7 +4,7 @@
 > deploy real. El runbook del deploy en sí está en [deploy-cdmon.md](deploy-cdmon.md);
 > aquí está el **qué** hay que actualizar y el **porqué**.
 >
-> **Estado:** en ejecución — fases A, B y C hechas; falta la ventana (D).
+> **Estado:** desplegado el 29/09/2026 — queda la verificación manual (fase E) y la fase F.
 > **Última revisión:** 29/09/2026
 
 ---
@@ -429,7 +429,7 @@ Elegir una hora de poco tráfico. Cuenta con **15-30 minutos** con el web caído
       `APP_ENV=production`, `APP_DEBUG=false` y `APP_URL=https://www.cemavvic.cat`
 - [ ] `git push origin main` → arranca el workflow
 - [ ] Vigilar https://github.com/rovaar/CEMAV_PROD/actions hasta el icono verde
-      (5-15 min, sube el `vendor/` entero)
+      (el primero tardó 1h 15m: sube el `vendor/` entero, ~5240 ficheros de uno en uno)
 - [ ] **Solo con Actions en verde:** panel de cdmon → PHP → **8.2**
 - [ ] Activar en 8.2 las extensiones de la §1.5
 - [ ] Borrar por FTP los `bootstrap/cache/*.php` y los `storage/framework/views/*.php`
@@ -469,6 +469,10 @@ es lo que faltó la primera vez que se intentó el cambio de PHP.
 | 29/09/2026 | A | Segunda prueba en móvil: portadas de especialidades, serveis y sobre CEMAV desbordadas | ✅ Corregido (`4aa705c`) |
 | 29/09/2026 | B | `.env` del servidor era el de desarrollo, con `APP_DEBUG=true` | ✅ Corregido y subido antes del deploy; el web viejo carga |
 | 29/09/2026 | C | Copia de seguridad del servidor descargada en local | ✅ |
+| 29/09/2026 | D | Push `8b96bf9`: `vendor/` sube entero al primer intento (**~5240 ficheros, 1h 15m**, no los ~3000 que estimaba este documento); el core falla los tres intentos | ❌ Nuevo error: `550 errors/errors.log.20220326: Permission denied` |
+| 29/09/2026 | D | Con `vendor/` nuevo ya arriba: cdmon a PHP 8.2 + extensiones, caches borradas | ✅ El web vuelve a cargar, aún con las vistas viejas |
+| 29/09/2026 | D | Causa del 550: `errors/`, `logs/` y `.ftpquota` son ficheros de cdmon que se colaron en `67abf39 Primer commit desde FTP`. Fuera de git y excluidos del deploy, igual que el symlink `public`. Push `fefdcf1` | ✅ Verde en 1m 37s |
+| 29/09/2026 | E | 23 rutas a 200, los 4 redirects 301 a `/serveis`, vistas nuevas servidas, sin jQuery/Popper/Bootstrap JS | ✅ Desde `curl`; queda la prueba manual en móvil |
 | | | | |
 
 ---
