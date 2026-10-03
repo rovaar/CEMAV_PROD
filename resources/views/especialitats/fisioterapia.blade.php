@@ -165,7 +165,7 @@
 
             <div class="col-md-4 mb-4">
                 <div class="doctor-card text-center">
-                    <img src="img/iconaDona.webp"
+                    <img src="img/Fotos Treballadors/MireiaFisio.webp"
                          alt="Mireia Puig Salvanas Fisioterapeuta a Vic"
                          loading="lazy"
                          class="doctor-img">
