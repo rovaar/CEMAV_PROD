@@ -88,6 +88,14 @@ Route::permanentRedirect('/analitiques', '/serveis');
 Route::permanentRedirect('/analitiquesCovid', '/serveis');
 Route::permanentRedirect('/revisions', '/serveis');
 
+/*
+ | URLs amb accent de la web antiga. Es van perdre en el deploy del 29/09 i donaven
+ | 404: /fisioteràpia era la 4a pàgina amb mes impressions a Search Console
+ | (2.812 impressions i 55 clics en cinc mesos). Les dades s'han tret amb tools/gsc.
+ */
+Route::permanentRedirect('/fisioteràpia', '/fisioterapia');
+Route::permanentRedirect('/depilació', '/serveis');
+
 /* Rutes Mutues*/
 
 Route::get('/mutues', function () {
