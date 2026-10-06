@@ -1,8 +1,11 @@
 """
 Search Console de cemavvic.cat des de la línia de comandes.
 
-Connecta amb l'API de Google Search Console amb una compte de servei de només
-lectura (permís "Restringit" a la propietat sc-domain:cemavvic.cat).
+Connecta amb l'API de Google Search Console amb una compte de servei (permís
+"Complet" a la propietat sc-domain:cemavvic.cat). Totes les comandes són de
+lectura excepte sitemap-submit i sitemap-delete, les úniques que demanen el
+permís d'escriptura. Demanar la indexació d'una URL no es pot fer per API:
+només des de la interfície de GSC.
 
     python tools/gsc/gsc.py sites                     propietats accessibles
     python tools/gsc/gsc.py sitemaps                  sitemaps enviats i el seu estat
@@ -11,6 +14,8 @@ lectura (permís "Restringit" a la propietat sc-domain:cemavvic.cat).
     python tools/gsc/gsc.py inspect                   estat d'indexació de les URLs del sitemap
     python tools/gsc/gsc.py inspect https://www.cemavvic.cat/odontologia
     python tools/gsc/gsc.py export                    tot el rendiment a CSV, fora del repo
+    python tools/gsc/gsc.py sitemap-submit https://www.cemavvic.cat/sitemap.xml
+    python tools/gsc/gsc.py sitemap-delete https://cemavvic.cat/sitemap.xml
 
 Clau: la variable d'entorn CEMAV_GSC_KEY, o si no hi és, el primer
 ../.secrets/cemav-gsc-*.json al costat del repositori. La clau no ha d'entrar
@@ -37,19 +42,20 @@ except ImportError:
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 SITE = "sc-domain:cemavvic.cat"
 SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly"]
+SCOPES_WRITE = ["https://www.googleapis.com/auth/webmasters"]
 API = "https://www.googleapis.com/webmasters/v3"
 DATA_DIR = os.path.join(os.path.dirname(REPO), "cemav-gsc-data")
 DIMENSIONS = ("query", "page", "date", "device", "country", "searchAppearance")
 
 
-def session():
+def session(write=False):
     key = os.environ.get("CEMAV_GSC_KEY")
     if not key:
         found = sorted(glob.glob(os.path.join(os.path.dirname(REPO), ".secrets", "cemav-gsc-*.json")))
         key = found[0] if found else None
     if not key or not os.path.isfile(key):
         sys.exit("No trobo la clau. Defineix CEMAV_GSC_KEY o posa-la a ../.secrets/cemav-gsc-*.json")
-    creds = service_account.Credentials.from_service_account_file(key, scopes=SCOPES)
+    creds = service_account.Credentials.from_service_account_file(key, scopes=SCOPES_WRITE if write else SCOPES)
     return AuthorizedSession(creds)
 
 
@@ -175,6 +181,20 @@ def cmd_inspect(s, args):
               f"rastrejada {str(ir.get('lastCrawlTime', '-'))[:10]}  ·  canonical Google: {canon or '-'}{aviso}")
 
 
+def cmd_sitemap_submit(s, args):
+    r = s.put(f"{API}/sites/{site_path(args.site)}/sitemaps/{site_path(args.url)}")
+    if r.status_code not in (200, 204):
+        sys.exit(f"Error {r.status_code}: {r.text[:300]}")
+    print(f"Enviat: {args.url}")
+
+
+def cmd_sitemap_delete(s, args):
+    r = s.delete(f"{API}/sites/{site_path(args.site)}/sitemaps/{site_path(args.url)}")
+    if r.status_code not in (200, 204):
+        sys.exit(f"Error {r.status_code}: {r.text[:300]}")
+    print(f"Esborrat de GSC (el fitxer del web no es toca): {args.url}")
+
+
 def cmd_export(s, args):
     start, end = date_range(args)
     out = args.out or os.path.join(DATA_DIR, str(dt.date.today()))
@@ -217,10 +237,14 @@ def main():
     add_dates(e, 480)
     e.add_argument("--out", help=f"carpeta (per defecte {DATA_DIR}/<avui>)")
 
+    for name in ("sitemap-submit", "sitemap-delete"):
+        sub.add_parser(name).add_argument("url", help="URL completa del sitemap")
+
     args = p.parse_args()
-    s = session()
+    s = session(write=args.cmd.startswith("sitemap-"))
     {"sites": cmd_sites, "sitemaps": cmd_sitemaps, "query": cmd_query,
-     "inspect": cmd_inspect, "export": cmd_export}[args.cmd](s, args)
+     "inspect": cmd_inspect, "export": cmd_export,
+     "sitemap-submit": cmd_sitemap_submit, "sitemap-delete": cmd_sitemap_delete}[args.cmd](s, args)
 
 
 if __name__ == "__main__":

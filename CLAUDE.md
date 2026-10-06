@@ -139,7 +139,7 @@ cita el identificador en el mensaje de commit y marca la casilla del plan de acc
 ## Search Console (API)
 
 `tools/gsc/gsc.py` consulta Google Search Console directamente (propiedad
-`sc-domain:cemavvic.cat`, cuenta de servicio con permiso **Restringido**, solo lectura):
+`sc-domain:cemavvic.cat`, cuenta de servicio con permiso **Completo** desde el 06/10/2026):
 
 ```bash
 python tools/gsc/gsc.py query --days 90 --dims query --rows 30   # consultas
@@ -147,14 +147,19 @@ python tools/gsc/gsc.py query --dims page --filter query:contains:dentista
 python tools/gsc/gsc.py inspect        # estado de indexación de las URLs del sitemap
 python tools/gsc/gsc.py sitemaps
 python tools/gsc/gsc.py export         # todo a CSV en ../cemav-gsc-data/<fecha>/
+python tools/gsc/gsc.py sitemap-submit https://www.cemavvic.cat/sitemap.xml   # tras cada deploy
 ```
+
+**Plan de posicionamiento:** `../cemav-gsc-data/pla-posicionament.md` (fuera del repo porque
+lleva datos de tráfico). Acciones `POS-01`…`POS-22`, que enlazan con los `SEO-xx` de la auditoría.
 
 - **La clave JSON vive fuera del repo**, en `../.secrets/cemav-gsc-*.json` (o en la variable
   `CEMAV_GSC_KEY`). Nunca la copies dentro del proyecto ni pegues su contenido.
 - **El repositorio es público.** Las exportaciones y los análisis con datos de GSC (consultas,
   clics) van a `../cemav-gsc-data/`, nunca a `docs/` ni a ningún sitio versionado.
-- Con permiso Restringido se puede leer todo, pero **no** enviar sitemaps ni pedir la
-  indexación: eso lo hace Roger desde la interfaz de GSC.
+- Solo `sitemap-submit` y `sitemap-delete` escriben; el resto es lectura. **Pedir la indexación
+  de una URL no existe en la API**: lo hace Roger desde la interfaz de GSC. No uses la Indexing
+  API de Google para esto: solo admite ofertas de empleo y emisiones en directo.
 - `tools/` está excluido del deploy (`deploy.yml`, tandas del core): es una herramienta local.
 - Requisitos: `pip install --user google-auth requests`.
 - **Antes de quitar o renombrar una ruta**, mira con `query --dims page` si tiene
