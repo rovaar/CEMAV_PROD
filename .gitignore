@@ -35,3 +35,9 @@ yarn-error.log
 
 # Fitxer intern del servidor FTP
 /web/.ftpquota
+
+# Fitxers de cdmon que es van colar al primer commit (baixat per FTP).
+# Son del servidor: si el deploy els intenta pujar, cdmon respon 550.
+/errors/
+/logs/
+/.ftpquota

@@ -103,9 +103,11 @@ No añadas scripts de terceros que dejen cookies sin pasarlos por ese gate.
 
 ## Deploy
 
-Push a **`main`** dispara `.github/workflows/deploy.yml`, que sube por FTP en dos
-tandas: `web/` → `./web/` y el core de Laravel → `./` (excluyendo `.env`, logs,
-`node_modules/`, tests, `*.md` y ficheros `*copy*`).
+Push a **`main`** dispara `.github/workflows/deploy.yml`, que sube por FTP en tres
+tandas: `web/` → `./web/`, `vendor/` → `./vendor/` y el resto del core de Laravel → `./`
+(excluyendo `.env`, logs, `node_modules/`, tests, `*.md` y ficheros `*copy*`).
+`vendor/` y el core llevan hasta tres intentos cada uno: cdmon corta la conexión
+(`ECONNRESET`) en subidas largas, y la acción solo guarda su estado al terminar.
 
 - **El deploy real está activo** — ya no hay `dry-run`.
 - El `.env` del servidor se creó a mano una sola vez y el deploy nunca lo toca.
@@ -113,12 +115,15 @@ tandas: `web/` → `./web/` y el core de Laravel → `./` (excluyendo `.env`, lo
 
 Detalle completo del primer despliegue y del rollback: [docs/deploy-cdmon.md](docs/deploy-cdmon.md).
 
-⚠️ **El primer deploy todavía no se ha hecho.** `origin/main` sigue en `b94596f` y en
-producción está lo que se subió por FTP a mano hace años. Ese primer despliegue va
-acompañado del cambio de PHP 7.4 → 8.2 en cdmon, y las dos cosas tienen que ir en la
-misma ventana: el `vendor/` del servidor no arranca en PHP 8 y el nuevo no arranca en
-7.4. Plan, secuencia y copia de seguridad previa:
-[docs/actualizacion-dependencias.md](docs/actualizacion-dependencias.md).
+El **primer deploy se hizo el 29/09/2026**, junto con el cambio de PHP 7.4 → 8.2 en
+cdmon. Desde entonces cada push a `main` es un deploy normal e incremental: la acción
+solo sube los ficheros que han cambiado. El registro de aquel día, con los errores que
+salieron, está en [docs/actualizacion-dependencias.md](docs/actualizacion-dependencias.md) §6.
+
+- **`main` y `dev` no se reescriben.** Si divergen, `merge`, nunca `rebase` ni `push --force`:
+  el 29/09 los arreglos del workflow se hicieron en `main` y no en `dev`.
+- `errors/`, `logs/` y `.ftpquota` son ficheros de cdmon. Están en el `.gitignore` y
+  excluidos del deploy: si se suben, cdmon responde `550 Permission denied`.
 
 ## SEO
 
