@@ -467,13 +467,29 @@ Torna a passar Lighthouse després de cada tanda i apunta-ho aquí.
 |---|---|---|---|---|---|---|---|---|
 | 03/10/2026 | Línia base | 94 / 83 | 85 / 98 | 76 / 98 | 81 / 90 | 82 / 76 | 92 / 87 | 95 / 86 |
 | 05/10/2026 | Tandes 1-4 + PSI-16, **en local** (*) | 99 / 100 | 99 / 100 | 99 / 100 | 99 / 100 | 99 / 100 | 99 / 100 | 100 / 100 |
+| 06/10/2026 | **Producció**, deploy de `510ec14` (**) | 98 / 100 | 98 / 100 | 98 / 100 | 98 / 100 | 98 / 100 | 99 / 100 | 98 / 100 |
 
 (*) Mesurat sobre una còpia estàtica de les pàgines renderitzades, servida amb gzip
 des de la màquina local. Accessibilitat, Pràctiques recomanades i SEO surten a 100 a
 les 7 pàgines; les quatre legals donen 100 / 100 / 100 i SEO 69, que és el `noindex`
 volgut. La mateixa mesura feta a la versió d'abans donava 80-95 en mòbil, així que la
-millora és real. **Però en local el TTFB és pràcticament zero**: la xifra de producció
-serà més baixa. Cal repetir-la contra `https://www.cemavvic.cat` després del deploy.
+millora és real. En local, però, el TTFB és pràcticament zero.
+
+(**) El mateix mètode que la línia base (Lighthouse 13.5 local contra
+`https://www.cemavvic.cat`). **Accessibilitat, Pràctiques recomanades i SEO: 100 a les 14
+mesures.** LCP en mòbil d'1,4-1,7 s (abans 2,4-4,0 s) i pes de pàgina de 120-250 KB (abans
+223-924 KB). Una passada de `/sobreCemav` en mòbil va donar `NO_FCP`, un error
+intermitent de Chrome headless; repetida dues vegades, va donar 98 totes dues. L'API de
+PageSpeed continuava sense cuota (`429`), així que la xifra de PSI s'ha de mirar al web
+de PageSpeed: PSI executa des dels servidors de Google i pot donar algun punt menys en
+mòbil.
+
+Verificat a producció després del deploy:
+- les 23 rutes a 200 i les directives `@assetv`/`@icon` compilades (OPcache revalida bé);
+- `Cache-Control: max-age=31536000` als CSS i les fonts, `2592000` a les imatges;
+- `font/woff2` com a `Content-Type`, i les redireccions canòniques a `https://www.`;
+- cap petició a tercers en carregar, ni errors de consola, ni 4xx a cap ruta;
+- menú, submenú, desplegable i façana del mapa provats amb clics reals.
 
 Comanda per repetir-la (Chrome instal·lat; Git Bash):
 
