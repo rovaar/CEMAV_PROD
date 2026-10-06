@@ -6,7 +6,7 @@
         'description' => "Servei d'odontologia a Vic. Dentistes especialitzats en prevenció, estètica dental i tractaments bucodentals. Visites privades i mútues a CEMAV.",
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero2.webp')}}">
-    <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
+    <link rel="stylesheet" href="@assetv('css/especialitats.css')">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -71,7 +71,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="medkit-outline"></ion-icon>
+                        @icon('medkit-outline')
                     </div>
 
                     <h3>Odontologia general</h3>
@@ -88,7 +88,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="star-outline"></ion-icon>
+                        @icon('star-outline')
                     </div>
 
                     <h3>Implantologia i estètica dental</h3>
@@ -105,7 +105,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="people-outline"></ion-icon>
+                        @icon('people-outline')
                     </div>
 
                     <h3>Ortodòncia i Odontopediatria</h3>

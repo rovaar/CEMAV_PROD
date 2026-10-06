@@ -8,7 +8,7 @@
       </div>
 
       <div>
-        <h4>Links útils</h4>
+        <h2 class="foot-title">Links útils</h2>
         <ul>
           <li><a href="{{URL::to('/sobreCemav')}}">Sobre CEMAV</a></li>
           <li><a href="{{URL::to('/serveis')}}">Serveis</a></li>
@@ -18,7 +18,7 @@
       </div>
 
       <div>
-        <h4>Horari</h4>
+        <h2 class="foot-title">Horari</h2>
         <ul>
           <li>Dilluns a divendres</li>
           <li style="color:#fff;font-weight:700">8.00 h – 14.00 h</li>
@@ -27,7 +27,7 @@
       </div>
 
       <div>
-        <h4>Contacte</h4>
+        <h2 class="foot-title">Contacte</h2>
         <div class="contact-line">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
             <rect x="3" y="5" width="18" height="14" rx="2"/>

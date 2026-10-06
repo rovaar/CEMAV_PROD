@@ -6,8 +6,8 @@
         'description' => "Política de privacitat de CEMAV. Informació sobre el tractament de dades personals segons el RGPD i la LOPDGDD.",
         'robots'      => 'noindex, follow',
     ])
-    <link rel="stylesheet" href="{{asset('css/sobre.css')}}">
-    <link rel="stylesheet" href="{{asset('css/legal.css')}}">
+    <link rel="stylesheet" href="@assetv('css/sobre.css')">
+    <link rel="stylesheet" href="@assetv('css/legal.css')">
   </head>
   <body>
   @include('includes.nav')

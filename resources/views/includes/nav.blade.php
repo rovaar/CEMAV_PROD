@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-lg fixed-top">
 
     <div class="container">
-        <a class="navbar-brand" href="{{URL::to('/')}}"><img src="{{asset('img/logoPrincipal.webp')}}" class="logo" alt="logo" style="height: 60px; width: 250px;"></a>
+        <a class="navbar-brand" href="{{URL::to('/')}}"><img src="{{asset('img/logoPrincipal.webp')}}" class="logo" alt="CEMAV, Centre de Medicina Amable de Vic" width="240" height="60"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <ion-icon name="menu-outline"></ion-icon>
+            @icon('menu-outline')
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">

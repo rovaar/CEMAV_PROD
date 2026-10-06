@@ -6,7 +6,7 @@
         'description' => 'Servei de dermatologia a Vic. Diagnòstic i tractament de malalties de la pell, cabells i ungles. Dermatòlegs especialitzats a CEMAV.',
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero2.webp')}}">
-    <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
+    <link rel="stylesheet" href="@assetv('css/especialitats.css')">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -71,7 +71,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="scan-outline"></ion-icon>
+                        @icon('scan-outline')
                     </div>
 
                     <h3>Diagnòstic dermatològic</h3>
@@ -88,7 +88,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="medical-outline"></ion-icon>
+                        @icon('medical-outline')
                     </div>
 
                     <h3>Tractament de patologies</h3>
@@ -105,7 +105,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="shield-checkmark-outline"></ion-icon>
+                        @icon('shield-checkmark-outline')
                     </div>
 
                     <h3>Prevenció i seguiment</h3>

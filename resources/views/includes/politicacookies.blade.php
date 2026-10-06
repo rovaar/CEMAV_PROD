@@ -6,8 +6,8 @@
         'description' => "Política de cookies de CEMAV. Quines cookies utilitzem, amb quina finalitat i com gestionar les teves preferències.",
         'robots'      => 'noindex, follow',
     ])
-    <link rel="stylesheet" href="{{asset('css/sobre.css')}}">
-    <link rel="stylesheet" href="{{asset('css/legal.css')}}">
+    <link rel="stylesheet" href="@assetv('css/sobre.css')">
+    <link rel="stylesheet" href="@assetv('css/legal.css')">
   </head>
   <body>
   @include('includes.nav')

@@ -9,7 +9,6 @@ body {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   min-height: 100px;
 }
-.logo { width: 250px; height: 80px; }
 .navbar-toggler        { font-size: 40px; }
 .navbar-toggler:focus  { outline: none; }
 
@@ -148,7 +147,7 @@ body {
   vertical-align: -0.3em;
 }
 .filosofia-sub {
-  color: #888;
+  color: var(--ink-soft);
   font-size: 1rem;
   margin: 0;
 }

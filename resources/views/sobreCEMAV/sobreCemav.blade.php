@@ -5,7 +5,7 @@
         'title'       => 'Sobre CEMAV | Centre de Medicina Amable de Vic',
         'description' => "Coneix CEMAV, el Centre de Medicina Amable de Vic. Des del 2002 oferim atenció mèdica especialitzada amb la filosofia 'Persones tractant a persones'.",
     ])
-    <link rel="stylesheet" href="{{asset('css/sobre.css')}}">
+    <link rel="stylesheet" href="@assetv('css/sobre.css')">
   </head>
   <body>
   @include('includes.nav')

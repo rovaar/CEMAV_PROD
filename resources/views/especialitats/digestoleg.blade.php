@@ -7,7 +7,7 @@
         'robots'      => 'noindex, follow',
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero2.webp')}}">
-    <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
+    <link rel="stylesheet" href="@assetv('css/especialitats.css')">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -72,7 +72,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="medkit-outline"></ion-icon>
+                        @icon('medkit-outline')
                     </div>
 
                     <h3>Patologia digestiva</h3>
@@ -89,7 +89,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="body-outline"></ion-icon>
+                        @icon('body-outline')
                     </div>
 
                     <h3>Òrgans glandulars</h3>
@@ -106,7 +106,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="cut-outline"></ion-icon>
+                        @icon('cut-outline')
                     </div>
 
                     <h3>Cirurgia digestiva</h3>

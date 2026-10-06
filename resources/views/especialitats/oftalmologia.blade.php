@@ -5,7 +5,8 @@
         'title'       => 'Oftalmologia a Vic | Clínica Oftalmològica CEMAV',
         'description' => "Servei d'oftalmologia a Vic. Especialistes en cataractes, glaucoma i salut visual. Visites privades i mútues a CEMAV.",
     ])
-    <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
+    <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero3.webp')}}">
+    <link rel="stylesheet" href="@assetv('css/especialitats.css')">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -70,7 +71,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="eye-outline"></ion-icon>
+                        @icon('eye-outline')
                     </div>
 
                     <h3>Exploració visual completa</h3>
@@ -88,7 +89,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="medkit-outline"></ion-icon>
+                        @icon('medkit-outline')
                     </div>
 
                     <h3>Diagnòstic de patologies oculars</h3>
@@ -106,7 +107,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="shield-checkmark-outline"></ion-icon>
+                        @icon('shield-checkmark-outline')
                     </div>
 
                     <h3>Prevenció i seguiment</h3>

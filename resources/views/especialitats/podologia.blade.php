@@ -6,7 +6,7 @@
         'description' => 'Servei de podologia a Vic. Diagnòstic i tractament de patologies del peu i turmell. Podòlegs especialitzats a CEMAV.',
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero4.webp')}}">
-    <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
+    <link rel="stylesheet" href="@assetv('css/especialitats.css')">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -71,7 +71,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="walk-outline"></ion-icon>
+                        @icon('walk-outline')
                     </div>
 
                     <h3>Podologia general i cirurgia</h3>
@@ -88,7 +88,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="footsteps-outline"></ion-icon>
+                        @icon('footsteps-outline')
                     </div>
 
                     <h3>Plantilles i ortesis</h3>
@@ -105,7 +105,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="bicycle-outline"></ion-icon>
+                        @icon('bicycle-outline')
                     </div>
 
                     <h3>Podologia esportiva i diabètica</h3>

@@ -7,7 +7,7 @@
         'robots'      => 'noindex, follow',
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero4.webp')}}">
-    <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
+    <link rel="stylesheet" href="@assetv('css/especialitats.css')">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -72,7 +72,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="star-outline"></ion-icon>
+                        @icon('star-outline')
                     </div>
 
                     <h3>Ortodòncia correctiva</h3>
@@ -89,7 +89,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="body-outline"></ion-icon>
+                        @icon('body-outline')
                     </div>
 
                     <h3>Ortopèdia infantil</h3>
@@ -106,7 +106,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="shield-checkmark-outline"></ion-icon>
+                        @icon('shield-checkmark-outline')
                     </div>
 
                     <h3>Prevenció d'hàbits</h3>

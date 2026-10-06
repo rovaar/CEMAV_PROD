@@ -7,7 +7,7 @@
     ])
     <!-- Preload hero image per millorar LCP -->
     <link rel="preload" as="image" href="/img/wallpapers/hero1.webp" fetchpriority="high">
-    <link rel="stylesheet" href="{{asset('css/home.css')}}">
+    <link rel="stylesheet" href="@assetv('css/home.css')">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -99,21 +99,21 @@
                 <div class="row mt-5">
                     <div class="col-md-4">
                         <div class="info-card">
-                            <ion-icon name="heart-outline"></ion-icon>
+                            @icon('heart-outline')
                             <h3>Atenció humana</h3>
                             <p>Tracte proper i personalitzat.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="info-card">
-                            <ion-icon name="medkit-outline"></ion-icon>
+                            @icon('medkit-outline')
                             <h3>Especialistes</h3>
                             <p>Equip mèdic multidisciplinari.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="info-card">
-                            <ion-icon name="location-outline"></ion-icon>
+                            @icon('location-outline')
                             <h3>A Vic</h3>
                             <p>Centre mèdic de referència local.</p>
                         </div>
@@ -271,49 +271,49 @@
   <div class="mutues-carousel" aria-label="Logotips de mútues col·laboradores">
     <div class="mc-viewport">
       <div class="mc-track">
-        <div class="mc-slide"><img src="{{asset('img/Mutues/adeslas.webp')}}"              alt="Adeslas"                  class="mc-logo"></div>
-        <div class="mc-slide"><img src="{{asset('img/Mutues/AEGON.webp')}}"                alt="AEGON"                    class="mc-logo"></div>
-        <div class="mc-slide"><img src="{{asset('img/Mutues/agrupacioMutua.webp')}}"       alt="Agrupació Mútua"          class="mc-logo"></div>
-        <div class="mc-slide"><img src="{{asset('img/Mutues/asisa.webp')}}"                alt="Asisa"                    class="mc-logo"></div>
-        <div class="mc-slide"><img src="{{asset('img/Mutues/assistenciaSanitaria.webp')}}" alt="Assistència Sanitària"    class="mc-logo"></div>
-        <div class="mc-slide"><img src="{{asset('img/Mutues/atlantida.webp')}}"            alt="Atlàntida"                class="mc-logo"></div>
-        <div class="mc-slide"><img src="{{asset('img/Mutues/axa.webp')}}"                  alt="AXA"                      class="mc-logo"></div>
-        <div class="mc-slide"><img src="{{asset('img/Mutues/caser.webp')}}"                alt="Caser"                    class="mc-logo"></div>
-        <div class="mc-slide"><img src="{{asset('img/Mutues/cosalud.webp')}}"              alt="Cosalud"                  class="mc-logo"></div>
-        <div class="mc-slide"><img src="{{asset('img/Mutues/divinapastora.webp')}}"        alt="Divina Pastora"           class="mc-logo"></div>
-        <div class="mc-slide"><img src="{{asset('img/Mutues/dkv.webp')}}"                  alt="DKV"                      class="mc-logo"></div>
-        <div class="mc-slide"><img src="{{asset('img/Mutues/fiatcSeguros.webp')}}"         alt="FIATC Seguros"            class="mc-logo"></div>
-        <div class="mc-slide"><img src="{{asset('img/Mutues/generali.webp')}}"             alt="Generali"                 class="mc-logo"></div>
-        <div class="mc-slide"><img src="{{asset('img/Mutues/groupama.webp')}}"             alt="Groupama"                 class="mc-logo"></div>
-        <div class="mc-slide"><img src="{{asset('img/Mutues/hna.webp')}}"                  alt="HNA"                      class="mc-logo"></div>
-        <div class="mc-slide"><img src="{{asset('img/Mutues/logosantalucia.webp')}}"       alt="Santa Lucía"              class="mc-logo"></div>
-        <div class="mc-slide"><img src="{{asset('img/Mutues/mapfre.webp')}}"               alt="Mapfre"                   class="mc-logo"></div>
-        <div class="mc-slide"><img src="{{asset('img/Mutues/Mutuacat.webp')}}"             alt="Mutuacat"                 class="mc-logo"></div>
-        <div class="mc-slide"><img src="{{asset('img/Mutues/mutuageneralcat.webp')}}"      alt="Mútua General Catalunya"  class="mc-logo"></div>
-        <div class="mc-slide"><img src="{{asset('img/Mutues/plusUltra.webp')}}"            alt="Plus Ultra"               class="mc-logo"></div>
-        <div class="mc-slide"><img src="{{asset('img/Mutues/sanitas.webp')}}"              alt="Sanitas"                  class="mc-logo"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/adeslas.webp')}}"              alt="Adeslas"                  class="mc-logo" width="400" height="174" loading="lazy" decoding="async"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/AEGON.webp')}}"                alt="AEGON"                    class="mc-logo" width="300" height="300" loading="lazy" decoding="async"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/agrupacioMutua.webp')}}"       alt="Agrupació Mútua"          class="mc-logo" width="400" height="269" loading="lazy" decoding="async"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/asisa.webp')}}"                alt="Asisa"                    class="mc-logo" width="367" height="137" loading="lazy" decoding="async"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/assistenciaSanitaria.webp')}}" alt="Assistència Sanitària"    class="mc-logo" width="400" height="200" loading="lazy" decoding="async"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/atlantida.webp')}}"            alt="Atlàntida"                class="mc-logo" width="430" height="148" loading="lazy" decoding="async"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/axa.webp')}}"                  alt="AXA"                      class="mc-logo" width="200" height="200" loading="lazy" decoding="async"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/caser.webp')}}"                alt="Caser"                    class="mc-logo" width="400" height="174" loading="lazy" decoding="async"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/cosalud.webp')}}"              alt="Cosalud"                  class="mc-logo" width="1600" height="600" loading="lazy" decoding="async"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/divinapastora.webp')}}"        alt="Divina Pastora"           class="mc-logo" width="300" height="122" loading="lazy" decoding="async"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/dkv.webp')}}"                  alt="DKV"                      class="mc-logo" width="400" height="156" loading="lazy" decoding="async"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/fiatcSeguros.webp')}}"         alt="FIATC Seguros"            class="mc-logo" width="400" height="209" loading="lazy" decoding="async"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/generali.webp')}}"             alt="Generali"                 class="mc-logo" width="400" height="217" loading="lazy" decoding="async"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/groupama.webp')}}"             alt="Groupama"                 class="mc-logo" width="283" height="178" loading="lazy" decoding="async"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/hna.webp')}}"                  alt="HNA"                      class="mc-logo" width="400" height="225" loading="lazy" decoding="async"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/logosantalucia.webp')}}"       alt="Santa Lucía"              class="mc-logo" width="400" height="209" loading="lazy" decoding="async"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/mapfre.webp')}}"               alt="Mapfre"                   class="mc-logo" width="400" height="224" loading="lazy" decoding="async"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/Mutuacat.webp')}}"             alt="Mutuacat"                 class="mc-logo" width="300" height="300" loading="lazy" decoding="async"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/mutuageneralcat.webp')}}"      alt="Mútua General Catalunya"  class="mc-logo" width="300" height="148" loading="lazy" decoding="async"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/plusUltra.webp')}}"            alt="Plus Ultra"               class="mc-logo" width="400" height="233" loading="lazy" decoding="async"></div>
+        <div class="mc-slide"><img src="{{asset('img/Mutues/sanitas.webp')}}"              alt="Sanitas"                  class="mc-logo" width="400" height="257" loading="lazy" decoding="async"></div>
         <!-- Duplicat per al bucle infinit sense interrupcions -->
-        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/adeslas.webp')}}"              alt="" class="mc-logo"></div>
-        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/AEGON.webp')}}"                alt="" class="mc-logo"></div>
-        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/agrupacioMutua.webp')}}"       alt="" class="mc-logo"></div>
-        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/asisa.webp')}}"                alt="" class="mc-logo"></div>
-        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/assistenciaSanitaria.webp')}}" alt="" class="mc-logo"></div>
-        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/atlantida.webp')}}"            alt="" class="mc-logo"></div>
-        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/axa.webp')}}"                  alt="" class="mc-logo"></div>
-        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/caser.webp')}}"                alt="" class="mc-logo"></div>
-        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/cosalud.webp')}}"              alt="" class="mc-logo"></div>
-        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/divinapastora.webp')}}"        alt="" class="mc-logo"></div>
-        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/dkv.webp')}}"                  alt="" class="mc-logo"></div>
-        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/fiatcSeguros.webp')}}"         alt="" class="mc-logo"></div>
-        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/generali.webp')}}"             alt="" class="mc-logo"></div>
-        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/groupama.webp')}}"             alt="" class="mc-logo"></div>
-        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/hna.webp')}}"                  alt="" class="mc-logo"></div>
-        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/logosantalucia.webp')}}"       alt="" class="mc-logo"></div>
-        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/mapfre.webp')}}"               alt="" class="mc-logo"></div>
-        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/Mutuacat.webp')}}"             alt="" class="mc-logo"></div>
-        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/mutuageneralcat.webp')}}"      alt="" class="mc-logo"></div>
-        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/plusUltra.webp')}}"            alt="" class="mc-logo"></div>
-        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/sanitas.webp')}}"              alt="" class="mc-logo"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/adeslas.webp')}}"              alt="" class="mc-logo" width="400" height="174" loading="lazy" decoding="async"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/AEGON.webp')}}"                alt="" class="mc-logo" width="300" height="300" loading="lazy" decoding="async"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/agrupacioMutua.webp')}}"       alt="" class="mc-logo" width="400" height="269" loading="lazy" decoding="async"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/asisa.webp')}}"                alt="" class="mc-logo" width="367" height="137" loading="lazy" decoding="async"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/assistenciaSanitaria.webp')}}" alt="" class="mc-logo" width="400" height="200" loading="lazy" decoding="async"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/atlantida.webp')}}"            alt="" class="mc-logo" width="430" height="148" loading="lazy" decoding="async"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/axa.webp')}}"                  alt="" class="mc-logo" width="200" height="200" loading="lazy" decoding="async"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/caser.webp')}}"                alt="" class="mc-logo" width="400" height="174" loading="lazy" decoding="async"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/cosalud.webp')}}"              alt="" class="mc-logo" width="1600" height="600" loading="lazy" decoding="async"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/divinapastora.webp')}}"        alt="" class="mc-logo" width="300" height="122" loading="lazy" decoding="async"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/dkv.webp')}}"                  alt="" class="mc-logo" width="400" height="156" loading="lazy" decoding="async"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/fiatcSeguros.webp')}}"         alt="" class="mc-logo" width="400" height="209" loading="lazy" decoding="async"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/generali.webp')}}"             alt="" class="mc-logo" width="400" height="217" loading="lazy" decoding="async"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/groupama.webp')}}"             alt="" class="mc-logo" width="283" height="178" loading="lazy" decoding="async"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/hna.webp')}}"                  alt="" class="mc-logo" width="400" height="225" loading="lazy" decoding="async"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/logosantalucia.webp')}}"       alt="" class="mc-logo" width="400" height="209" loading="lazy" decoding="async"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/mapfre.webp')}}"               alt="" class="mc-logo" width="400" height="224" loading="lazy" decoding="async"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/Mutuacat.webp')}}"             alt="" class="mc-logo" width="300" height="300" loading="lazy" decoding="async"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/mutuageneralcat.webp')}}"      alt="" class="mc-logo" width="300" height="148" loading="lazy" decoding="async"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/plusUltra.webp')}}"            alt="" class="mc-logo" width="400" height="233" loading="lazy" decoding="async"></div>
+        <div class="mc-slide" aria-hidden="true"><img src="{{asset('img/Mutues/sanitas.webp')}}"              alt="" class="mc-logo" width="400" height="257" loading="lazy" decoding="async"></div>
       </div>
     </div>
   </div>

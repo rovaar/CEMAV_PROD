@@ -6,7 +6,7 @@
         'description' => 'Servei de dietètica i nutrició a Vic. Assessorament nutricional personalitzat per a una alimentació saludable i control de pes. CEMAV.',
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero4.webp')}}">
-    <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
+    <link rel="stylesheet" href="@assetv('css/especialitats.css')">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -71,7 +71,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="leaf-outline"></ion-icon>
+                        @icon('leaf-outline')
                     </div>
 
                     <h3>Plans nutricionals personalitzats</h3>
@@ -88,7 +88,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="restaurant-outline"></ion-icon>
+                        @icon('restaurant-outline')
                     </div>
 
                     <h3>Nutrició esportiva i especial</h3>
@@ -105,7 +105,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="fitness-outline"></ion-icon>
+                        @icon('fitness-outline')
                     </div>
 
                     <h3>Prevenció de malalties</h3>

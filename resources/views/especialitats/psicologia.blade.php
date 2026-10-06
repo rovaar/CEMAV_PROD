@@ -6,7 +6,7 @@
         'description' => "Servei de psicologia a Vic. Atenció psicològica per a adults, joves i infants. Teràpia individual i tractament de l'ansietat i depressió. CEMAV.",
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero4.webp')}}">
-    <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
+    <link rel="stylesheet" href="@assetv('css/especialitats.css')">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -71,7 +71,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="people-outline"></ion-icon>
+                        @icon('people-outline')
                     </div>
 
                     <h3>Teràpia individual i creixement</h3>
@@ -88,7 +88,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="heart-outline"></ion-icon>
+                        @icon('heart-outline')
                     </div>
 
                     <h3>Gestió de l'ansietat i el dol</h3>
@@ -105,7 +105,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="home-outline"></ion-icon>
+                        @icon('home-outline')
                     </div>
 
                     <h3>Relacions familiars i de parella</h3>

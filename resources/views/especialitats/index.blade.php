@@ -5,7 +5,8 @@
         'title'       => 'Especialitats - CEMAV',
         'description' => 'Descobreix totes les especialitats mèdiques que oferim a CEMAV. Odontologia, fisioterapia, oftalmologia, dermatologia i moltes més.',
     ])
-    <link rel="stylesheet" type="text/css" href="{{asset('css/especialitats.css')}}?v={{ time() }}">
+    <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero1.webp')}}">
+    <link rel="stylesheet" type="text/css" href="@assetv('css/especialitats.css')">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

@@ -6,7 +6,7 @@
         'description' => "Servei d'urologia a Vic. Diagnòstic i tractament de patologies del sistema urinari i masculí. Especialistes en urologia a CEMAV.",
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero2.webp')}}">
-    <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
+    <link rel="stylesheet" href="@assetv('css/especialitats.css')">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -71,7 +71,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="medkit-outline"></ion-icon>
+                        @icon('medkit-outline')
                     </div>
 
                     <h3>Urologia general</h3>
@@ -88,7 +88,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="man-outline"></ion-icon>
+                        @icon('man-outline')
                     </div>
 
                     <h3>Andrologia i salut sexual</h3>
@@ -105,7 +105,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="alert-circle-outline"></ion-icon>
+                        @icon('alert-circle-outline')
                     </div>
 
                     <h3>Patologia oncològica</h3>

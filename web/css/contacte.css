@@ -14,7 +14,7 @@
 
 body{
   overflow-x: hidden;
-  font-family: 'Mulish', sans-serif;
+  font-family: 'Mulish', 'Mulish Fallback', sans-serif;
   color: var(--ink);
   background:
     linear-gradient(180deg,
@@ -31,7 +31,6 @@ body{
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   min-height: 100px;
 }
-.logo{ width: 250px; height: 60px; }
 .navbar-toggler{ font-size: 40px; }
 .navbar-toggler:focus{ outline: none; }
 
@@ -63,7 +62,7 @@ body{
   margin-bottom: 22px;
 }
 .contact-hero h1{
-  font-family: 'Fraunces', serif;
+  font-family: 'Fraunces', 'Fraunces Fallback', Georgia, serif;
   font-weight: 600;
   font-size: clamp(2.6rem, 6vw, 4.4rem);
   line-height: 1.05;
@@ -124,8 +123,8 @@ a.info-card:hover{
   color: var(--blue-deep);
   font-size: 28px;
 }
-.info-card h3{
-  font-family: 'Fraunces', serif;
+.info-card h2{
+  font-family: 'Fraunces', 'Fraunces Fallback', Georgia, serif;
   font-weight: 600;
   font-size: 1.25rem;
   margin: 0 0 4px;
@@ -161,6 +160,67 @@ a.info-card:hover{
   min-height: 420px;
 }
 
+/* Facana del mapa (PSI-10): un "mapa" de carrers dibuixat amb degradats, sense
+   cap imatge ni peticio a Google fins que es clica. */
+.map-facade{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 100%;
+  min-height: 420px;
+  padding: 32px 24px;
+  text-align: center;
+  color: var(--ink);
+  text-decoration: none;
+  background-color: var(--sky);
+  background-image:
+    linear-gradient(115deg, transparent 47%, #fff 47%, #fff 53%, transparent 53%),
+    linear-gradient(20deg, transparent 63%, rgba(255,255,255,.85) 63%, rgba(255,255,255,.85) 66%, transparent 66%),
+    linear-gradient(rgba(19,99,156,.07) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(19,99,156,.07) 2px, transparent 2px);
+  background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+}
+.map-facade:hover,
+.map-facade:focus-visible{ color: var(--ink); text-decoration: none; }
+.map-pin{
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--blue-deep);
+  color: #fff;
+  box-shadow: var(--shadow-soft);
+}
+.map-addr{
+  font-family: 'Fraunces', 'Fraunces Fallback', Georgia, serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background: rgba(255,255,255,.9);
+  padding: 4px 12px;
+  border-radius: 8px;
+}
+.map-btn{
+  display: inline-block;
+  background: var(--blue-deep);
+  color: #fff;
+  font-weight: 700;
+  padding: 11px 24px;
+  border-radius: 50px;
+  transition: background .2s ease;
+}
+.map-facade:hover .map-btn,
+.map-facade:focus-visible .map-btn{ background: var(--ink); }
+.map-note{
+  font-size: .85rem;
+  color: var(--ink-soft);
+  background: rgba(255,255,255,.9);
+  padding: 2px 10px;
+  border-radius: 6px;
+}
+
 /* ============ CTA ============ */
 .contact-cta{
   background: linear-gradient(135deg, var(--blue) 0%, var(--blue-deep) 100%);
@@ -169,7 +229,7 @@ a.info-card:hover{
   padding: 70px 0;
 }
 .contact-cta h2{
-  font-family: 'Fraunces', serif;
+  font-family: 'Fraunces', 'Fraunces Fallback', Georgia, serif;
   font-weight: 600;
   font-size: clamp(2rem, 4vw, 2.8rem);
   margin: 0 0 12px;
@@ -207,7 +267,8 @@ a.info-card:hover{
     gap: 28px;
   }
   .contact-map{ min-height: 360px; }
-  .contact-map iframe{ min-height: 360px; }
+  .contact-map iframe,
+  .map-facade{ min-height: 360px; }
 }
 
 @media (max-width: 575.98px){

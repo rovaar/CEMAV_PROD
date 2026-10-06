@@ -43,35 +43,24 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-    <!-- Preconnect a CDNs per reduir latència -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    {{-- Fonts allotjades a web/fonts/ i declarades a base.css (PSI-02). Abans venien
+         de Google Fonts: dos dominis mes abans de poder pintar el text. Aquestes URLs
+         han de coincidir exactament amb les del @font-face, o es baixarien dues vegades. --}}
+    <link rel="preload" as="font" type="font/woff2" href="{{asset('fonts/mulish-v18-latin-400-800.woff2')}}" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="{{asset('fonts/fraunces-v38-latin-400-600.woff2')}}" crossorigin>
 
-    {{-- MDBootstrap retirat el 25/08/2026: cap vista feia servir ni una sola classe seva. --}}
-    <!-- Bootstrap (crític per al layout, síncron) -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-
-    {{-- Només Fraunces + Mulish: són les dues que fixa base.css. Titillium Web i Roboto
-         retirades el 25/08/2026, no les feia servir cap full d'estil de producció. --}}
-    <!-- Google Fonts (asíncron, no bloqueja el renderitzat) -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Mulish:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    </noscript>
+    {{-- Bootstrap 4.5.0, NOMES el CSS, retallat amb PurgeCSS a les classes que fan servir
+         les vistes: 160 KB -> 10 KB (PSI-01). Servit des del domini, sense passar per cdnjs.
+         Si una vista fa servir una classe de Bootstrap nova, cal regenerar-lo: vegeu CLAUDE.md. --}}
+    <link rel="stylesheet" href="@assetv('css/vendor/bootstrap-4.5.0.purged.min.css')">
 
     <!-- Sistema de disseny compartit: tokens + tipografia (Mulish + Fraunces) -->
-    <link rel="stylesheet" href="{{asset('css/base.css')}}">
+    <link rel="stylesheet" href="@assetv('css/base.css')">
 
     <!-- Footer CSS (compartit per totes les pàgines) -->
-    <link rel="stylesheet" href="{{asset('css/footer.css')}}">
+    <link rel="stylesheet" href="@assetv('css/footer.css')">
 
-    {{-- Ionicons unificat a 7.1.0 el 26/08/2026: abans el head carregava la 5.5.2 i
-         /serveis se sobrecarregava la 7.1.0 a sobre. Comprovat que els 34 noms
-         d'icona que fa servir el web existeixen tots a la 7. --}}
-    <!-- Ionicons (diferit, no bloqueja el renderitzat) -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule defer src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    {{-- Ionicons ja no es carrega des d'unpkg: les icones son SVG inline amb @icon() (PSI-16). --}}
 
     {{-- Els estils del desplegable i del boto hamburguesa han passat a
          web/css/base.css el 26/08/2026, al costat de .nav-link, en comptes
@@ -89,14 +78,15 @@
          Banner injectat a totes les pàgines amb opció Acceptar/Rebutjar.
          ============================================================ -->
     <style>
-      .cemav-cc{position:fixed;bottom:24px;left:24px;right:24px;max-width:420px;background:#fff;border:1px solid #DFE1FF;padding:22px 22px 24px;border-radius:15px;box-shadow:0 10px 30px -8px rgba(0,0,0,.25);z-index:99999;font-family:'Mulish',sans-serif}
-      .cemav-cc h4{font-size:19px;font-weight:700;margin:0 0 8px;color:#16324f}
+      .cemav-cc{position:fixed;bottom:24px;left:24px;right:24px;max-width:420px;background:#fff;border:1px solid #DFE1FF;padding:22px 22px 24px;border-radius:15px;box-shadow:0 10px 30px -8px rgba(0,0,0,.25);z-index:99999;font-family:'Mulish', 'Mulish Fallback', sans-serif}
+      /* Titol en <p> i no <h4>: el banner es un dialeg, no part de l'esquema de la pagina (PSI-13) */
+      .cemav-cc .cc-title{font-family:'Fraunces','Fraunces Fallback',Georgia,serif;font-size:19px;font-weight:700;line-height:1.2;margin:0 0 8px;color:#16324f}
       .cemav-cc p{font-size:14px;line-height:1.5;color:#555;margin:0 0 16px}
-      .cemav-cc p a{color:#3090C7;text-decoration:underline}
+      .cemav-cc p a{color:#13639C;text-decoration:underline}
       .cemav-cc .cc-btns{display:flex;gap:10px;flex-wrap:wrap}
       .cemav-cc button{flex:1 1 120px;padding:11px 16px;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;transition:transform .2s ease}
       .cemav-cc button:hover{transform:scale(.98)}
-      .cemav-cc .cc-accept{background:#3090C7;color:#fff}
+      .cemav-cc .cc-accept{background:#13639C;color:#fff}
       .cemav-cc .cc-reject{background:#eef1f6;color:#16324f}
       @media (max-width:480px){.cemav-cc{left:12px;right:12px;bottom:12px}}
     </style>
@@ -134,7 +124,7 @@
         function showBanner() {
           var html =
             '<div class="cemav-cc" id="cemav-cookie-banner" role="dialog" aria-live="polite" aria-label="Consentiment de cookies">' +
-              '<h4>Aquest web utilitza cookies</h4>' +
+              '<p class="cc-title">Aquest web utilitza cookies</p>' +
               '<p>Utilitzem cookies analítiques (Google Analytics) per entendre com es navega pel web. ' +
               'Pots acceptar-les o rebutjar-les. Més detalls a la nostra ' +
               '<a href="/politicadecookies">Política de cookies</a>.</p>' +

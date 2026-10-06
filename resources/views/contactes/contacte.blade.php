@@ -5,7 +5,7 @@
         'title'       => 'Contacte | Centre de Medicina Amable de Vic',
         'description' => "Contacta amb CEMAV, el teu centre mèdic a Vic. Truca'ns al 93 889 46 02 o vine a C/ Bisbe Strauch, 16. Horari de dilluns a divendres, de 8h a 20h.",
     ])
-    <link rel="stylesheet" href="{{asset('css/contacte.css')}}">
+    <link rel="stylesheet" href="@assetv('css/contacte.css')">
   </head>
   <body>
   @include('includes.nav')
@@ -27,33 +27,33 @@
           <section class="contact-info" aria-label="Dades de contacte">
 
             <a class="info-card" href="https://www.google.com/maps/search/CEMAV+Centre+Medicina+Amable+Vic" target="_blank" rel="noopener">
-              <span class="ic"><ion-icon name="location-outline"></ion-icon></span>
+              <span class="ic">@icon('location-outline')</span>
               <div>
-                <h3>Adreça</h3>
+                <h2>Adreça</h2>
                 <p>C/ Bisbe Strauch, 16 · Vic</p>
               </div>
             </a>
 
             <a class="info-card" href="tel:+34938894602">
-              <span class="ic"><ion-icon name="call-outline"></ion-icon></span>
+              <span class="ic">@icon('call-outline')</span>
               <div>
-                <h3>Telèfon</h3>
+                <h2>Telèfon</h2>
                 <p>93 889 46 02</p>
               </div>
             </a>
 
             <a class="info-card" href="mailto:noucemav@gmail.com">
-              <span class="ic"><ion-icon name="mail-outline"></ion-icon></span>
+              <span class="ic">@icon('mail-outline')</span>
               <div>
-                <h3>Correu electrònic</h3>
+                <h2>Correu electrònic</h2>
                 <p>noucemav@gmail.com</p>
               </div>
             </a>
 
             <div class="info-card no-link">
-              <span class="ic"><ion-icon name="time-outline"></ion-icon></span>
+              <span class="ic">@icon('time-outline')</span>
               <div>
-                <h3>Horari</h3>
+                <h2>Horari</h2>
                 <p>Dilluns a divendres</p>
                 <p class="hours">8.00 h – 14.00 h · 15.00 h – 20.00 h</p>
               </div>
@@ -62,12 +62,21 @@
           </section>
 
           <!-- Columna mapa -->
+          {{-- Facana del mapa (PSI-10). L'iframe de Google Maps carregava ~450 KB de
+               JavaScript a cada visita i podia deixar cookies de Google sense passar pel
+               consentiment. Ara nomes es carrega quan l'usuari ho demana. Sense JS,
+               l'enllac obre Google Maps. --}}
           <section class="contact-map" aria-label="Ubicació al mapa">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.585218229426!2d2.249101714945508!3d41.92327457056577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a527119a56dd7d%3A0x84f0ed8304ce9538!2sCemav!5e0!3m2!1sca!2ses!4v1617832343957!5m2!1sca!2ses"
-              style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Mapa d'ubicació de CEMAV"></iframe>
+            <a class="map-facade" id="map-facade" target="_blank" rel="noopener"
+               href="https://www.google.com/maps/search/CEMAV+Centre+Medicina+Amable+Vic"
+               data-embed="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.585218229426!2d2.249101714945508!3d41.92327457056577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a527119a56dd7d%3A0x84f0ed8304ce9538!2sCemav!5e0!3m2!1sca!2ses!4v1617832343957!5m2!1sca!2ses">
+              <span class="map-pin" aria-hidden="true">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              </span>
+              <span class="map-addr">C/ Bisbe Strauch, 16 · Vic</span>
+              <span class="map-btn">Mostra el mapa</span>
+              <span class="map-note">Es carregarà Google Maps, que pot fer servir cookies pròpies.</span>
+            </a>
           </section>
 
         </div>
@@ -80,13 +89,32 @@
         <h2>Vols demanar visita?</h2>
         <p>Truca'ns i t'atendrem amb la millor de les actituds.</p>
         <a class="cta-btn" href="tel:+34938894602">
-          <ion-icon name="call-outline"></ion-icon>
+          @icon('call-outline')
           Truca al 93 889 46 02
         </a>
       </div>
     </section>
 
   @include('includes.footer')
+
+  <script>
+    // Facana del mapa: substitueix l'enllac per l'iframe nomes quan es clica.
+    (function () {
+      var f = document.getElementById('map-facade');
+      if (!f) return;
+      f.addEventListener('click', function (e) {
+        e.preventDefault();
+        var i = document.createElement('iframe');
+        i.src = f.getAttribute('data-embed');
+        i.title = "Mapa d'ubicació de CEMAV";
+        i.setAttribute('allowfullscreen', '');
+        i.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+        i.style.border = '0';
+        f.parentNode.replaceChild(i, f);
+        i.focus();
+      });
+    })();
+  </script>
 
   </body>
 </html>

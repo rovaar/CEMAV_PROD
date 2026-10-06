@@ -5,7 +5,8 @@
             'title'       => 'Serveis complementaris | Centre de Medicina Amable de Vic',
             'description' => 'Descobreix els serveis complementaris de CEMAV a Vic: analítiques, depilació làser, revisions mèdiques i molt més. Demana cita al 93 889 46 02.',
         ])
-        <link rel="stylesheet" href="{{asset('css/serveis.css')}}">
+        <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero2.webp')}}">
+        <link rel="stylesheet" href="@assetv('css/serveis.css')">
     </head>
     <body>
     @include('includes.nav')
@@ -62,7 +63,7 @@
                 <div class="col-md-4 mb-4">
                     <div class="servei-card">
                         <div class="servei-icon">
-                            <ion-icon name="clipboard-outline"></ion-icon>
+                            @icon('clipboard-outline')
                         </div>
                         <h3>Revisions mèdiques i laborals</h3>
                         <p>
@@ -74,7 +75,7 @@
                 <div class="col-md-4 mb-4">
                     <div class="servei-card">
                         <div class="servei-icon">
-                            <ion-icon name="car-outline"></ion-icon>
+                            @icon('car-outline')
                         </div>
                         <h3>Revisions carnet de cotxe</h3>
                         <p>
@@ -86,7 +87,7 @@
                 <div class="col-md-4 mb-4">
                     <div class="servei-card">
                         <div class="servei-icon">
-                            <ion-icon name="fitness-outline"></ion-icon>
+                            @icon('fitness-outline')
                         </div>
                         <h3>Revisions esportives</h3>
                         <p>
@@ -98,7 +99,7 @@
                 <div class="col-md-4 mb-4">
                     <div class="servei-card">
                         <div class="servei-icon">
-                            <ion-icon name="flask-outline"></ion-icon>
+                            @icon('flask-outline')
                         </div>
                         <h3>Analítiques</h3>
                         <p>
@@ -110,7 +111,7 @@
                 <div class="col-md-4 mb-4">
                     <div class="servei-card">
                         <div class="servei-icon">
-                            <ion-icon name="body-outline"></ion-icon>
+                            @icon('body-outline')
                         </div>
                         <h3>Rehabilitació</h3>
                         <p>

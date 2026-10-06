@@ -8,11 +8,6 @@ body {
     min-height: 100px;
 }
 
-.logo {
-    width: 250px;
-    height: 60px;
-}
-
 .navbar-toggler { font-size: 40px; }
 .navbar-toggler:focus { outline: none; }
 
@@ -65,8 +60,8 @@ body {
     display: inline-block;
     margin-top: 40px;
     background: #fff;
-    color: #3090C7;
-    border: 2px solid #3090C7;
+    color: var(--blue-deep);
+    border: 2px solid var(--blue-deep);
     padding: 18px 45px;
     border-radius: 50px;
     font-size: 20px;
@@ -76,7 +71,7 @@ body {
 }
 
 .hero-btn:hover {
-    background: #3090C7;
+    background: var(--blue-deep);
     color: #fff;
 }
 
@@ -140,8 +135,10 @@ body {
     line-height: 1.7;
 }
 
+/* Subratllat: dins d'un paragraf, el color sol no distingeix l'enllac (PSI-14). */
 .servei-card a {
-    color: #3090C7;
+    color: var(--blue-deep);
+    text-decoration: underline;
 }
 
 /* RESPONSIVE */

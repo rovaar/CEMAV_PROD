@@ -16,11 +16,6 @@ body{
 }
 
 
-.logo{
-    width: 250px;
-    height: 60px;
-}
-
 .navbar-toggler{ font-size: 40px;}
 .navbar-toggler:focus{ outline: none;}
 

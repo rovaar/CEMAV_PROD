@@ -8,11 +8,6 @@ body{
     min-height: 100px;
 }
 
-.logo{
-    width: 250px;
-    height: 80px;
-}
-
 .content-center{
     max-width: 800px;
     margin: 0 auto 60px auto;
@@ -174,7 +169,7 @@ body{
 }
 
 .hero-title{
-    font-family: 'Mulish', sans-serif;
+    font-family: 'Mulish', 'Mulish Fallback', sans-serif;
     font-size: 72px;
     font-weight: 700;
     line-height: 1.1;
@@ -196,8 +191,8 @@ body{
     display: inline-block;
     margin-top: 40px;
     background: #fff;
-    color: #3090C7;
-    border: 2px solid #3090C7;
+    color: var(--blue-deep);
+    border: 2px solid var(--blue-deep);
     padding: 18px 45px;
     border-radius: 50px;
     font-size: 20px;
@@ -207,7 +202,7 @@ body{
 }
 
 .hero-btn:hover{
-    background: #3090C7;
+    background: var(--blue-deep);
     color: #fff;
 }
 
@@ -313,7 +308,7 @@ body{
     margin-top: auto;
     margin-bottom: 0;
     padding-top: 10px;
-    color: #777;
+    color: var(--ink-soft);
     font-size: 18px;
 }
 
@@ -470,7 +465,7 @@ body{
 
 .title-dep {
     display: block;
-    color: #3090C7;
+    color: var(--blue-deep);
     margin-top: 10px;
     font-size: 16px;
     font-weight: 600;
@@ -479,7 +474,7 @@ body{
 
 p {
     font-size: 18px;
-    color: #999999;
+    color: var(--ink-soft);
     line-height: 1.8;
     margin-bottom: 0;
 }
@@ -587,20 +582,20 @@ p {
 .rel-totes {
     font-size: 18px;
     font-weight: 600;
-    color: #3090C7;
+    color: var(--blue-deep);
     text-decoration: underline;
 }
 
 .rel-totes:hover {
-    color: #13639C;
+    color: var(--ink);
 }
 
 /* Boto de cita a escala d'aquesta seccio, no de portada. */
 .rel-cita {
     display: inline-block;
-    background: #3090C7;
+    background: var(--blue-deep);
     color: #ffffff;
-    border: 2px solid #3090C7;
+    border: 2px solid var(--blue-deep);
     padding: 13px 32px;
     border-radius: 50px;
     font-size: 17px;
@@ -611,8 +606,8 @@ p {
 
 .rel-cita:hover,
 .rel-cita:focus-visible {
-    background: #13639C;
-    border-color: #13639C;
+    background: var(--ink);
+    border-color: var(--ink);
     color: #ffffff;
     text-decoration: none;
     transform: translateY(-2px);

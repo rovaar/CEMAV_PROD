@@ -6,7 +6,7 @@
         'description' => "Servei d'infermeria a Vic. Cures infermeres, injeccions, extraccions de sang i atenció preventiva. Infermers especialitzats a CEMAV.",
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero4.webp')}}">
-    <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
+    <link rel="stylesheet" href="@assetv('css/especialitats.css')">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -71,7 +71,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="eyedrop-outline"></ion-icon>
+                        @icon('eyedrop-outline')
                     </div>
 
                     <h3>Administració de medicaments</h3>
@@ -88,7 +88,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="pulse-outline"></ion-icon>
+                        @icon('pulse-outline')
                     </div>
 
                     <h3>Controls i revisions</h3>
@@ -105,7 +105,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="flask-outline"></ion-icon>
+                        @icon('flask-outline')
                     </div>
 
                     <h3>Analítiques i extraccions</h3>

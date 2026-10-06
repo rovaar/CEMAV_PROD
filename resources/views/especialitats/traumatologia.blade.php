@@ -6,7 +6,7 @@
         'description' => 'Servei de traumatologia a Vic. Diagnòstic i tractament de lesions musculoesquelètiques, fractures i patologies ortopèdiques. CEMAV.',
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero2.webp')}}">
-    <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
+    <link rel="stylesheet" href="@assetv('css/especialitats.css')">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -71,7 +71,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="fitness-outline"></ion-icon>
+                        @icon('fitness-outline')
                     </div>
 
                     <h3>Patologia traumàtica i ortopèdica</h3>
@@ -88,7 +88,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="search-outline"></ion-icon>
+                        @icon('search-outline')
                     </div>
 
                     <h3>Diagnòstic i prevenció</h3>
@@ -105,7 +105,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="person-outline"></ion-icon>
+                        @icon('person-outline')
                     </div>
 
                     <h3>Atenció personalitzada</h3>

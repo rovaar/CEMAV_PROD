@@ -6,7 +6,7 @@
         'description' => 'Servei de fisioteràpia i rehabilitació a Vic. Tractament de lesions musculars i articulars amb fisioterapeutes especialitzats. Demana cita a CEMAV.',
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero3.webp')}}">
-    <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
+    <link rel="stylesheet" href="@assetv('css/especialitats.css')">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -71,7 +71,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="body-outline"></ion-icon>
+                        @icon('body-outline')
                     </div>
 
                     <h3>Fisioteràpia general i esportiva</h3>
@@ -88,7 +88,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="hand-left-outline"></ion-icon>
+                        @icon('hand-left-outline')
                     </div>
 
                     <h3>Teràpia Manual i Drenatge</h3>
@@ -105,7 +105,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="flash-outline"></ion-icon>
+                        @icon('flash-outline')
                     </div>
 
                     <h3>Electroteràpia i Termoteràpia</h3>

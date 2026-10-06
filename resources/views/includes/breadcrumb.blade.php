@@ -1,5 +1,5 @@
     <!-- Breadcrumb Navigation for SEO -->
-    <nav aria-label="breadcrumb" style="padding: 10px 0; background-color: #3090C7;">
+    <nav aria-label="breadcrumb" style="padding: 10px 0; background-color: var(--blue-deep);">
         <div class="container">
             <ol class="breadcrumb" style="margin-bottom: 0; background-color: transparent; padding: 0; color: white;">
                 @php
@@ -120,7 +120,7 @@
 
     .breadcrumb-item + .breadcrumb-item::before {
         content: " / ";
-        color: #074169;
+        color: rgba(255,255,255,.6);
         margin: 0 8px;
     }
 
@@ -132,11 +132,14 @@
 
     .breadcrumb-item a:hover {
         color: white;
+        text-decoration: underline;
     }
 
+    /* Fons --blue-deep: blanc 6,4:1 i --sky 5,7:1 (PSI-12). Abans #3090C7 amb
+       #074169 a sobre donava 3:1. */
     .breadcrumb-item.active {
-        color: #074169;
-        font-weight: 500;
+        color: var(--sky);
+        font-weight: 700;
     }
 
     @media (max-width: 576px) {

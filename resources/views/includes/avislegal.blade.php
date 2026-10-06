@@ -6,8 +6,8 @@
         'description' => "Avís legal de CEMAV. Dades identificatives del titular del lloc web cemavvic.cat segons la LSSI-CE.",
         'robots'      => 'noindex, follow',
     ])
-    <link rel="stylesheet" href="{{asset('css/sobre.css')}}">
-    <link rel="stylesheet" href="{{asset('css/legal.css')}}">
+    <link rel="stylesheet" href="@assetv('css/sobre.css')">
+    <link rel="stylesheet" href="@assetv('css/legal.css')">
   </head>
   <body>
   @include('includes.nav')

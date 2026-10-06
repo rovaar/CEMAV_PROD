@@ -6,7 +6,7 @@
         'description' => "Servei d'optometria a Vic. Exàmens visuals i adaptació de lents de contacte i ulleres. Optometristes especialitzats a CEMAV.",
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero3.webp')}}">
-    <link rel="stylesheet" href="{{asset('css/especialitats.css')}}">
+    <link rel="stylesheet" href="@assetv('css/especialitats.css')">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -71,7 +71,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="eye-outline"></ion-icon>
+                        @icon('eye-outline')
                     </div>
 
                     <h3>Exàmens visuals</h3>
@@ -88,7 +88,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="glasses-outline"></ion-icon>
+                        @icon('glasses-outline')
                     </div>
 
                     <h3>Prescripció i adaptació de lents</h3>
@@ -105,7 +105,7 @@
                 <div class="servei-card">
 
                     <div class="servei-icon">
-                        <ion-icon name="shield-checkmark-outline"></ion-icon>
+                        @icon('shield-checkmark-outline')
                     </div>
 
                     <h3>Correccions refractives</h3>

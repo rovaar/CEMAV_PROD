@@ -5,7 +5,7 @@
         'title'       => 'Mutues | Centre de Medicina Amable de Vic',
         'description' => 'CEMAV treballa amb les principals mútues i assegurances mèdiques. Consulta quines cobertes a Vic: Adeslas, AEGON, Agrupació Mútua i moltes més.',
     ])
-    <link rel="stylesheet" href="{{asset('css/mutues.css')}}">
+    <link rel="stylesheet" href="@assetv('css/mutues.css')">
   </head>
   <body>
 
