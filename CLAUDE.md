@@ -9,10 +9,10 @@ Dominio de producción: **https://www.cemavvic.cat**
 |---|---|
 | Laravel | 8.x (`composer.json` pide `php ^8.2`) |
 | PHP | **8.2**, mínimo real — lo exigen 16 paquetes del `composer.lock`. Techo: 8.5 (`nette/utils`) |
-| Frontend | Blade + CSS escrito a mano en `web/css/`. **Solo el CSS** de Bootstrap 4.5, por CDN |
+| Frontend | Blade + CSS escrito a mano en `web/css/`. **Solo el CSS** de Bootstrap 4.5, recortado con PurgeCSS y servido desde `web/css/vendor/` |
 | JavaScript | Vanilla. **No hay jQuery, ni Popper, ni Bootstrap JS** — retirados el 26/08/2026 |
-| Iconos | Ionicons 7.1 por CDN, carga diferida |
-| Tipografías | Fraunces (títulos) + Mulish (texto), Google Fonts con preload async |
+| Iconos | Ionicons 7.1 como **SVG inline** desde `resources/icons/`, con `@icon('nombre')` (ya no por CDN) |
+| Tipografías | Fraunces (títulos) + Mulish (texto), **autoalojadas** en `web/fonts/` (ya no Google Fonts) |
 | Hosting | cdmon, hosting compartido, deploy por FTP |
 
 **Laravel Mix está prácticamente sin usar.** `webpack.mix.js` apunta a
@@ -46,7 +46,7 @@ Todas las páginas siguen el mismo esqueleto:
 @include('includes.nav')
 @include('includes.breadcrumb', ['pageTitle' => 'Nom de la pàgina'])
 
-@push('head-css')  <link rel="stylesheet" href="{{asset('css/lapagina.css')}}">  @endpush
+@push('head-css')  <link rel="stylesheet" href="@assetv('css/lapagina.css')">  @endpush
 @push('head-schema')  {{-- JSON-LD Schema.org --}}  @endpush
 
 {{-- contingut --}}
@@ -58,6 +58,10 @@ Todas las páginas siguen el mismo esqueleto:
   `head-css` y `head-schema`. Genera canonical, hreflang, Open Graph y Twitter Card
   automáticamente a partir de `$title`/`$description`.
 - Los enlaces internos se escriben siempre `{{URL::to('/ruta')}}`.
+- Los CSS propios se enlazan con `@assetv('css/lapagina.css')`, no con `asset()`: añade
+  `?v=<filemtime>` y el `.htaccess` los sirve con un año de caché. Con `asset()` a secas, un
+  cambio de CSS tardaría un año en llegar a quien ya ha visitado el web. La directiva vive en
+  `AppServiceProvider` y nunca da error: si el fichero no existe, devuelve la URL sin versión.
 - El sistema de diseño (colores, sombras, escalas tipográficas) está en
   `web/css/base.css` como custom properties. Úsalas en lugar de valores literales.
 
@@ -146,6 +150,43 @@ resuelven unas líneas de JS nativo al final de `includes/footer.blade.php`.
   oculta y el enlace lleva a `/especialitats`.
 - Sin librerías por CDN no hay atributos `integrity` que mantener sincronizados en 18
   ficheros — que es justo lo que provocó el hallazgo `SEO-03`.
+
+## Rendimiento (PageSpeed)
+
+Auditoría y plan en [docs/rendiment-pagespeed.md](docs/rendiment-pagespeed.md)
+(`PSI-01`…`PSI-16`). Lo que hay que saber para no deshacerlo:
+
+- **Bootstrap recortado.** `web/css/vendor/bootstrap-4.5.0.purged.min.css` solo contiene
+  las clases que usan las vistas (10 KB en lugar de 160 KB). **Si añades a una vista una
+  clase de Bootstrap que no se usaba en ningún otro sitio (`col-lg-3`, `d-md-flex`…),
+  no tendrá efecto hasta regenerar el fichero:**
+
+  ```bash
+  curl -s -o bootstrap-4.5.0.min.css https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css
+  npx purgecss@6 --css bootstrap-4.5.0.min.css --content "resources/views/**/*.blade.php"       --safelist show collapse collapsing active --output web/css/vendor/bootstrap-4.5.0.purged.min.css
+  rm bootstrap-4.5.0.min.css
+  ```
+
+  (`show`/`collapse` van en la safelist porque las añade el JS del menú.)
+- **Fuentes** en `web/fonts/`, declaradas en `base.css` con fuentes de reserva ajustadas
+  (`Mulish Fallback`, `Fraunces Fallback`). Cualquier `font-family` nuevo debe incluirlas:
+  `'Mulish', 'Mulish Fallback', sans-serif`. Si cambias un `.woff2`, cámbiale el nombre
+  (caché de un año) y actualiza también el `preload` de `includes/head.blade.php`.
+- **Imágenes:** a 2× del tamaño al que se muestran, como mucho. Fotos del equipo a
+  500×500, logos de mútua dentro de 400×300. Una foto de móvil sin redimensionar son
+  150-250 KB.
+- **Hero con `background-image`:** cada vista lleva su `<link rel="preload" as="image"
+  fetchpriority="high">`. Si no, el navegador no descubre la imagen del LCP hasta leer el CSS.
+- **Iconos:** `@icon('heart-outline')`, nunca `<ion-icon name="…">` a mano: ya no se carga
+  el JS de Ionicons y un `<ion-icon>` vacío no pinta nada. Para un icono nuevo, descarga
+  `https://unpkg.com/ionicons@7.1.0/dist/svg/<nombre>.svg` a `resources/icons/`. No
+  vuelvas a cargar Ionicons desde unpkg: era el último freno del LCP en móvil (`PSI-16`).
+- **Mapa de `/contacte`:** es una fachada que solo carga el iframe de Google al hacer clic.
+  No vuelvas a poner el iframe directamente: son ~450 KB y cookies de Google fuera del
+  consentimiento.
+- **Colores de texto:** para texto o botones azules usa `--blue-deep` (6,4:1 sobre blanco).
+  `--blue` y el antiguo `#3090C7` no llegan a 4,5:1 y solo valen para iconos, bordes o
+  títulos muy grandes.
 
 ## Al trabajar aquí
 

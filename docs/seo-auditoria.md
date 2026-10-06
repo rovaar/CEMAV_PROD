@@ -523,6 +523,12 @@ mòbil 4G abans que comenci a arribar cap byte.
 
 Aplicant també SEO-27 en quedarien **tres**: cdnjs, Google Fonts i unpkg.
 
+> ✅ **Resolt el 05/10/2026.** Els tres que quedaven ja no hi són: Bootstrap CSS i les fonts
+> se serveixen des del domini (`PSI-01`, `PSI-02`) i les icones són SVG inline (`PSI-16`).
+> Abans de pintar, la pàgina ja no fa **cap** petició a tercers. Google Analytics continua
+> darrere del consentiment, i Google Maps només es carrega en clicar el mapa (`PSI-10`).
+> Detall a [rendiment-pagespeed.md](rendiment-pagespeed.md).
+
 ### SEO-26 · Bootstrap: la versió del CSS i la del JS no coincideixen — P1
 
 CSS: Bootstrap **4.5.0** des de cdnjs. JS: Bootstrap **4.0.0** des de maxcdn (i **4.5.2** des
@@ -851,8 +857,8 @@ Arreglades petites i sense risc. **Feta el 25/08/2026 excepte tres punts.**
 - [x] **SEO-23** Fora Font Awesome
 - [x] **SEO-24** Només Fraunces + Mulish a les Google Fonts
 - [ ] **SEO-21** `Mútues` amb accent, separador `|` a `/especialitats`
-- [x] **SEO-31** Els cinc `alt="foto"` (queda l'`alt` del logo del menú)
-- [ ] **SEO-30** Preload del hero a `/oftalmologia` i `/especialitats`
+- [x] **SEO-31** Els cinc `alt="foto"`. L'`alt` del logo del menú, fet el 05/10/2026 amb `PSI-08`
+- [x] **SEO-30** Preload del hero a `/oftalmologia`, `/especialitats` i també `/serveis` (05/10/2026, `PSI-07`)
 - [x] **SEO-04** i **SEO-05**, que eren de tandes posteriors, també fets
 - [ ] **J1, J2** Comprovar el `.env` de producció
 
@@ -892,9 +898,9 @@ Arreglades petites i sense risc. **Feta el 25/08/2026 excepte tres punts.**
 ### Tanda 5 — neteja (sense pressa)
 
 - [ ] **SEO-33** Esborrar les 26 imatges òrfenes (**no** `facana4.webp`: és l'original de l'og:image)
-- [ ] **SEO-29** Redimensionar les fotos d'equip i els logos de mútua
-- [ ] **SEO-32** `width`/`height` a les 77 imatges que no en tenen
-- [ ] **SEO-28** Cache i compressió al `.htaccess` (després de J12)
+- [x] **SEO-29** Fotos d'equip a 500×500 i logos de mútua dins de 400×300: 2,1 MB → 350 KB (05/10/2026, `PSI-05`/`PSI-06`)
+- [ ] **SEO-32** `width`/`height` a les 77 imatges que no en tenen — fets els 42 logos del carrusel de la portada i el logo del menú (`PSI-05`/`PSI-08`)
+- [x] **SEO-28** Cache al `.htaccess` (05/10/2026, `PSI-03`). La compressió gzip ja l'aplicava cdmon
 - [ ] **SEO-49** Pàgina 404 personalitzada
 - [ ] **SEO-45** Alinear `CLAUDE.md` amb el que fan les vistes de debò
 - [ ] **SEO-08** URLs en minúscula amb redireccions 301
