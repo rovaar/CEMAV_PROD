@@ -41,3 +41,6 @@ yarn-error.log
 /errors/
 /logs/
 /.ftpquota
+
+# Python (tools/gsc)
+__pycache__/
