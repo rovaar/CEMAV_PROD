@@ -1,0 +1,112 @@
+/* ============================================================
+   CEMAV — Pàgina 404 (resources/views/errors/404.blade.php)
+   El menú el dona sobre.css, com a les pàgines legals.
+   Depèn dels tokens de base.css.
+   ============================================================ */
+
+.err404{
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 150px 22px 90px;   /* 100px del nav fix + aire */
+  text-align: center;
+}
+
+.err404-codi{
+  display: inline-block;
+  margin: 0 0 12px;
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--blue-deep);
+}
+
+.err404 h1{
+  font-size: 2.4rem;
+  margin: 0 0 14px;
+  color: var(--ink);
+}
+
+.err404-text{
+  max-width: 560px;
+  margin: 0 auto 34px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.err404-links{
+  list-style: none;
+  margin: 0 0 40px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.err404-links a{
+  display: block;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  color: var(--blue-deep);
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color .2s ease, color .2s ease;
+}
+
+.err404-links a:hover,
+.err404-links a:focus-visible{
+  border-color: var(--blue-deep);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.err404-cta{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.err404-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  border: 2px solid var(--blue-deep);
+  border-radius: 50px;
+  background: var(--blue-deep);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .2s ease, color .2s ease;
+}
+
+.err404-btn:hover,
+.err404-btn:focus-visible{
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+  text-decoration: none;
+}
+
+.err404-btn--sec{
+  background: #fff;
+  color: var(--blue-deep);
+}
+
+.err404-btn--sec:hover,
+.err404-btn--sec:focus-visible{
+  background: var(--blue-deep);
+  border-color: var(--blue-deep);
+  color: #fff;
+}
+
+@media (max-width: 767.98px){
+  .err404{ padding: 130px 16px 70px; }
+  .err404 h1{ font-size: 1.8rem; }
+  .err404-links{ grid-template-columns: repeat(2, 1fr); }
+}

@@ -856,7 +856,7 @@ Arreglades petites i sense risc. **Feta el 25/08/2026 excepte tres punts.**
 - [x] **SEO-22** Fora MDBootstrap: el CSS de `head.blade.php` i el JS de `/especialitats`
 - [x] **SEO-23** Fora Font Awesome
 - [x] **SEO-24** Només Fraunces + Mulish a les Google Fonts
-- [ ] **SEO-21** `Mútues` amb accent, separador `|` a `/especialitats`
+- [x] **SEO-21** `Mútues` amb accent, `|` a `/especialitats` i la marca ben escrita a la portada (07/10/2026, `POS-07`)
 - [x] **SEO-31** Els cinc `alt="foto"`. L'`alt` del logo del menú, fet el 05/10/2026 amb `PSI-08`
 - [x] **SEO-30** Preload del hero a `/oftalmologia`, `/especialitats` i també `/serveis` (05/10/2026, `PSI-07`)
 - [x] **SEO-04** i **SEO-05**, que eren de tandes posteriors, també fets
@@ -867,9 +867,9 @@ Arreglades petites i sense risc. **Feta el 25/08/2026 excepte tres punts.**
 - [x] ~~**SEO-05** Enllaçar les targetes de `/serveis` amb les subpàgines~~ — resolt d'una
       altra manera: les subpàgines s'han retirat i el contingut es queda a `/serveis`
 - [x] ~~**SEO-07** Include d'especialitats relacionades + CTA a `/contacte`~~ — fet
-- [ ] **SEO-34** Un sol `h1` per pàgina a les 3 pàgines que queden
-- [ ] **SEO-10** `/especialitats` al footer
-- [ ] **SEO-15** Completar el `BreadcrumbList` a mútues, sobre i contacte
+- [x] **SEO-34** Un sol `h1` per pàgina, i el primer encapçalament de cada pàgina; cap salt de nivell a les 23 rutes ni a la 404 (07/10/2026)
+- [x] **SEO-10** `/especialitats` al footer (07/10/2026)
+- [x] **SEO-15** Resolt d'una altra manera: el redisseny va treure el breadcrumb de mútues, sobre i contacte. El que quedava malament era `/especialitats` (només «Inici»), i ara porta els dos elements (07/10/2026)
 - [ ] **SEO-27** Substituir jQuery/Popper/Bootstrap JS per JS natiu (tanca SEO-26)
 - [x] ~~**SEO-04** Generar l'`og:image` de 1200×630 (tanca SEO-35)~~ — fet
 
@@ -879,9 +879,9 @@ Arreglades petites i sense risc. **Feta el 25/08/2026 excepte tres punts.**
 - [x] ~~**SEO-12** Completar-lo amb `geo`, `image`, `logo`, horaris~~ — fet
 - [ ] **SEO-40** `sameAs` amb Google Business, Instagram i Facebook
 - [x] ~~**SEO-14** `medicalSpecialty` amb valors de l'enumeració~~ — fet
-- [ ] **SEO-11** JSON-LD a les 8 pàgines que no en tenen
+- [x] **SEO-11** `ContactPage` + `MedicalClinic` a `/contacte`, `AboutPage` a `/sobreCemav` i `WebPage` a `/mutues`, tots lligats a `#clinica`. Les 4 subpàgines de serveis ja no existeixen (07/10/2026)
 - [ ] **J5, J6** Search Console i Google Business Profile
-- [ ] **SEO-44** Centralitzar el NAP i els horaris
+- [ ] **SEO-44** Centralitzar el NAP i els horaris — **en part**: el JSON-LD del centre és un sol include (`includes/schema-clinica`) per a la portada i `/contacte`, i la descripció de `/contacte` ja diu l'horari amb la pausa de 14 a 15 h. Queden el footer i el text de `/contacte`
 
 ### Tanda 4 — contingut (esforç continuat)
 
@@ -891,7 +891,7 @@ Arreglades petites i sense risc. **Feta el 25/08/2026 excepte tres punts.**
 - [ ] **SEO-17** Ampliar les 5 especialitats prioritàries a 600-900 paraules
 - [ ] **SEO-16** FAQ a `/contacte` i a les especialitats prioritàries
 - [ ] **SEO-42** Fitxes de professionals amb `Physician`
-- [ ] **SEO-20** Reescriure els 8 títols curts
+- [x] **SEO-20** Títols de les especialitats amb el terme que es busca a GSC («Podòleg a Vic», «Nutricionista i dietista a Vic»…) i `h1` amb «a Vic». Oftalmologia es queda igual perquè ja funciona (07/10/2026, `POS-07`)
 - [ ] **SEO-43** Correu al domini propi
 - [ ] **SEO-19** Decidir què es fa amb el castellà
 
@@ -901,7 +901,7 @@ Arreglades petites i sense risc. **Feta el 25/08/2026 excepte tres punts.**
 - [x] **SEO-29** Fotos d'equip a 500×500 i logos de mútua dins de 400×300: 2,1 MB → 350 KB (05/10/2026, `PSI-05`/`PSI-06`)
 - [ ] **SEO-32** `width`/`height` a les 77 imatges que no en tenen — fets els 42 logos del carrusel de la portada i el logo del menú (`PSI-05`/`PSI-08`)
 - [x] **SEO-28** Cache al `.htaccess` (05/10/2026, `PSI-03`). La compressió gzip ja l'aplicava cdmon
-- [ ] **SEO-49** Pàgina 404 personalitzada
+- [x] **SEO-49** `errors/404.blade.php`: menú, 12 enllaços i telèfon, `noindex`, codi 404 (07/10/2026, `POS-09`)
 - [ ] **SEO-45** Alinear `CLAUDE.md` amb el que fan les vistes de debò
 - [ ] **SEO-08** URLs en minúscula amb redireccions 301
 - [ ] **SEO-39** Treure el BOM de les sis vistes

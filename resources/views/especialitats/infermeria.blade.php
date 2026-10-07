@@ -2,7 +2,7 @@
 <html lang="ca">
   <head>
     @include('includes.head', [
-        'title'       => 'Infermeria a Vic | CEMAV',
+        'title'       => 'Infermeria a Vic · Medicació, controls i analítiques | CEMAV',
         'description' => "Servei d'infermeria a Vic. Cures infermeres, injeccions, extraccions de sang i atenció preventiva. Infermers especialitzats a CEMAV.",
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero4.webp')}}">
@@ -36,7 +36,7 @@
 <section id="portada-infermeria">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title">Infermeria <span>per cuidar la teva salut</span></h1>
+        <h1 class="hero-title">Infermeria a Vic <span>per cuidar la teva salut</span></h1>
         <h2>Atenció infermera especialitzada a Vic</h2>
       </div>
     </div>

@@ -2,10 +2,23 @@
 <html lang="ca">
   <head>
     @include('includes.head', [
-        'title'       => 'Contacte | Centre de Medicina Amable de Vic',
-        'description' => "Contacta amb CEMAV, el teu centre mèdic a Vic. Truca'ns al 93 889 46 02 o vine a C/ Bisbe Strauch, 16. Horari de dilluns a divendres, de 8h a 20h.",
+        'title'       => 'Contacte i cita prèvia | CEMAV, centre mèdic a Vic',
+        'description' => "Contacta amb CEMAV, centre mèdic a Vic. Truca'ns al 93 889 46 02 o vine a C/ Bisbe Strauch, 16. De dilluns a divendres, de 8 a 14 h i de 15 a 20 h.",
     ])
     <link rel="stylesheet" href="@assetv('css/contacte.css')">
+    @include('includes.schema-clinica')
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "@id": "https://www.cemavvic.cat/contacte#pagina",
+      "url": "https://www.cemavvic.cat/contacte",
+      "name": "Contacte i cita prèvia",
+      "inLanguage": "ca",
+      "isPartOf": { "@type": "WebSite", "url": "https://www.cemavvic.cat/", "name": "CEMAV" },
+      "about": { "@id": "https://www.cemavvic.cat/#clinica" }
+    }
+    </script>
   </head>
   <body>
   @include('includes.nav')

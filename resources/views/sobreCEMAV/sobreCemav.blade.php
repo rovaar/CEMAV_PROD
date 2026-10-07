@@ -6,6 +6,18 @@
         'description' => "Coneix CEMAV, el Centre de Medicina Amable de Vic. Des del 2002 oferim atenció mèdica especialitzada amb la filosofia 'Persones tractant a persones'.",
     ])
     <link rel="stylesheet" href="@assetv('css/sobre.css')">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "@id": "https://www.cemavvic.cat/sobreCemav#pagina",
+      "url": "https://www.cemavvic.cat/sobreCemav",
+      "name": "Sobre CEMAV",
+      "inLanguage": "ca",
+      "isPartOf": { "@type": "WebSite", "url": "https://www.cemavvic.cat/", "name": "CEMAV" },
+      "about": { "@id": "https://www.cemavvic.cat/#clinica" }
+    }
+    </script>
   </head>
   <body>
   @include('includes.nav')

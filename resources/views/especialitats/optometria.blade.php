@@ -2,7 +2,7 @@
 <html lang="ca">
   <head>
     @include('includes.head', [
-        'title'       => 'Optometria a Vic | CEMAV',
+        'title'       => 'Optometrista a Vic · Revisió de la vista i lents | CEMAV',
         'description' => "Servei d'optometria a Vic. Exàmens visuals i adaptació de lents de contacte i ulleres. Optometristes especialitzats a CEMAV.",
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero3.webp')}}">
@@ -36,7 +36,7 @@
 <section id="portada-optometria">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title">Optometria <span>per una visió perfecta</span></h1>
+        <h1 class="hero-title">Optometria a Vic <span>per una visió perfecta</span></h1>
         <h2>Especialistes en salut visual i adaptació de lents a Vic</h2>
       </div>
     </div>

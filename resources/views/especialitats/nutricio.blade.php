@@ -2,7 +2,7 @@
 <html lang="ca">
   <head>
     @include('includes.head', [
-        'title'       => 'Dietètica i Nutrició a Vic | CEMAV',
+        'title'       => 'Nutricionista i dietista a Vic | CEMAV',
         'description' => 'Servei de dietètica i nutrició a Vic. Assessorament nutricional personalitzat per a una alimentació saludable i control de pes. CEMAV.',
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero4.webp')}}">
@@ -36,7 +36,7 @@
 <section id="portada-nutricio">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title">Nutrició i Dietètica <span>per a una vida saludable</span></h1>
+        <h1 class="hero-title">Nutrició i dietètica a Vic <span>per a una vida saludable</span></h1>
         <h2>Assessorament nutricional personalitzat a Vic</h2>
       </div>
     </div>

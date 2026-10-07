@@ -2,7 +2,7 @@
 <html lang="ca">
     <head>
         @include('includes.head', [
-            'title'       => 'Serveis complementaris | Centre de Medicina Amable de Vic',
+            'title'       => 'Revisions mèdiques, carnet i analítiques a Vic | CEMAV',
             'description' => 'Descobreix els serveis complementaris de CEMAV a Vic: analítiques, depilació làser, revisions mèdiques i molt més. Demana cita al 93 889 46 02.',
         ])
         <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero2.webp')}}">

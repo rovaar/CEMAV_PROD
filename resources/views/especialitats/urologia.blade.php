@@ -2,7 +2,7 @@
 <html lang="ca">
   <head>
     @include('includes.head', [
-        'title'       => 'Urologia a Vic | CEMAV',
+        'title'       => 'Uròleg a Vic · Urologia i andrologia | CEMAV',
         'description' => "Servei d'urologia a Vic. Diagnòstic i tractament de patologies del sistema urinari i masculí. Especialistes en urologia a CEMAV.",
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero2.webp')}}">
@@ -36,7 +36,7 @@
 <section id="portada-urologia">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title">Urologia i Andrologia <span>per cuidar la teva salut urinària</span></h1>
+        <h1 class="hero-title">Urologia i andrologia a Vic <span>per cuidar la teva salut urinària</span></h1>
         <h2>Especialistes en salut urològica i andrologia a Vic</h2>
       </div>
     </div>

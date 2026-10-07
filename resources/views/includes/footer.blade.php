@@ -11,6 +11,7 @@
         <h2 class="foot-title">Links útils</h2>
         <ul>
           <li><a href="{{URL::to('/sobreCemav')}}">Sobre CEMAV</a></li>
+          <li><a href="{{URL::to('/especialitats')}}">Especialitats</a></li>
           <li><a href="{{URL::to('/serveis')}}">Serveis</a></li>
           <li><a href="{{URL::to('/mutues')}}">Mútues</a></li>
           <li><a href="{{URL::to('/contacte')}}">Contacte</a></li>

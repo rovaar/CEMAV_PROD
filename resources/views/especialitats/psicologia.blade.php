@@ -2,7 +2,7 @@
 <html lang="ca">
   <head>
     @include('includes.head', [
-        'title'       => 'Psicologia a Vic | CEMAV',
+        'title'       => 'Psicòleg a Vic · Psicologia per a adults i infants | CEMAV',
         'description' => "Servei de psicologia a Vic. Atenció psicològica per a adults, joves i infants. Teràpia individual i tractament de l'ansietat i depressió. CEMAV.",
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero4.webp')}}">
@@ -36,7 +36,7 @@
 <section id="portada-psicologia">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title">Psicologia <span>per al teu benestar emocional</span></h1>
+        <h1 class="hero-title">Psicologia a Vic <span>per al teu benestar emocional</span></h1>
         <h2>Atenció psicològica professional per a adults i infants a Vic</h2>
       </div>
     </div>

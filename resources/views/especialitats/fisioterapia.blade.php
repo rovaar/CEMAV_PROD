@@ -2,7 +2,7 @@
 <html lang="ca">
   <head>
     @include('includes.head', [
-        'title'       => 'Fisioteràpia a Vic | Centre de Rehabilitació CEMAV',
+        'title'       => 'Fisioterapeuta a Vic · Fisioteràpia i rehabilitació | CEMAV',
         'description' => 'Servei de fisioteràpia i rehabilitació a Vic. Tractament de lesions musculars i articulars amb fisioterapeutes especialitzats. Demana cita a CEMAV.',
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero3.webp')}}">
@@ -36,7 +36,7 @@
 <section id="portada-fisioterapia">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title">Fisioteràpia avançada <span>per recuperar el teu moviment</span></h1>
+        <h1 class="hero-title">Fisioteràpia a Vic <span>per recuperar el teu moviment</span></h1>
         <h2>Especialistes en rehabilitació i tractament de lesions a Vic</h2>
       </div>
     </div>

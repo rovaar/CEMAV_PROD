@@ -2,7 +2,7 @@
 <html lang="ca">
   <head>
     @include('includes.head', [
-        'title'       => 'Odontologia a Vic | Dentista CEMAV',
+        'title'       => 'Dentista a Vic · Odontologia i implants | CEMAV',
         'description' => "Servei d'odontologia a Vic. Dentistes especialitzats en prevenció, estètica dental i tractaments bucodentals. Visites privades i mútues a CEMAV.",
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero2.webp')}}">
@@ -36,7 +36,7 @@
 <section id="portada-odontologia">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title">Odontologia <span>per cuidar el teu somriure</span></h1>
+        <h1 class="hero-title">Odontologia a Vic <span>per cuidar el teu somriure</span></h1>
         <h2>Especialistes en salut bucodental a Vic</h2>
       </div>
     </div>

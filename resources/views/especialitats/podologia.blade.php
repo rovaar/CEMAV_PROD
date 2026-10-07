@@ -2,7 +2,7 @@
 <html lang="ca">
   <head>
     @include('includes.head', [
-        'title'       => 'Podologia a Vic | CEMAV',
+        'title'       => 'Podòleg a Vic · Plantilles i peu diabètic | CEMAV',
         'description' => 'Servei de podologia a Vic. Diagnòstic i tractament de patologies del peu i turmell. Podòlegs especialitzats a CEMAV.',
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero4.webp')}}">
@@ -36,7 +36,7 @@
 <section id="portada-podologia">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title">Podologia avançada <span>per cuidar els teus peus</span></h1>
+        <h1 class="hero-title">Podologia a Vic <span>per cuidar els teus peus</span></h1>
         <h2>Especialistes en salut del peu i turmell a Vic</h2>
       </div>
     </div>

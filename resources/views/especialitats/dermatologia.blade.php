@@ -2,7 +2,7 @@
 <html lang="ca">
 <head>
     @include('includes.head', [
-        'title'       => 'Dermatologia a Vic | CEMAV',
+        'title'       => 'Dermatòleg a Vic · Pell, cabell i ungles | CEMAV',
         'description' => 'Servei de dermatologia a Vic. Diagnòstic i tractament de malalties de la pell, cabells i ungles. Dermatòlegs especialitzats a CEMAV.',
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero2.webp')}}">
@@ -36,7 +36,7 @@
 <section id="portada-dermatologia">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title">Dermatologia avançada <span>per cuidar la teva pell</span></h1>
+        <h1 class="hero-title">Dermatologia a Vic <span>per cuidar la teva pell</span></h1>
         <h2>Especialistes en pell, cabell i ungles a Vic</h2>
       </div>
     </div>

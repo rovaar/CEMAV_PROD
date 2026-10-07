@@ -2,10 +2,22 @@
 <html lang="ca">
   <head>
     @include('includes.head', [
-        'title'       => 'Mutues | Centre de Medicina Amable de Vic',
+        'title'       => 'Mútues a Vic · Sanitas, Adeslas, DKV, Asisa i més | CEMAV',
         'description' => 'CEMAV treballa amb les principals mútues i assegurances mèdiques. Consulta quines cobertes a Vic: Adeslas, AEGON, Agrupació Mútua i moltes més.',
     ])
     <link rel="stylesheet" href="@assetv('css/mutues.css')">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.cemavvic.cat/mutues#pagina",
+      "url": "https://www.cemavvic.cat/mutues",
+      "name": "Mútues amb què treballa CEMAV",
+      "inLanguage": "ca",
+      "isPartOf": { "@type": "WebSite", "url": "https://www.cemavvic.cat/", "name": "CEMAV" },
+      "about": { "@id": "https://www.cemavvic.cat/#clinica" }
+    }
+    </script>
   </head>
   <body>
 

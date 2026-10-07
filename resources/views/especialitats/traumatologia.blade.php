@@ -2,7 +2,7 @@
 <html lang="ca">
   <head>
     @include('includes.head', [
-        'title'       => 'Traumatologia a Vic | CEMAV',
+        'title'       => 'Traumatòleg a Vic · Traumatologia i ortopèdia | CEMAV',
         'description' => 'Servei de traumatologia a Vic. Diagnòstic i tractament de lesions musculoesquelètiques, fractures i patologies ortopèdiques. CEMAV.',
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero2.webp')}}">
@@ -36,7 +36,7 @@
 <section id="portada-traumatologia">
     <div class="container">
       <div class="content-center">
-        <h1 class="hero-title">Traumatologia <span>per recuperar la teva mobilitat</span></h1>
+        <h1 class="hero-title">Traumatologia a Vic <span>per recuperar la teva mobilitat</span></h1>
         <h2>Especialistes en lesions musculoesquelètiques i ortopèdia a Vic</h2>
       </div>
     </div>

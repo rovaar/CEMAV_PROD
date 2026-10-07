@@ -79,7 +79,7 @@
          ============================================================ -->
     <style>
       .cemav-cc{position:fixed;bottom:24px;left:24px;right:24px;max-width:420px;background:#fff;border:1px solid #DFE1FF;padding:22px 22px 24px;border-radius:15px;box-shadow:0 10px 30px -8px rgba(0,0,0,.25);z-index:99999;font-family:'Mulish', 'Mulish Fallback', sans-serif}
-      /* Titol en <p> i no <h4>: el banner es un dialeg, no part de l'esquema de la pagina (PSI-13) */
+      /* Titol en un paragraf i no en un h4: el banner es un dialeg, no part de l'esquema de la pagina (PSI-13) */
       .cemav-cc .cc-title{font-family:'Fraunces','Fraunces Fallback',Georgia,serif;font-size:19px;font-weight:700;line-height:1.2;margin:0 0 8px;color:#16324f}
       .cemav-cc p{font-size:14px;line-height:1.5;color:#555;margin:0 0 16px}
       .cemav-cc p a{color:#13639C;text-decoration:underline}

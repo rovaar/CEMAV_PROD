@@ -2,79 +2,20 @@
 <html lang="ca">
   <head>
     @include('includes.head', [
-        'title'       => 'CEMAV | Centre de medicina amable de Vic',
-        'description' => "Centre de Medicina Amable de Vic. Especialistes en fisioteràpia, rehabilitació i serveis mèdics per al teu benestar. Demana cita prèvia!",
+        'title'       => 'CEMAV | Centre mèdic a Vic amb especialistes i mútues',
+        'description' => "Centre mèdic a Vic amb odontologia, fisioteràpia, podologia, nutrició, psicologia i més especialitats. Visites privades i amb mútua. Truca al 93 889 46 02.",
     ])
     <!-- Preload hero image per millorar LCP -->
     <link rel="preload" as="image" href="/img/wallpapers/hero1.webp" fetchpriority="high">
     <link rel="stylesheet" href="@assetv('css/home.css')">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalClinic",
-      "@id": "https://www.cemavvic.cat/#clinica",
-      "name": "CEMAV - Centre de Medicina Amable de Vic",
-      "alternateName": "CEMAV",
-      "description": "Centre medic a Vic amb especialitats i serveis per a visites privades i mutues assistencials.",
-      "url": "https://www.cemavvic.cat",
-      "logo": "https://www.cemavvic.cat/img/logoPrincipal.webp",
-      "image": "https://www.cemavvic.cat/img/og-cemav.webp",
-      "telephone": "+34938894602",
-      "email": "noucemav@gmail.com",
-      "foundingDate": "2002-05-02",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Carrer Bisbe Strauch, 16",
-        "addressLocality": "Vic",
-        "addressRegion": "Catalunya",
-        "postalCode": "08500",
-        "addressCountry": "ES"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 41.92327,
-        "longitude": 2.24910
-      },
-      "hasMap": "https://www.google.com/maps/search/CEMAV+Centre+Medicina+Amable+Vic",
-      "areaServed": [
-        { "@type": "City", "name": "Vic" },
-        { "@type": "AdministrativeArea", "name": "Osona" }
-      ],
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-          "opens": "08:00",
-          "closes": "14:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-          "opens": "15:00",
-          "closes": "20:00"
-        }
-      ],
-      "medicalSpecialty": [
-        "https://schema.org/Dentistry",
-        "https://schema.org/Podiatric",
-        "https://schema.org/Physiotherapy",
-        "https://schema.org/Optometric",
-        "https://schema.org/DietNutrition",
-        "https://schema.org/Urologic",
-        "https://schema.org/Ophthalmologic",
-        "https://schema.org/Musculoskeletal",
-        "https://schema.org/Dermatology",
-        "https://schema.org/Nursing"
-      ]
-    }
-    </script>
+    @include('includes.schema-clinica')
   </head>
   <body>
   @include('includes.nav')
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 text-center" id="portada">
-                <h2 style="margin-top:50px;">Acompanyant-te en el teu benestar i procés de salut</h2>
+                <p class="portada-lema" style="margin-top:50px;">Acompanyant-te en el teu benestar i procés de salut</p>
                 <h1 class="hero-title">CENTRE DE <span>MEDICINA AMABLE</span> DE <span>VIC</span></h1>
                 <h2>Persones tractant a persones</h2>
                 <a href="{{URL::to('/contacte')}}" class="hero-btn" style="margin-top:60px;">Contacte</a>
@@ -126,7 +67,7 @@
 
         <div class="row" id="especialitats_titol">
           <div class="col-md-12">
-             <h1>Especialitats</h1>
+             <h2>Especialitats</h2>
              <p>Els nostres especialistes ofereixen tots els seus coneixements i les seves habilitats per acompanyar-vos en el vostre procés de sanació i rehabilitació per millorar la teva qualitat de vida.</p>
           </div>
         </div>

@@ -2,7 +2,7 @@
 <html lang="ca">
   <head>
     @include('includes.head', [
-        'title'       => 'Especialitats - CEMAV',
+        'title'       => 'Especialitats mèdiques a Vic | CEMAV',
         'description' => 'Descobreix totes les especialitats mèdiques que oferim a CEMAV. Odontologia, fisioterapia, oftalmologia, dermatologia i moltes més.',
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero1.webp')}}">
@@ -44,7 +44,7 @@
 
   <div class="row" id="especialitats_titol">
     <div class="col-md-12" style="text-align:center;">
-       <h1 style="margin-top">Especialitats</h1>
+       <h2>Especialitats</h2>
        <p>Els nostres especialistes ofereixen tots els seus coneixements i les seves habilitats per acompanyar-vos en el vostre procés de sanació i rehabilitació per millorar la teva qualitat de vida.</p>
     </div>
   </div>

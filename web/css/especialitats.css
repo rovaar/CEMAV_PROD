@@ -413,7 +413,7 @@ body{
     text-align: center;
 }
 
-#especialitats_titol h1 {
+#especialitats_titol h2 {
     font-size: 52px;
     font-weight: 700;
     color: #1a2e4a;
@@ -422,7 +422,7 @@ body{
     display: inline-block;
 }
 
-#especialitats_titol h1::after {
+#especialitats_titol h2::after {
     content: '';
     display: block;
     width: 60px;

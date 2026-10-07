@@ -92,6 +92,16 @@
                     'url' => URL::to('/serveis'),
                     'position' => $position++
                 ];
+            } elseif($currentRoute != '/' && $currentRoute != '') {
+                // Mútues, Sobre CEMAV, Contacte, Especialitats i les legals (SEO-15): abans el
+                // JSON-LD nomes duia "Inici" mentre el breadcrumb visible en mostrava dos.
+                // Els noms han de coincidir amb els del breadcrumb visible de dalt.
+                $visibles = ['mutues' => 'Mútues', 'sobreCemav' => 'Sobre CEMAV', 'contacte' => 'Contacte'];
+                $breadcrumbItems[] = [
+                    'name' => $visibles[$currentRoute] ?? ($pageTitle ?? ucfirst(str_replace('-', ' ', $currentRoute))),
+                    'url' => URL::to('/' . $currentRoute),
+                    'position' => $position++
+                ];
             }
         @endphp
         @foreach($breadcrumbItems as $item)

@@ -41,6 +41,7 @@ body{
    en títols grans en majúscules. */
 #portada h1,
 #portada h2,
+#portada .portada-lema,
 .hero-title{
     font-family: 'Mulish', 'Mulish Fallback', sans-serif;
 }
@@ -112,10 +113,20 @@ body{
        
 }
 
-#portada h2 {
+#portada h2,
+#portada .portada-lema {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 	color: #fff;
 	position: relative
+}
+
+/* Lema de sobre el h1. Abans era un <h2> abans del <h1> (SEO-34): com a <p> manté
+   exactament la mida i el pes que li donaven Bootstrap i base.css. */
+#portada .portada-lema {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: .5rem;
 }
 
 #novetat{
@@ -405,7 +416,7 @@ p{font-size: 18px; color: var(--ink-soft); line-height: 1.8; margin-bottom: 0px}
     text-align: center;
 }
 
-#especialitats_titol h1{
+#especialitats_titol h2{
     font-size: 52px;
     font-weight: 700;
     color: #1a2e4a;
@@ -414,7 +425,7 @@ p{font-size: 18px; color: var(--ink-soft); line-height: 1.8; margin-bottom: 0px}
     display: inline-block;
 }
 
-#especialitats_titol h1::after{
+#especialitats_titol h2::after{
     content: '';
     display: block;
     width: 60px;
@@ -580,7 +591,8 @@ p{font-size: 18px; color: var(--ink-soft); line-height: 1.8; margin-bottom: 0px}
         margin-bottom: 20px;
     }
 
-    #portada h2 {
+    #portada h2,
+    #portada .portada-lema {
         font-size: 16px;
     }
 
