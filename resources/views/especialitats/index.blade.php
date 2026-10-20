@@ -3,7 +3,7 @@
   <head>
     @include('includes.head', [
         'title'       => 'Especialitats mèdiques a Vic | CEMAV',
-        'description' => 'Descobreix totes les especialitats mèdiques que oferim a CEMAV. Odontologia, fisioterapia, oftalmologia, dermatologia i moltes més.',
+        'description' => 'Descobreix totes les especialitats mèdiques que oferim a CEMAV. Odontologia, fisioteràpia, oftalmologia, podologia i moltes més.',
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero1.webp')}}">
     <link rel="stylesheet" type="text/css" href="@assetv('css/especialitats.css')">
@@ -12,7 +12,7 @@
       "@context": "https://schema.org",
       "@type": "MedicalClinic",
       "name": "CEMAV - Centre de Medicina Amable de Vic",
-      "description": "Descobreix totes les especialitats mèdiques que oferim a CEMAV. Odontologia, fisioterapia, oftalmologia, dermatologia i moltes més.",
+      "description": "Descobreix totes les especialitats mèdiques que oferim a CEMAV. Odontologia, fisioteràpia, oftalmologia, podologia i moltes més.",
       "url": "https://www.cemavvic.cat/especialitats",
       "address": {
         "@type": "PostalAddress",
@@ -51,27 +51,27 @@
 
   <div class="row" id="especialitats">
       <div class="col-12 col-md-2 container-departaments">
+          <a href="{{URL::to('/fisioterapia')}}" style="text-decoration: none; color: inherit;">
+              <img src="img/Fisioteràpia.webp" alt="Fisioteràpia" class="img-dep">
+              <span class="title-dep">Fisioteràpia</span>
+          </a>
+      </div>
+      <div class="col-12 col-md-2 container-departaments">
+          <a href="{{URL::to('/infermeria')}}" style="text-decoration: none; color: inherit;">
+              <img src="img/Medicina Amable.webp" alt="Infermeria" class="img-dep">
+              <span class="title-dep">Infermeria</span>
+          </a>
+      </div>
+      <div class="col-12 col-md-2 container-departaments">
           <a href="{{URL::to('/odontologia')}}" style="text-decoration: none; color: inherit;">
               <img src="img/Odontologia.webp" alt="Odontologia" class="img-dep">
               <span class="title-dep">Odontologia</span>
           </a> 
       </div>
       <div class="col-12 col-md-2 container-departaments">
-          <a href="{{URL::to('/fisioterapia')}}" style="text-decoration: none; color: inherit;">
-              <img src="img/Fisioteràpia.webp" alt="Fisioterapia" class="img-dep">
-              <span class="title-dep">Fisioterapia</span>
-          </a>
-      </div>
-      <div class="col-12 col-md-2 container-departaments">
           <a href="{{URL::to('/oftalmologia')}}" style="text-decoration: none; color: inherit;">
               <img src="img/PersonesTractantPersones.webp" alt="Oftalmologia" class="img-dep">
               <span class="title-dep">Oftalmologia</span>
-          </a>
-      </div>
-      <div class="col-12 col-md-2 container-departaments">
-          <a href="{{URL::to('/dermatologia')}}" style="text-decoration: none; color: inherit;">
-              <img src="img/Dermatologia.webp" alt="Dermatologia" class="img-dep">
-              <span class="title-dep">Dermatologia</span>
           </a>
       </div>
       <div class="col-12 col-md-2 container-departaments">
@@ -81,18 +81,21 @@
           </a>
       </div>
       <div class="col-12 col-md-2 container-departaments">
+          <a href="{{URL::to('/ortodoncista')}}" style="text-decoration: none; color: inherit;">
+              <img src="img/Odontologia.webp" alt="Ortodoncista" class="img-dep">
+              <span class="title-dep">Ortodoncista</span>
+          </a>
+      </div>
+      <div class="col-12 col-md-2 container-departaments">
           <a href="{{URL::to('/podologia')}}" style="text-decoration: none; color: inherit;">
               <img src="img/Podologia.webp" alt="Podologia" class="img-dep">
               <span class="title-dep">Podologia</span>
           </a>
       </div>
-  </div>
-
-  <div class="row" id="especialitats">
       <div class="col-12 col-md-2 container-departaments">
-          <a href="{{URL::to('/nutricio')}}" style="text-decoration: none; color: inherit;">
-              <img src="img/Nutrició.webp" alt="Nutrició" class="img-dep">
-              <span class="title-dep">Nutrició</span>
+          <a href="{{URL::to('/psicologia')}}" style="text-decoration: none; color: inherit;">
+              <img src="img/Psicologia.webp" alt="Psicologia" class="img-dep">
+              <span class="title-dep">Psicologia</span>
           </a>
       </div>
       <div class="col-12 col-md-2 container-departaments">
@@ -105,33 +108,6 @@
           <a href="{{URL::to('/urologia')}}" style="text-decoration: none; color: inherit;">
               <img src="img/Urologia.webp" alt="Urologia" class="img-dep">
               <span class="title-dep">Urologia</span>
-          </a>
-      </div>
-      <div class="col-12 col-md-2 container-departaments">
-          <a href="{{URL::to('/psicologia')}}" style="text-decoration: none; color: inherit;">
-              <img src="img/Psicologia.webp" alt="Psicologia" class="img-dep">
-              <span class="title-dep">Psicologia</span>
-          </a>
-      </div>
-      <div class="col-12 col-md-2 container-departaments">
-          <a href="{{URL::to('/infermeria')}}" style="text-decoration: none; color: inherit;">
-              <img src="img/Medicina Amable.webp" alt="Infermeria" class="img-dep">
-              <span class="title-dep">Infermeria</span>
-          </a>
-      </div>
-  </div>
-
-  <div class="row" id="especialitats">
-      <div class="col-12 col-md-2 container-departaments">
-          <a href="{{URL::to('/digestoleg')}}" style="text-decoration: none; color: inherit;">
-              <img src="img/Digestoleg.webp" alt="Digestologia" class="img-dep">
-              <span class="title-dep">Digestologia</span>
-          </a>
-      </div>
-      <div class="col-12 col-md-2 container-departaments">
-          <a href="{{URL::to('/ortodoncista')}}" style="text-decoration: none; color: inherit;">
-              <img src="img/Odontologia.webp" alt="Ortodòncia" class="img-dep">
-              <span class="title-dep">Ortodòncia</span>
           </a>
       </div>
   </div>

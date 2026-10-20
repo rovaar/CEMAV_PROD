@@ -23,16 +23,15 @@
                             aria-expanded="false" aria-controls="menu-especialitats"
                             aria-label="Mostra la llista d'especialitats">▾</button>
                 <div class="dropdown-menu" id="menu-especialitats" aria-labelledby="especialitats">
-                    <a class="dropdown-item" href="{{URL::to('/dermatologia')}}" id="dermatologia">Dermatologia</a>
-                    <a class="dropdown-item" href="{{URL::to('/nutricio')}}" id="nutricio">Dietista i Nutrició</a>
                     <a class="dropdown-item" href="{{URL::to('/fisioterapia')}}" id="fisioterapia">Fisioteràpia</a>
                     <a class="dropdown-item" href="{{URL::to('/infermeria')}}" id="infermeria">Infermeria</a>
                     <a class="dropdown-item" href="{{URL::to('/odontologia')}}" id="odontologia">Odontologia</a>
                     <a class="dropdown-item" href="{{URL::to('/oftalmologia')}}" id="oftalmologia">Oftalmologia</a>
                     <a class="dropdown-item" href="{{URL::to('/optometria')}}" id="optometria">Optometria</a>
+                    <a class="dropdown-item" href="{{URL::to('/ortodoncista')}}" id="ortodoncista">Ortodoncista</a>
                     <a class="dropdown-item" href="{{URL::to('/podologia')}}" id="podologia">Podologia</a>
                     <a class="dropdown-item" href="{{URL::to('/psicologia')}}" id="psicologia">Psicologia</a>
-                    <a class="dropdown-item" href="{{URL::to('/traumatologia')}}" id="traumatologia">Traumatologia i ortòpèdia</a>
+                    <a class="dropdown-item" href="{{URL::to('/traumatologia')}}" id="traumatologia">Traumatologia</a>
                     <a class="dropdown-item" href="{{URL::to('/urologia')}}" id="urologia">Urologia</a>
 
                 </div>

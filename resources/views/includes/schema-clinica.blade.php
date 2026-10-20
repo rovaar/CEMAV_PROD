@@ -52,11 +52,9 @@
         "https://schema.org/Podiatric",
         "https://schema.org/Physiotherapy",
         "https://schema.org/Optometric",
-        "https://schema.org/DietNutrition",
         "https://schema.org/Urologic",
         "https://schema.org/Ophthalmologic",
         "https://schema.org/Musculoskeletal",
-        "https://schema.org/Dermatology",
         "https://schema.org/Nursing"
       ]
     }

@@ -4,6 +4,7 @@
     @include('includes.head', [
         'title'       => 'Nutricionista i dietista a Vic | CEMAV',
         'description' => 'Servei de dietètica i nutrició a Vic. Assessorament nutricional personalitzat per a una alimentació saludable i control de pes. CEMAV.',
+        'robots'      => 'noindex, follow',
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero4.webp')}}">
     <link rel="stylesheet" href="@assetv('css/especialitats.css')">

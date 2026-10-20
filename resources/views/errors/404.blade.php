@@ -23,14 +23,16 @@
 
       <ul class="err404-links">
         <li><a href="{{URL::to('/especialitats')}}">Totes les especialitats</a></li>
-        <li><a href="{{URL::to('/odontologia')}}">Odontologia</a></li>
         <li><a href="{{URL::to('/fisioterapia')}}">Fisioteràpia</a></li>
-        <li><a href="{{URL::to('/podologia')}}">Podologia</a></li>
-        <li><a href="{{URL::to('/nutricio')}}">Nutrició i dietètica</a></li>
-        <li><a href="{{URL::to('/psicologia')}}">Psicologia</a></li>
+        <li><a href="{{URL::to('/infermeria')}}">Infermeria</a></li>
+        <li><a href="{{URL::to('/odontologia')}}">Odontologia</a></li>
         <li><a href="{{URL::to('/oftalmologia')}}">Oftalmologia</a></li>
+        <li><a href="{{URL::to('/optometria')}}">Optometria</a></li>
+        <li><a href="{{URL::to('/ortodoncista')}}">Ortodoncista</a></li>
+        <li><a href="{{URL::to('/podologia')}}">Podologia</a></li>
+        <li><a href="{{URL::to('/psicologia')}}">Psicologia</a></li>
         <li><a href="{{URL::to('/traumatologia')}}">Traumatologia</a></li>
-        <li><a href="{{URL::to('/dermatologia')}}">Dermatologia</a></li>
+        <li><a href="{{URL::to('/urologia')}}">Urologia</a></li>
         <li><a href="{{URL::to('/serveis')}}">Revisions i analítiques</a></li>
         <li><a href="{{URL::to('/mutues')}}">Mútues</a></li>
         <li><a href="{{URL::to('/contacte')}}">Contacte</a></li>

@@ -9,8 +9,8 @@
   Ús, just abans de @include('includes.footer'):
       @include('includes.especialitats-relacionades', ['actual' => 'dermatologia'])
 
-  Digestologia i ortodòncia són noindex perquè el centre no ofereix aquests
-  serveis ara mateix: no han de ser mai destí de $relacions. Sí que poden
+  Dermatologia, digestologia i nutrició són noindex perquè el centre no ofereix
+  aquests serveis ara mateix: no han de ser mai destí de $relacions. Sí que poden
   tenir el bloc (són noindex, follow), per això surten com a clau.
 --}}
 @php
@@ -19,29 +19,28 @@
         'podologia'     => ['Podologia',              'img/Podologia.webp'],
         'fisioterapia'  => ['Fisioteràpia',           'img/Fisioteràpia.webp'],
         'optometria'    => ['Optometria',             'img/Optometria.webp'],
-        'nutricio'      => ['Dietètica i Nutrició',   'img/Nutrició.webp'],
         'urologia'      => ['Urologia',               'img/Urologia.webp'],
         'oftalmologia'  => ['Oftalmologia',           'img/PersonesTractantPersones.webp'],
         'traumatologia' => ['Traumatologia',          'img/traumatologia.webp'],
-        'dermatologia'  => ['Dermatologia',           'img/Dermatologia.webp'],
         'psicologia'    => ['Psicologia',             'img/Psicologia.webp'],
         'infermeria'    => ['Infermeria',             'img/Medicina Amable.webp'],
+        'ortodoncista'  => ['Ortodoncista',           'img/Odontologia.webp'],
     ];
 
     $relacions = [
-        'odontologia'   => ['infermeria', 'dermatologia', 'nutricio'],
-        'podologia'     => ['fisioterapia', 'traumatologia', 'dermatologia'],
+        'odontologia'   => ['ortodoncista', 'infermeria', 'fisioterapia'],
+        'podologia'     => ['fisioterapia', 'traumatologia', 'infermeria'],
         'fisioterapia'  => ['traumatologia', 'podologia', 'infermeria'],
         'optometria'    => ['oftalmologia', 'infermeria', 'psicologia'],
         'nutricio'      => ['psicologia', 'infermeria', 'fisioterapia'],
-        'urologia'      => ['infermeria', 'nutricio', 'psicologia'],
-        'oftalmologia'  => ['optometria', 'infermeria', 'dermatologia'],
+        'urologia'      => ['infermeria', 'fisioterapia', 'psicologia'],
+        'oftalmologia'  => ['optometria', 'infermeria', 'odontologia'],
         'traumatologia' => ['fisioterapia', 'podologia', 'infermeria'],
-        'dermatologia'  => ['podologia', 'infermeria', 'nutricio'],
-        'psicologia'    => ['nutricio', 'infermeria', 'fisioterapia'],
-        'infermeria'    => ['nutricio', 'urologia', 'dermatologia'],
-        'digestoleg'    => ['nutricio', 'infermeria', 'psicologia'],
-        'ortodoncista'  => ['odontologia', 'infermeria', 'dermatologia'],
+        'dermatologia'  => ['podologia', 'infermeria', 'odontologia'],
+        'psicologia'    => ['odontologia', 'infermeria', 'fisioterapia'],
+        'infermeria'    => ['traumatologia', 'urologia', 'podologia'],
+        'digestoleg'    => ['urologia', 'infermeria', 'psicologia'],
+        'ortodoncista'  => ['odontologia', 'infermeria', 'fisioterapia'],
     ];
 
     // Mai enllacem la pàgina on som, ni res que no sigui a la llista.

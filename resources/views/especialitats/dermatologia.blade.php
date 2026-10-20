@@ -4,6 +4,7 @@
     @include('includes.head', [
         'title'       => 'Dermatòleg a Vic · Pell, cabell i ungles | CEMAV',
         'description' => 'Servei de dermatologia a Vic. Diagnòstic i tractament de malalties de la pell, cabells i ungles. Dermatòlegs especialitzats a CEMAV.',
+        'robots'      => 'noindex, follow',
     ])
     <link rel="preload" as="image" fetchpriority="high" href="{{asset('img/wallpapers/hero2.webp')}}">
     <link rel="stylesheet" href="@assetv('css/especialitats.css')">
