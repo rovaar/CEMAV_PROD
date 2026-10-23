@@ -21,14 +21,14 @@
                 <a href="{{URL::to('/contacte')}}" class="hero-btn" style="margin-top:60px;">Contacte</a>
             </div>
         </div>
-        <!--
+        {{--
         <div class="row" id="novetat">
           <div class="col-md-12" style="text-align:center;">
              <h1 style="margin-top: 10px">NOVETAT!</h1>
              <p style="color: black; font-size:30px;">Ara també fem revisions de permis de conduir, cita prèvia a <a href="https://www.emedicalboxvic.com/" style="color: white;">  emedicalboxvic.com</a></p>
           </div>
         </div>
-        -->
+        --}}
 
         <!-- PER QUÈ -->
         <section id="perque">
